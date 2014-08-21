@@ -1,0 +1,37 @@
+footer
+	background: $fondo_gris
+	color: white
+
+section
+	background: white
+
+	&.countdown
+		background: $fondo_gris
+		color: white
+
+	&.headline,
+	&.wannabesponsor
+		position: relative
+
+		&:after
+			background-size: 10px 12px, 10px 10px !important
+			bottom: -20px
+			content: ''
+			display: block
+			height: 30px
+			left: 0
+			position: absolute
+			width: 100%
+
+	&.headline
+		&:after
+			+sawtooth(white)
+
+	&.speakers,
+	&.wannabesponsor
+		background: $fondo_azul
+		color: white
+
+	&.wannabesponsor
+		&:after
+			+sawtooth($fondo_azul)
