@@ -3,6 +3,7 @@ a
 
 body
 	background: white
+	font-family: Raleway
 
 button,
 input[type="submit"],
@@ -15,8 +16,28 @@ input[type="submit"],
 	text-decoration: none
 	text-transform: uppercase
 
-h2.sawtooth
-	text-transform: uppercase
+h2
+	text-align: center
+
+	&.sawtooth
+		text-transform: uppercase
+		width: auto
+
+		span
+			padding: 0.4em 0.2em
+			border-image-width: 0.3em !important
+
+		&.blue
+			color: $color_azul
+
+			span
+				border-image: url($zigzag_blue) 0 0 10 0 round round
+
+		&.white
+			color: white
+
+			span
+				border-image: url($zigzag_white) 0 0 10 0 round round
 
 span.color
 	color: $color_azul

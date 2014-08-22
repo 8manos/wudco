@@ -25,6 +25,21 @@ section
 			width: 100%
 
 	&.headline
+		background: url($headline_bckgnd) center calc(100% + 40px) no-repeat
+		padding-bottom: 220px
+		
+		h1,
+		p
+			margin: 0 auto
+			text-align: center
+
+		h1
+			margin-bottom: 0.5em
+			width: 65%
+
+		p
+			width: 45%
+
 		&:after
 			+sawtooth(white)
 
@@ -32,6 +47,9 @@ section
 	&.wannabesponsor
 		background: $fondo_azul
 		color: white
+
+	&.speakers
+		text-align: center
 
 	&.wannabesponsor
 		&:after

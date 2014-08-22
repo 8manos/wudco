@@ -1,0 +1,45 @@
+.speaker
+	display: inline-block
+	margin: 1em 40px
+
+	.speaker-pic
+		position: relative
+		width: auto
+		height: auto
+
+		a
+			display: block
+			position: absolute
+
+			img
+				width: 40px
+
+
+			&.linkedin
+				bottom: -5px
+				right: 0
+
+			&.twitter
+				right: -25px
+				top: 50%
+
+		figure
+			border: 10px solid white
+			border-radius: 50%
+			height: $speaker_img_size
+			overflow: hidden
+			margin: 0
+			text-align: center
+			width: $speaker_img_size
+
+			img
+				height: 100%
+
+	.speaker-name,
+	.speaker-position,
+	.speaker-company
+		margin: 0.25em
+		text-align: center
+
+	.speaker-name
+		font-weight: bold

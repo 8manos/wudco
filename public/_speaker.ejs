@@ -1,10 +1,12 @@
 <li class="speaker">
-	<figure class="speaker-pic">
-		<img src="<%- img %>" alt="<%- name %>" />
-		<a href="<%- twitter %>" class="twitter"></a>
-		<a href="<%- linkedin %>" class="linkedin"></a>
-	</figure>
-	<p class="speaker-name"><strong><%- name %></strong></p>
+	<div class="speaker-pic">
+		<figure>
+			<img src="<%- img %>" alt="<%- name %>" />
+		</figure>
+		<a href="<%- twitter %>" class="twitter"><img src="img/twitter_profile.svg" /></a>
+		<a href="<%- linkedin %>" class="linkedin"><img src="img/linkedin_profile.svg" /></a>
+	</div>
+	<p class="speaker-name"><%- name %></p>
 	<p class="speaker-position"><%- position %></p>
 	<p class="speaker-company"><%- company %></p>
 </li>
