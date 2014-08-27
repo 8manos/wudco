@@ -3,41 +3,48 @@ a
 
 body
 	background: white
+	color: $color_gris
 	font-family: Raleway
+	font-size: 10px
 
 button,
 input[type="submit"],
 .button
+	box-sizing: border-box
 	background: $color_naranja
 	border: none
 	border-radius: 2px
 	color: white
+	height: 35px
 	padding: 0.5em 1em
 	text-decoration: none
 	text-transform: uppercase
 
 h2
+	display: inline-block
 	text-align: center
 
 	&.sawtooth
+		border-image-width: 0.3em !important
+		font-weight: 500
+		padding: 0.4em 0.2em
 		text-transform: uppercase
 		width: auto
 
-		span
-			padding: 0.4em 0.2em
-			border-image-width: 0.3em !important
-
 		&.blue
+			border-image: url($zigzag_blue) 0 0 10 0 round round
 			color: $color_azul
 
-			span
-				border-image: url($zigzag_blue) 0 0 10 0 round round
-
 		&.white
+			border-image: url($zigzag_white) 0 0 10 0 round round
 			color: white
 
-			span
-				border-image: url($zigzag_white) 0 0 10 0 round round
+input
+	box-sizing: border-box
+	height: 35px
 
 span.color
 	color: $color_azul
+
+ul
+	padding: 0

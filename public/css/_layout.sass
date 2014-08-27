@@ -4,7 +4,12 @@ footer
 
 section
 	background: white
-	padding: 1em
+	padding: 2em 1em
+	text-align: center
+
+	h2
+		font-size: 1.2rem
+		margin-top: 0
 
 	&.countdown
 		background: $fondo_gris
@@ -25,8 +30,10 @@ section
 			width: 100%
 
 	&.headline
-		background: url($headline_bckgnd) center calc(100% + 40px) no-repeat
-		padding-bottom: 220px
+		background: url($headline_bckgnd) no-repeat
+		background-position: center calc(100% + 15px)
+		background-size: 100% auto
+		padding-bottom: 80px
 		
 		h1,
 		p
@@ -34,11 +41,14 @@ section
 			text-align: center
 
 		h1
+			font-size: 1.6rem
 			margin-bottom: 0.5em
-			width: 65%
+
+			span
+				display: block
 
 		p
-			width: 45%
+			display: none;
 
 		&:after
 			+sawtooth(white)
@@ -47,9 +57,6 @@ section
 	&.wannabesponsor
 		background: $fondo_azul
 		color: white
-
-	&.speakers
-		text-align: center
 
 	&.wannabesponsor
 		&:after

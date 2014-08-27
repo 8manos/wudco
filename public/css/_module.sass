@@ -1,5 +1,40 @@
+.contact,
+.counter
+	font-size: 1rem
+	margin: 0 auto
+	text-align: center
+
+.contact
+	input[type="email"]
+		width: 220px
+	label
+		display: block
+		margin-bottom: 0.5em
+
+.counter
+	.number
+		background: $fondo_azul
+		border-radius: 50%
+		display: inline-block
+		padding: 0.3em
+
+.date,
+.header
+	font-size: 0.8rem
+	margin: 0 auto
+	text-align: center
+
+	p
+		margin: 0
+
+.header
+	border-top: 1px solid rgba(128, 128, 128, 0.4)
+	padding: 1em 0
+	width: 90%
+
 .speaker
 	display: inline-block
+	font-size: 1.4rem
 	margin: 1em 40px
 
 	.speaker-pic
@@ -7,12 +42,12 @@
 		width: auto
 		height: auto
 
-		a
+		& > a
 			display: block
 			position: absolute
 
 			img
-				width: 40px
+				width: 45px
 
 
 			&.linkedin
@@ -38,8 +73,73 @@
 	.speaker-name,
 	.speaker-position,
 	.speaker-company
-		margin: 0.25em
+		margin: 0
 		text-align: center
 
 	.speaker-name
 		font-weight: bold
+		margin-top: 0.5em
+		text-transform: capitalize
+
+		a
+			text-decoration: none
+
+			&:hover
+				text-decoration: underline
+
+	.speaker-position,
+	.speaker-company
+		font-size: smaller
+
+.speech
+	margin-bottom: 1em
+
+	a
+		color: $color_naranja
+		font-weight: bold
+
+	.speech-date,
+	.speech-info
+		box-sizing: border-box
+		display: inline-block
+		vertical-align: top
+
+	.speech-date
+		background: url("../img/calendar_conf.svg") no-repeat
+		background-size: auto 50px
+		font-size: 0.7rem
+		font-weight: 600
+		height: $calendar_size
+		width: $calendar_size
+
+		.speech-day
+			font-size: 1.4rem
+			font-weight: bold
+			line-height: 1.2em
+
+		.speech-month
+			color: white
+			margin-top: 0.7em
+			text-transform: uppercase
+
+	.speech-info
+		font-size: 0.8rem
+		margin-left: 0.5em
+		text-align: left
+		width: calc(100% - #{$calendar_size} - 50px)
+
+		.speech-link,
+		.speech-speaker,
+		.speech-title
+			margin: 0.3em 0 0 0
+
+.sub-content
+	img
+		width: 50%
+
+.wud-logo
+	margin: 0.75em auto
+	width: 80%
+
+	img
+		width: 100%
