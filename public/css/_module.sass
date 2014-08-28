@@ -114,10 +114,6 @@
 .speech
 	margin-bottom: 1em
 
-	a
-		color: $color_naranja
-		font-weight: bold
-
 	.speech-date,
 	.speech-info
 		box-sizing: border-box
@@ -152,6 +148,18 @@
 		.speech-speaker,
 		.speech-title
 			margin: 0.3em 0 0 0
+
+		.speech-link a
+			color: $color_naranja
+			font-weight: bold
+
+		.speech-title a
+			color: inherit
+			text-decoration: none
+
+			&:hover
+				text-decoration: underline
+
 
 .sponsor
 	box-sizing: border-box
