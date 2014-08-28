@@ -16,6 +16,11 @@
 	text-align: center
 
 .contact
+	button,
+	input,
+	label
+		vertical-align: middle
+
 	input[type="email"]
 		width: 220px
 	label
@@ -58,9 +63,10 @@
 	margin: 1em 40px
 
 	.speaker-pic
+		height: $speaker_img_size
 		position: relative
-		width: auto
-		height: auto
+		margin: 0 auto
+		width: $speaker_img_size
 
 		& > a
 			display: block
@@ -81,11 +87,12 @@
 		figure
 			border: 10px solid white
 			border-radius: 50%
-			height: $speaker_img_size
+			box-sizing: border-box
+			height: 100%
 			overflow: hidden
 			margin: 0
 			text-align: center
-			width: $speaker_img_size
+			width: 100%
 
 			img
 				height: 100%
@@ -122,7 +129,7 @@
 
 	.speech-date
 		background: url("../img/calendar_conf.svg") no-repeat
-		background-size: auto 50px
+		background-size: auto $calendar_size
 		font-size: 0.7rem
 		font-weight: 600
 		height: $calendar_size
@@ -164,10 +171,12 @@
 .sponsor
 	box-sizing: border-box
 	display: inline-block
+	margin: 0.5em
+	vertical-align: middle
 	width: 45%
 	
 	figure
-		margin: 0.5em
+		margin: 0
 
 		img
 			width: 100%
@@ -187,3 +196,71 @@
 
 	img
 		width: 100%
+
+@media screen and (min-width: $tablet-th)
+	.actions,
+	.follow-us,
+	.organizer
+		display: inline-block
+		margin: 1em
+		vertical-align: middle
+
+	.actions
+		padding-left: 40px
+
+	.contact label
+		display: initial
+
+	.date
+		border-top: 1px solid rgba(128, 128, 128, 0.4)
+		padding: 1em 0
+		width: 95%
+
+		.day
+			background: url("../img/calendar_nav.svg") no-repeat
+			background-size: auto $calendar_nav_size
+			box-sizing: border-box
+			display: inline-block
+			font-weight: 600
+			height: $calendar_nav_size
+			padding: 1em
+			vertical-align: middle
+			width: $calendar_nav_size
+
+	.header,
+	.wud-logo
+		display: inline-block
+		vertical-align: middle
+
+	.header
+		border: none;
+		text-align: left
+		width: auto
+
+	.speech
+		display: inline-block
+		width: 250px
+
+		.speech-info
+			width: calc(100% - #{$calendar_size} - 25px)
+
+	.sponsor
+		margin: 1em 2em
+		width: 180px
+
+	.sub,
+	.sub-content
+		display: inline-block
+		vertical-align: middle
+
+	.sub
+		border-right: 1px solid
+		font-size: 1rem
+		padding: 0.5em 1em
+
+	.sub-content img
+		width: 150px
+
+	.wud-logo
+		margin: 1em 2em
+		width: 55%
