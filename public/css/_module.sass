@@ -221,7 +221,7 @@
 			background-size: auto $calendar_nav_size
 			box-sizing: border-box
 			display: inline-block
-			font-weight: 600
+			font-weight: bold
 			height: $calendar_nav_size
 			padding: 1em
 			vertical-align: middle
@@ -264,3 +264,32 @@
 	.wud-logo
 		margin: 1em 2em
 		width: 55%
+
+@media screen and (min-width: $desktop-th)
+	.actions ul
+		padding: 0
+
+		li
+			display: inline-block
+			margin: 0 0.5em
+
+	.contact,
+	.counter
+		display: inline-block
+		margin: 0 1em
+		vertical-align: middle
+
+	.date
+		border: none
+		display: inline-block
+		font-size: 1rem
+		margin: 1em 2em
+		width: auto
+
+		.day
+			background-size: auto $calendar_nav_desk_size
+			height: $calendar_nav_desk_size
+			width: $calendar_nav_desk_size
+
+	.wud-logo
+		width: 50%
