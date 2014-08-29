@@ -1,5 +1,9 @@
 a
 	color: white
+	transition: color 0.3s
+
+	&:hover
+		color: $color_azul
 
 body
 	background: white
@@ -22,6 +26,11 @@ input[type="submit"],
 	padding: 0.5em 1em
 	text-decoration: none
 	text-transform: uppercase
+	transition: background 0.3s
+
+	&:hover
+		background: $color_azul_oscuro
+		color: inherit
 
 h2
 	display: inline-block

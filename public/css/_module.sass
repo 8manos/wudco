@@ -6,8 +6,22 @@
 .actions
 	font-size: 0.8rem
 
-	li
-		margin-bottom: 1em
+	ul
+		list-style: none
+
+		li
+			margin-bottom: 1em
+
+			&:before
+				content: '•'
+				font-size: 1.75rem
+				padding-right: 7px
+				transition: color 0.3s
+				vertical-align: middle
+
+			&:hover a,
+			&:hover:before
+				color: $color_azul
 
 .contact,
 .counter
@@ -44,6 +58,11 @@
 	p
 		margin: 0
 
+.header
+	border-top: 1px solid rgba(128, 128, 128, 0.4)
+	padding: 1em 0
+	width: 90%
+
 .social-network
 	display: inline-block
 	margin: 1em
@@ -75,11 +94,6 @@
 		&:hover
 			background-image: url("../img/youtube_azul.svg")
 
-.header
-	border-top: 1px solid rgba(128, 128, 128, 0.4)
-	padding: 1em 0
-	width: 90%
-
 .speaker
 	display: inline-block
 	font-size: 1.4rem
@@ -92,20 +106,28 @@
 		width: $speaker_img_size
 
 		& > a
+			background: transparent no-repeat center
+			background-size: cover
 			display: block
+			height: 45px
 			position: absolute
-
-			img
-				width: 45px
-
+			width: 45px
 
 			&.linkedin
+				background-image: url("../img/linkedin_profile.svg")
 				bottom: -5px
 				right: 0
 
+				&:hover
+					background-image: url("../img/linkedin_profile_hover.svg")
+
 			&.twitter
+				background-image: url("../img/twitter_profile.svg")
 				right: -25px
 				top: 50%
+
+				&:hover
+					background-image: url("../img/twitter_profile_hover.svg")
 
 		figure
 			border: 10px solid white
@@ -135,6 +157,7 @@
 			text-decoration: none
 
 			&:hover
+				color: inherit
 				text-decoration: underline
 
 	.speaker-position,
@@ -182,6 +205,10 @@
 		.speech-link a
 			color: $color_naranja
 			font-weight: bold
+			transition: color 0.3s
+
+			&:hover
+				color: $color_azul
 
 		.speech-title a
 			color: inherit
@@ -228,9 +255,6 @@
 		display: inline-block
 		margin: 1em
 		vertical-align: middle
-
-	.actions
-		padding-left: 40px
 
 	.contact label
 		display: initial
