@@ -12,10 +12,6 @@ media
 
 # Front side
 content/components
-content/dist
-content/css
-content/css/index.css
-content/css/main.css
 node_modules
 .sass-cache
 media

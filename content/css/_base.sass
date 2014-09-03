@@ -1,0 +1,66 @@
+a
+	color: white
+	transition: color 0.3s
+
+	&:hover
+		color: $color_azul
+
+body
+	background: white
+	color: $color_gris
+	font-family: Raleway
+	font-size: 10px
+
+button,
+input[type="submit"],
+.button
+	box-sizing: border-box
+	background: $color_naranja
+	border: none
+	border-radius: 2px
+	color: white
+	font-size: 0.9rem
+	font-weight: 600
+	height: 35px
+	letter-spacing: 0.2em
+	padding: 0.5em 1em
+	text-decoration: none
+	text-transform: uppercase
+	transition: background 0.3s
+
+	&:hover
+		background: $color_azul_oscuro
+		color: inherit
+
+h2
+	display: inline-block
+	text-align: center
+
+	&.sawtooth
+		border-image-width: 0.3em !important
+		font-weight: 300
+		letter-spacing: 0.2em
+		padding: 0.4em 0.2em
+		text-transform: uppercase
+		width: auto
+
+		&.blue
+			border-image: url($zigzag_blue) 0 0 10 0 round round
+			color: $color_azul
+
+		&.white
+			border-image: url($zigzag_white) 0 0 10 0 round round
+			color: white
+
+input
+	border: none
+	border-radius: 4px
+	box-sizing: border-box
+	padding: 0 0.5em
+	height: 35px
+
+span.color
+	color: $color_azul
+
+ul
+	padding: 0
