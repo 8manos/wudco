@@ -11,4 +11,4 @@ static3==0.5.1
 wsgiref==0.1.2
 django-storages==1.1.8
 boto==2.32.1
--e https://github.com/monoku/django-copy.git@537c943de0bd6aec24d0ed434df678b9d0be8afc#egg=kopy-dev
+-e git+https://github.com/monoku/django-copy.git@537c943de0bd6aec24d0ed434df678b9d0be8afc#egg=kopy-dev
