@@ -86,6 +86,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+    # 'constance.context_processors.config',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
@@ -94,6 +100,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 if [(i, k) for i, k in os.environ.items() if 'heroku' in k]:
+    DEBUG = False
     import dj_database_url
     DATABASES['default'] = dj_database_url.config()
 
