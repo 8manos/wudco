@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles copy %}
 <!DOCTYPE html>
 <html lang="es">
 {% block head %}
@@ -16,9 +16,9 @@
             <a href="#"><img src="{% static 'img/logo_WudCo.svg' %}" alt="World Usability Day" /></a>
         </figure>
         <div class="header">
-            <p><strong>Día mundial de la usabilidad 2014</strong></p>
-            <p><span class="color">Bogotá Colombia</span></p>
-            <p>Universidad Nacional</p>
+            <p><strong>{% copy 'title' default='Día mundial de la usabilidad 2014' %}</strong></p>
+            <p><span class="color">{% copy 'city' default='Bogotá Colombia' %}</span></p>
+            <p>{% copy 'location-name' default='Universidad Nacional'%}</p>
         </div>
         <div class="date">
             <p><span class="day">7</span> de <strong>noviembre</strong> de 2014</p>
@@ -27,13 +27,13 @@
     </header>
 <section class="headline">
     <div class="container">
-        <h1><span class="color">WUDco 2014:</span> Planificación, ejecución y evaluación de la experiencia de usuario en un proyecto digital</h1>
-        <p>Profesionales del mundo entero se reúnen para celebrar el Día Mundial de la Usabilidad</p>
+        <h1><span class="color">{% copy 'name-short' default='WUDco 2014'%}:</span> {% copy 'title-description' default='Planificación, ejecución y evaluación de la experiencia de usuario en un proyecto digital'%}</h1>
+        <p>{% copy 'subtitle' default='Profesionales del mundo entero se reúnen para celebrar el Día Mundial de la Usabilidad'%}</p>
     </div>
 </section>
 <section class="speakers">
     <div class="container">
-        <h2 class="sawtooth white"><span>Ponentes</span></h2>
+        <h2 class="sawtooth white"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
         <ul>
     {% for speaker in speakers %}
     <li class="speaker">
@@ -115,7 +115,7 @@
 </section>
 <section class="speeches">
     <div class="container">
-        <h2 class="sawtooth blue"><span>Charlas preliminares gratuitas</span></h2>
+        <h2 class="sawtooth blue"><span>{% copy 'free-talks' default='Charlas preliminares gratuitas'%}</span></h2>
         <ul>
             <li class="speech">
     <div class="speech-date">
@@ -167,14 +167,14 @@
 </section>
 <section class="wannabesponsor">
     <div class="container">
-        <h2>¿Quieres ser patrocinador?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident minima quasi qui itaque veritatis rem dolores, sed cum. Quod iure soluta quidem tempora ab est ex velit. Saepe, quasi! Commodi.</p>
-        <a href="#" class="button">Patrocina</a>
+        <h2>{% copy 'want-sponsor' default='¿Quieres ser patrocinador?' %}</h2>
+        <p>{% copy 'want-sponsor-description' default='Lorem...'%}</p>
+        <a href="#" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
     </div>
 </section>
 <section class="sponsors">
     <div class="container">
-        <h2 class="sawtooth blue"><span>Nos apoyan</span></h2>
+        <h2 class="sawtooth blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
         <ul>
             {% for sponsor in sponsors %}<li class="sponsor">
     <figure>
@@ -217,7 +217,7 @@
 <footer>
     <div class="container">
         <div class="organizer">
-            <div class="sub">Organiza</div>
+            <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
             <div class="sub-content">
                 <a href="http://usarte.co"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
             </div>
