@@ -1,0 +1,124 @@
+footer
+	background: $fondo_gris
+	color: white
+	padding: 2em 1em
+	text-align: center
+
+header
+	text-align: center
+
+section
+	background: white
+	padding: 2em 1em
+	text-align: center
+
+	h2
+		font-size: 1.2rem
+		margin-top: 0
+
+	ul
+		margin: 0 auto
+		max-width: 1000px
+
+	&.countdown
+		background: $fondo_gris
+		color: white
+
+	&.headline,
+	&.wannabesponsor
+		position: relative
+
+		&:after
+			background-size: 10px 12px, 10px 10px !important
+			bottom: -20px
+			content: ''
+			display: block
+			height: 30px
+			left: 0
+			position: absolute
+			width: 100%
+
+	&.headline
+		background: url($headline_bckgnd) no-repeat
+		background-position: center calc(100% + 20px)
+		background-size: contain
+		padding-bottom: 25%
+		
+		h1,
+		p
+			margin: 0 auto
+			text-align: center
+
+		h1
+			font-size: 1.8rem
+			margin-bottom: 0.5em
+
+			span
+				display: block
+
+		p
+			display: none;
+			font-size: 1rem
+			width: 60%
+
+		&:after
+			+sawtooth(white)
+
+	&.speakers,
+	&.wannabesponsor
+		background: $fondo_azul
+		color: white
+
+	&.wannabesponsor
+		padding: 5em 1em
+		
+		p
+			font-size: 0.8rem
+			margin: 0 auto 2em auto
+			max-width: 800px
+			width: 90%
+
+		&:after
+			+sawtooth($fondo_azul)
+
+.container
+	margin: 0 auto
+	max-width: 1280px
+
+@media screen and (min-width: $tablet-th)
+	section
+		h2
+			font-size: 1.4rem
+
+		&.headline
+			background-position: center calc(100% + 40px)
+
+			h1
+				font-size: 2rem
+
+				span
+					display: initial
+
+			p
+				display: block
+				font-size: 1.2rem
+
+		&.wannabesponsor p
+			font-size: 1rem
+
+@media screen and (min-width: $desktop-th)
+	section
+		h2
+			font-size: 1.6rem
+
+		&.headline
+			background-size: auto 55%
+			padding-bottom: 20%
+
+			h1
+				font-size: 2.2rem
+				width: 55%
+
+			p
+				font-size: 1.4rem
+				width: 45%

@@ -1,0 +1,20 @@
+{
+  "name": "wudco2014",
+  "version": "0.0.0",
+  "description": "WUDCO 2014 landing page",
+  "dependencies": {
+    "harp": "0.13.0"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/8manos/wudco.git"
+  },
+  "author": "cesosag",
+  "bugs": {
+    "url": "https://github.com/8manos/wudco/issues"
+  }
+}
