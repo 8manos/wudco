@@ -176,13 +176,13 @@
     <div class="container">
         <h2 class="sawtooth blue"><span>Nos apoyan</span></h2>
         <ul>
-            <li class="sponsor">
+            {% for sponsor in sponsors %}<li class="sponsor">
     <figure>
-        <a href="#">
-            <img src="img/logo_usaria.jpg" alt="Usaria">
+        <a href="{{ sponsor.url }}">
+            <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
         </a>
     </figure>
-</li>
+</li>{% endfor %}{% comment %}
             <li class="sponsor">
     <figure>
         <a href="#">
@@ -210,7 +210,7 @@
             <img src="img/logo_openweb.png" alt="Openweb">
         </a>
     </figure>
-</li>
+</li>{% endcomment %}
         </ul>
     </div>
 </section>
