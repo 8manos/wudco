@@ -1,0 +1,32 @@
+# Backend ignore section
+
+# OS
+.DS_Store
+
+# Python
+*.pyc
+*.pyo
+.ropeproject/
+
+#static dirs
+static
+media
+
+# Front side
+content/components
+content/dist
+content/css
+content/css/index.css
+content/css/main.css
+node_modules
+.sass-cache
+media
+bower_components
+content/img/icons-*
+
+# Frontend ignore section
+node_modules
+content/.sass-cache
+content/components
+
+db.sqlite3

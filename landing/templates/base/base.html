@@ -1,0 +1,242 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} WUDCO 2014</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+</head>{% endblock %}
+<body>
+    <header>
+    {% block header %}
+    <div class="container">
+        <figure class="wud-logo">
+            <a href="#"><img src="{% static 'img/logo_WudCo.svg' %}" alt="World Usability Day" /></a>
+        </figure>
+        <div class="header">
+            <p><strong>Día mundial de la usabilidad 2014</strong></p>
+            <p><span class="color">Bogotá Colombia</span></p>
+            <p>Universidad Nacional</p>
+        </div>
+        <div class="date">
+            <p><span class="day">7</span> de <strong>noviembre</strong> de 2014</p>
+        </div>
+    </div>{% endblock %}
+    </header>
+<section class="headline">
+    <div class="container">
+        <h1><span class="color">WUDco 2014:</span> Planificación, ejecución y evaluación de la experiencia de usuario en un proyecto digital</h1>
+        <p>Profesionales del mundo entero se reúnen para celebrar el Día Mundial de la Usabilidad</p>
+    </div>
+</section>
+<section class="speakers">
+    <div class="container">
+        <h2 class="sawtooth white"><span>Ponentes</span></h2>
+        <ul>
+    {% for speaker in speakers %}
+    <li class="speaker">
+    <div class="speaker-pic">
+        <figure>
+            <a href="{{ speaker.url|default:'#' }}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{ speaker.name }}" /></a>
+        </figure>
+        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"></a>
+        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"></a>
+    </div>
+    <p class="speaker-name"><a href="{{ speaker.url|default:'#' }}">{{ speaker.name }}</a></p>
+    <p class="speaker-position">{{ speaker.title }}</p>
+    <p class="speaker-company">{{ speaker.company }}</p>
+    </li>{% endfor %}{% comment %}
+            <li class="speaker">
+    <div class="speaker-pic">
+        <figure>
+            <a href="#"><img src="img/Jorge_Arango.jpg" alt="Jorge Arango" /></a>
+        </figure>
+        <a href="http://twitter.com/" class="twitter"></a>
+        <a href="http://linked.in/" class="linkedin"></a>
+    </div>
+    <p class="speaker-name"><a href="#">Jorge Arango</a></p>
+    <p class="speaker-position">Fundador y Consultor UX</p>
+    <p class="speaker-company">BootStudio</p>
+</li>
+            <li class="speaker">
+    <div class="speaker-pic">
+        <figure>
+            <a href="#"><img src="img/Kyle_Soucy.jpg" alt="Kyle Soucy" /></a>
+        </figure>
+        <a href="http://twitter.com/" class="twitter"></a>
+        <a href="http://linked.in/" class="linkedin"></a>
+    </div>
+    <p class="speaker-name"><a href="#">Kyle Soucy</a></p>
+    <p class="speaker-position">Directora y Consultora UX</p>
+    <p class="speaker-company">Usable Interface</p>
+</li>
+            <li class="speaker">
+    <div class="speaker-pic">
+        <figure>
+            <a href="#"><img src="img/Lorena_Escandon.jpg" alt="Lorena Escandón" /></a>
+        </figure>
+        <a href="http://twitter.com/" class="twitter"></a>
+        <a href="http://linked.in/" class="linkedin"></a>
+    </div>
+    <p class="speaker-name"><a href="#">Lorena Escandón</a></p>
+    <p class="speaker-position">Especialista Design Thinking</p>
+    <p class="speaker-company"></p>
+</li>
+            <li class="speaker">
+    <div class="speaker-pic">
+        <figure>
+            <a href="#"><img src="img/Valerio_Pinna.png" alt="Valerio Pinna" /></a>
+        </figure>
+        <a href="http://twitter.com/" class="twitter"></a>
+        <a href="http://linked.in/" class="linkedin"></a>
+    </div>
+    <p class="speaker-name"><a href="#">Valerio Pinna</a></p>
+    <p class="speaker-position">Diseñador de Interacción</p>
+    <p class="speaker-company">Mixel Scarl</p>
+</li>{% endcomment %}
+        </ul>
+    </div>
+</section>
+<section class="countdown">
+    <div class="container">
+        <div class="counter">
+            <p><strong>Quedan <span class="number">{{days_left}}</span> días para el Wud<span class="color">Co 2014</span></strong></p>
+        </div>
+        <div class="contact">
+            <form action="">
+                <label for="email">¿Quieres estar al tanto?</label>
+                <input id="email" name="email" type="email" placeholder="Escribe tu correo electrónico" />
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="speeches">
+    <div class="container">
+        <h2 class="sawtooth blue"><span>Charlas preliminares gratuitas</span></h2>
+        <ul>
+            <li class="speech">
+    <div class="speech-date">
+        <div class="speech-month">
+            Ago
+        </div>
+        <div class="speech-day">
+            20
+        </div>
+    </div>
+    <div class="speech-info">
+        <h3 class="speech-title"><a href="#">Errores y aciertos en el proceso de construcción de un sitio web.</a></h3>
+        <p class="speech-speaker">Jorge Arango</p>
+        <p class="speech-link"><a href="#">Ver más</a></p>
+    </div>
+</li>
+            <li class="speech">
+    <div class="speech-date">
+        <div class="speech-month">
+            Sep
+        </div>
+        <div class="speech-day">
+            10
+        </div>
+    </div>
+    <div class="speech-info">
+        <h3 class="speech-title"><a href="#">Fundamentos de Lean UX.</a></h3>
+        <p class="speech-speaker">Lorena Escandón</p>
+        <p class="speech-link"><a href="#">Ver más</a></p>
+    </div>
+</li>
+            <li class="speech">
+    <div class="speech-date">
+        <div class="speech-month">
+            Oct
+        </div>
+        <div class="speech-day">
+            26
+        </div>
+    </div>
+    <div class="speech-info">
+        <h3 class="speech-title"><a href="#">Usabilidad en aplicaciones videojuegos.</a></h3>
+        <p class="speech-speaker">Valerio Pinna</p>
+        <p class="speech-link"><a href="#">Ver más</a></p>
+    </div>
+</li>
+        </ul>
+    </div>
+</section>
+<section class="wannabesponsor">
+    <div class="container">
+        <h2>¿Quieres ser patrocinador?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident minima quasi qui itaque veritatis rem dolores, sed cum. Quod iure soluta quidem tempora ab est ex velit. Saepe, quasi! Commodi.</p>
+        <a href="#" class="button">Patrocina</a>
+    </div>
+</section>
+<section class="sponsors">
+    <div class="container">
+        <h2 class="sawtooth blue"><span>Nos apoyan</span></h2>
+        <ul>
+            <li class="sponsor">
+    <figure>
+        <a href="#">
+            <img src="img/logo_usaria.jpg" alt="Usaria">
+        </a>
+    </figure>
+</li>
+            <li class="sponsor">
+    <figure>
+        <a href="#">
+            <img src="img/logo_monoku.png" alt="Monoku">
+        </a>
+    </figure>
+</li>
+            <li class="sponsor">
+    <figure>
+        <a href="#">
+            <img src="img/logo_8manos.png" alt="8manos">
+        </a>
+    </figure>
+</li>
+            <li class="sponsor">
+    <figure>
+        <a href="#">
+            <img src="img/logo_webcake.png" alt="Webcake">
+        </a>
+    </figure>
+</li>
+            <li class="sponsor">
+    <figure>
+        <a href="#">
+            <img src="img/logo_openweb.png" alt="Openweb">
+        </a>
+    </figure>
+</li>
+        </ul>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="organizer">
+            <div class="sub">Organiza</div>
+            <div class="sub-content">
+                <a href="http://usarte.co"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
+            </div>
+        </div>
+        <div class="actions">
+            <ul>
+                <li><a href="#">Quiero ser voluntario</a></li>
+                <li><a href="#">Quiero ser patrocinador</a></li>
+            </ul>
+        </div>
+        <div class="follow-us">
+            <div class="sub">Síguenos</div>
+            <div class="sub-content">
+                <a class="social-network twitter" href="#"></a>
+                <a class="social-network facebook" href="#"></a>
+                <a class="social-network youtube" href="#"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
