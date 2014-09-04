@@ -1,0 +1,15 @@
+{% load staticfiles copy %}
+<section class="speakers">
+  <div class="container">
+    <h2 class="sawtooth white"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
+    <ul>
+      {% include 'front/_speaker.html' with picture="img/Jorge_Arango.jpg" name="Jorge Arango" title="Fundador y Consultor UX" company="BootStudio" %}
+
+      {% include 'front/_speaker.html' with picture="img/Kyle_Soucy.jpg" name="Kyle Soucy" title="Directora y Consultora UX" company="Usable Interface" %}
+
+      {% include 'front/_speaker.html' with picture="img/Lorena_Escandon.jpg" name="Lorena Escandón" title="Especialista Design Thinking" %}
+
+      {% include 'front/_speaker.html' with picture="img/Valerio_Pinna.png" name="Valerio Pinna" title="Diseñador de Interacción" company="Mixel Scarl" %}
+    </ul>
+  </div>
+</section>

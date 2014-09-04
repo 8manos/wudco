@@ -1,0 +1,8 @@
+{% load staticfiles copy %}
+<section class="wannabesponsor">
+  <div class="container">
+    <h2>{% copy 'want-sponsor' default='¿Quieres ser patrocinador?' %}</h2>
+    <p>{% copy 'want-sponsor-description' default='Lorem...'%}</p>
+    <a href="#" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
+  </div>
+</section>
