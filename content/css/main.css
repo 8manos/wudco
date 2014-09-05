@@ -225,25 +225,10 @@ section {
 
 .social-network {
   display: inline-block;
-  margin: 1em; }
-  .social-network.facebook, .social-network.twitter, .social-network.youtube {
-    background: transparent no-repeat center;
-    background-size: cover;
-    height: 30px;
-    width: 30px; }
-  .social-network.facebook {
-    background-image: url("../img/facebook_blanco.svg"); }
-    .social-network.facebook:hover {
-      background-image: url("../img/facebook_azul.svg"); }
-  .social-network.twitter {
-    background-image: url("../img/twitter_blanco.svg"); }
-    .social-network.twitter:hover {
-      background-image: url("../img/twitter_azul.svg"); }
-  .social-network.youtube {
-    background-image: url("../img/youtube_blanco.svg");
-    width: 66px; }
-    .social-network.youtube:hover {
-      background-image: url("../img/youtube_azul.svg"); }
+  margin: 1em;
+  text-decoration: none; }
+  .social-network i {
+    font-size: 30px; }
 
 .speaker {
   display: inline-block;
@@ -272,16 +257,12 @@ section {
         transition: color 0.3s; }
       .speaker .speaker-pic > a.linkedin {
         bottom: -5px;
-        right: 0;
-        /*&:hover
-         * background-image: url("../img/linkedin_profile_hover.svg") */ }
+        right: 0; }
         .speaker .speaker-pic > a.linkedin i {
           color: #007BB5; }
       .speaker .speaker-pic > a.twitter {
         right: -25px;
-        top: 50%;
-        /*&:hover
-         * background-image: url("../img/twitter_profile_hover.svg") */ }
+        top: 50%; }
         .speaker .speaker-pic > a.twitter i {
           color: #5FA9DD; }
       .speaker .speaker-pic > a:hover i {
