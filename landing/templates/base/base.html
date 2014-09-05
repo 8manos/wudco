@@ -130,9 +130,9 @@
                 </div>
             </div>
             <div class="speech-info">
-                <h3 class="speech-title"><a href="#">{{ talk.name }}</a></h3>
+                <h3 class="speech-title"><a href="{{ talk.url }}" target="_blank">{{ talk.name }}</a></h3>
                 <p class="speech-speaker">{{ talk.speaker_name }}</p>
-                <p class="speech-link"><a href="{{ talk.url }}">{% copy 'see-more' default='Ver más'%}</a></p>
+                <p class="speech-link"><a href="{{ talk.url }}" target="_blank">{% copy 'see-more' default='Ver más'%}</a></p>
             </div>
             </li>{% endfor %}{% comment %}
             <li class="speech">
@@ -172,7 +172,7 @@
     <div class="container">
         <h2>{% copy 'want-sponsor' default='¿Quieres ser patrocinador?' %}</h2>
         <p>{% copy 'want-sponsor-description' default='Lorem...'%}</p>
-        <a href="mailto:info@diadelausabilidad.com.co?Subject=Quiero%20ser%20patrocinador" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
+        <a href="mailto:info@diadelausabilidad.com.co?Subject=Quiero%20ser%20patrocinador" target="_blank" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
     </div>
 </section>
 <section class="sponsors">
@@ -181,7 +181,7 @@
         <ul>
             {% for sponsor in sponsors %}<li class="sponsor">
     <figure>
-        <a href="{{ sponsor.url }}">
+        <a href="{{ sponsor.url }}" target="_blank">
             <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
         </a>
     </figure>
@@ -222,7 +222,7 @@
         <div class="organizer">
             <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
             <div class="sub-content">
-                <a href="http://usarte.co"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
+                <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
             </div>
         </div>
         <div class="actions">
@@ -234,9 +234,9 @@
         <div class="follow-us">
             <div class="sub">Síguenos</div>
             <div class="sub-content">
-                {% if not request.GET.edit_copys%}<a href="{% copy 'twitter-url' %}" class="social-network twitter" ></a>{% else %}{% copy 'twitter-url' %} {% endif %}
-                {% if not request.GET.edit_copys%}<a href="{% copy 'facebook-url' %}" class="social-network facebook" ></a>{% else %}{% copy 'facebook-url' %} {% endif %}
-                {% if not request.GET.edit_copys%}<a href="{% copy 'youtube-url' %}" class="social-network youtube"></a>{% else %}{% copy 'youtube-url' %} {% endif %}
+                {% if not request.GET.edit_copys%}<a href="{% copy 'twitter-url' %}" target="_blank" class="social-network twitter" ></a>{% else %}{% copy 'twitter-url' %} {% endif %}
+                {% if not request.GET.edit_copys%}<a href="{% copy 'facebook-url' %}" target="_blank" class="social-network facebook" ></a>{% else %}{% copy 'facebook-url' %} {% endif %}
+                {% if not request.GET.edit_copys%}<a href="{% copy 'youtube-url' %}" target="_blank" class="social-network youtube"></a>{% else %}{% copy 'youtube-url' %} {% endif %}
             </div>
         </div>
     </div>
