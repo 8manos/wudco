@@ -107,28 +107,36 @@
 		width: $speaker_img_size
 
 		& > a
-			background: transparent no-repeat center
-			background-size: cover
+			+radial-gradient()
+			//background: transparent no-repeat center
+			//background-size: cover
 			display: block
 			height: 45px
 			position: absolute
+			text-decoration: none
 			width: 45px
 
+			i
+				font-size: 45px
+				transition: color 0.3s
+
 			&.linkedin
-				background-image: url("../img/linkedin_profile.svg")
 				bottom: -5px
 				right: 0
 
-				&:hover
-					background-image: url("../img/linkedin_profile_hover.svg")
+				i
+					color: #007BB5
 
 			&.twitter
-				background-image: url("../img/twitter_profile.svg")
 				right: -25px
 				top: 50%
 
-				&:hover
-					background-image: url("../img/twitter_profile_hover.svg")
+				i
+					color: #5FA9DD
+
+			&:hover i
+				color: #393939
+				text-decoration: none
 
 		figure
 			border: 10px solid white
@@ -285,7 +293,7 @@
 		vertical-align: middle
 
 	.header
-		border: none;
+		border: none
 		text-align: left
 		width: auto
 

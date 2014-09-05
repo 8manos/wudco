@@ -44,8 +44,8 @@
         <figure>
             <a href="{{ speaker.url|default:'#' }}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{ speaker.name }}" /></a>
         </figure>
-        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"></a>
-        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"></a>
+        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"><i class="icon-twitter-profile"></i></a>
+        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"><i class="icon-linkedin-profile"></i></a>
     </div>
     <p class="speaker-name"><a href="{{ speaker.url|default:'#' }}">{{ speaker.name }}</a></p>
     <p class="speaker-position">{{ speaker.title }}</p>
