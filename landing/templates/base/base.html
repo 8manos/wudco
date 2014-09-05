@@ -134,7 +134,7 @@
                 <p class="speech-speaker">{{ talk.speaker_name }}</p>
                 <p class="speech-link"><a href="{{ talk.url }}">{% copy 'see-more' default='Ver más'%}</a></p>
             </div>
-            </li>{% endfor %}
+            </li>{% endfor %}{% comment %}
             <li class="speech">
     <div class="speech-date">
         <div class="speech-month">
@@ -164,7 +164,7 @@
         <p class="speech-speaker">Valerio Pinna</p>
         <p class="speech-link"><a href="#">Ver más</a></p>
     </div>
-</li>
+</li>{% endcomment %}
         </ul>
     </div>
 </section>
