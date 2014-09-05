@@ -30,3 +30,10 @@ class Sponsor(models.Model):
 
     class Meta:
         ordering = ('order', )
+
+
+class Talk(models.Model):
+    when = models.DateTimeField()
+    name = models.CharField(max_length=140)
+    speaker_name = models.CharField(max_length=140)
+    url = models.URLField(max_length=140, blank=True)
