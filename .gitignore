@@ -24,3 +24,5 @@ content/.sass-cache
 content/components
 
 db.sqlite3
+
+env

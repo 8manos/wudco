@@ -1,0 +1,15 @@
+{% load staticfiles copy %}
+<section class="sponsors">
+  <div class="container">
+    <h2 class="sawtooth blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
+    <ul>
+      {% include 'front/_sponsor.html' with picture="img/logo_monoku.png" name="Monoku" %}
+
+      {% include 'front/_sponsor.html' with picture="img/logo_8manos.png" name="8manos" %}
+
+      {% include 'front/_sponsor.html' with picture="img/logo_webcake.png" name="Webcake" %}
+
+      {% include 'front/_sponsor.html' with picture="img/logo_openweb.png" name="Openweb" %}
+    </ul>
+  </div>
+</section>
