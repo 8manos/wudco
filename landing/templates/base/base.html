@@ -44,8 +44,8 @@
         <figure>
             <a href="{{ speaker.url|default:'#' }}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{ speaker.name }}" /></a>
         </figure>
-        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"></a>
-        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"></a>
+        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"><i class="icon-twitter-profile"></i></a>
+        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"><i class="icon-linkedin-profile"></i></a>
     </div>
     <p class="speaker-name"><a href="{{ speaker.url|default:'#' }}">{{ speaker.name }}</a></p>
     <p class="speaker-position">{{ speaker.title }}</p>
@@ -119,22 +119,22 @@
 <section class="speeches">
     <div class="container">
         <h2 class="sawtooth blue"><span>{% copy 'free-talks' default='Charlas preliminares gratuitas'%}</span></h2>
-        <ul>
+        <ul>{% for talk in talks %}
             <li class="speech">
-    <div class="speech-date">
-        <div class="speech-month">
-            Ago
-        </div>
-        <div class="speech-day">
-            20
-        </div>
-    </div>
-    <div class="speech-info">
-        <h3 class="speech-title"><a href="#">Errores y aciertos en el proceso de construcción de un sitio web.</a></h3>
-        <p class="speech-speaker">Jorge Arango</p>
-        <p class="speech-link"><a href="#">Ver más</a></p>
-    </div>
-</li>
+            <div class="speech-date">
+                <div class="speech-month">
+                    {{ talk.when|date:'M'|title}}
+                </div>
+                <div class="speech-day">
+                    {{ talk.when|date:'d'}}
+                </div>
+            </div>
+            <div class="speech-info">
+                <h3 class="speech-title"><a href="{{ talk.url }}" target="_blank">{{ talk.name }}</a></h3>
+                <p class="speech-speaker">{{ talk.speaker_name }}</p>
+                <p class="speech-link"><a href="{{ talk.url }}" target="_blank">{% copy 'see-more' default='Ver más'%}</a></p>
+            </div>
+            </li>{% endfor %}{% comment %}
             <li class="speech">
     <div class="speech-date">
         <div class="speech-month">
@@ -164,7 +164,7 @@
         <p class="speech-speaker">Valerio Pinna</p>
         <p class="speech-link"><a href="#">Ver más</a></p>
     </div>
-</li>
+</li>{% endcomment %}
         </ul>
     </div>
 </section>
@@ -172,7 +172,7 @@
     <div class="container">
         <h2>{% copy 'want-sponsor' default='¿Quieres ser patrocinador?' %}</h2>
         <p>{% copy 'want-sponsor-description' default='Lorem...'%}</p>
-        <a href="#" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
+        <a href="mailto:info@diadelausabilidad.com.co?Subject=Quiero%20ser%20patrocinador" target="_blank" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
     </div>
 </section>
 <section class="sponsors">
@@ -181,7 +181,7 @@
         <ul>
             {% for sponsor in sponsors %}<li class="sponsor">
     <figure>
-        <a href="{{ sponsor.url }}">
+        <a href="{{ sponsor.url }}" target="_blank">
             <img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">
         </a>
     </figure>
@@ -222,21 +222,21 @@
         <div class="organizer">
             <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
             <div class="sub-content">
-                <a href="http://usarte.co"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
+                <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
             </div>
         </div>
         <div class="actions">
             <ul>
-                <li><a href="#">Quiero ser voluntario</a></li>
-                <li><a href="#">Quiero ser patrocinador</a></li>
+                <li>{% if not request.GET.edit_copys%}<a href="{% copy 'link-volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
+                <li>{% if not request.GET.edit_copys%}<a href="{% copy 'link-sponsor' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
             </ul>
         </div>
         <div class="follow-us">
             <div class="sub">Síguenos</div>
             <div class="sub-content">
-                <a class="social-network twitter" href="#"></a>
-                <a class="social-network facebook" href="#"></a>
-                <a class="social-network youtube" href="#"></a>
+                {% if not request.GET.edit_copys%}<a href="{% copy 'twitter-url' %}" target="_blank" class="social-network" ><i class="icon-twitter"></i></a>{% else %}{% copy 'twitter-url' %} {% endif %}
+                {% if not request.GET.edit_copys%}<a href="{% copy 'facebook-url' %}" target="_blank" class="social-network" ><i class="icon-facebook"></i></a>{% else %}{% copy 'facebook-url' %} {% endif %}
+                {% if not request.GET.edit_copys%}<a href="{% copy 'youtube-url' %}" target="_blank" class="social-network"><i class="icon-youtube"></i></a>{% else %}{% copy 'youtube-url' %} {% endif %}
             </div>
         </div>
     </div>

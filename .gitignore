@@ -25,4 +25,4 @@ content/components
 
 db.sqlite3
 
-env
+.env

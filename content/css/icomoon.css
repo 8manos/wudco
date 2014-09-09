@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-1fr2y0');
+	src:url('fonts/icomoon.eot?#iefix-1fr2y0') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-1fr2y0') format('woff'),
+		url('fonts/icomoon.ttf?-1fr2y0') format('truetype'),
+		url('fonts/icomoon.svg?-1fr2y0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin-profile:before {
+	content: "\e605";
+}
+.icon-twitter-profile:before {
+	content: "\e606";
+}
+.icon-talk:before {
+	content: "\e600";
+}
+.icon-check:before {
+	content: "\e601";
+}
+.icon-execution:before {
+	content: "\e602";
+}
+.icon-evaluation:before {
+	content: "\e603";
+}
+.icon-facebook:before {
+	content: "\e604";
+}
+.icon-planning:before {
+	content: "\e607";
+}
+.icon-workshop:before {
+	content: "\e608";
+}
+.icon-twitter:before {
+	content: "\e609";
+}
+.icon-youtube:before {
+	content: "\e60c";
+}
