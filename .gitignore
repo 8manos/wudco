@@ -17,6 +17,7 @@ node_modules
 media
 bower_components
 content/img/icons-*
+resources
 
 # Frontend ignore section
 node_modules
