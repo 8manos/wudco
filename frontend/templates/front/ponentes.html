@@ -1,0 +1,15 @@
+{% extends 'front/_base.html' %}
+{% load staticfiles copy %}
+
+{% block contenido %}
+  <section>
+    <div class="container">
+      <h2 class="sawtooth blue"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
+      <ul>
+        {% include 'front/_speaker_details.html' with picture="img/Jorge_Arango.jpg" name="Jorge Arango" title="Fundador y Consultor UX" company="BootStudio" intro="En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda." author_of="En un lugar de la Mancha, La razón de la sinrazón que a mi razón se hace" speech="Toughts on User Experience" workshop="Hands on User Experience" %}
+
+        {% include 'front/_speaker_details.html' with picture="img/Lorena_Escandon.jpg" name="Lorena Escandón" title="Especialista Design Thinking" company="" intro="En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda." author_of="En un lugar de la Mancha, La razón de la sinrazón que a mi razón se hace" speech="Toughts on User Experience" workshop="Hands on User Experience" %}
+      </ul>
+    </div>
+  </section>
+{% endblock %}
