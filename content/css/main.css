@@ -234,6 +234,8 @@ section {
   display: inline-block;
   font-size: 1.4rem;
   margin: 1em 40px; }
+  .speaker .speaker-books {
+    font-size: 0.8rem; }
   .speaker .speaker-pic {
     height: 180px;
     position: relative;
@@ -284,6 +286,8 @@ section {
   .speaker .speaker-company {
     margin: 0;
     text-align: center; }
+  .speaker .speaker-info {
+    font-size: 1rem; }
   .speaker .speaker-name {
     font-weight: bold;
     margin-top: 0.5em;
@@ -296,6 +300,14 @@ section {
   .speaker .speaker-position,
   .speaker .speaker-company {
     font-size: smaller; }
+  .speaker .speaker-position-company {
+    color: #33A7B0;
+    font-size: 0.8rem; }
+
+.speakers-page .speaker {
+  margin: 1em; }
+.speakers-page .speaker-name a {
+  color: #393939; }
 
 .speech {
   display: block;
