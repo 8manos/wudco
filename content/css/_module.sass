@@ -137,7 +137,7 @@
 		margin: 0
 		text-align: center
 
-	.speaker-info
+	.speaker-bio
 		font-size: 1rem
 
 	.speaker-link
@@ -180,18 +180,23 @@
 	.speaker-position-company
 		color: $color_azul
 		font-size: 0.8rem
+		margin: 0 0 0.5em 0
 
 .speakers-page
 	.speaker
 		border-bottom: 2px solid rgba(0, 0, 0, 0.2)
 		margin: 1em
 
+		.speaker-company:before
+			content: '/'
+			padding-right: 0.25em
+
+		.speaker-name a
+			color: $color_gris
+
 		&:last-of-type
 			border-bottom: none
 			margin-bottom: 0
-
-	.speaker-name a
-		color: $color_gris
 
 .speech
 	display: block
@@ -318,6 +323,32 @@
 		text-align: left
 		width: auto
 
+	.speakers-page
+		.speaker
+			.speaker-info,
+			.speaker-pic
+				display: inline-block
+				vertical-align: top
+
+			.speaker-info
+				margin-left: 2em
+				position: relative
+				text-align: left
+				width: 55%
+	
+			.speaker-books
+				left: -($speaker_img_size + 60px)
+				position: absolute
+				text-align: center
+				top: $speaker_img_size + 10px
+				width: $speaker_img_size + 30px
+
+			.speaker-name
+				font-size: xx-large
+
+			.speaker-position-company
+				font-size: larger
+
 	.speech
 		display: inline-block
 		margin: 0.5em
@@ -371,6 +402,17 @@
 		display: inline-block
 		margin: 1em 2em
 		width: auto
+
+	.speakers-page
+		.speaker
+			.speaker-link
+				box-sizing: border-box
+				display: inline-block
+				width: 49%
+
+				&:last-of-type
+					border-left: 2px solid rgba(0, 0, 0, 0.2)
+					padding-left: 1em
 
 	.speech
 		margin: 1em 2.5em

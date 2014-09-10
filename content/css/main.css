@@ -292,7 +292,7 @@ section {
   .speaker .speaker-company {
     margin: 0;
     text-align: center; }
-  .speaker .speaker-info {
+  .speaker .speaker-bio {
     font-size: 1rem; }
   .speaker .speaker-link {
     margin: 1em auto; }
@@ -324,16 +324,20 @@ section {
     font-size: smaller; }
   .speaker .speaker-position-company {
     color: #33A7B0;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    margin: 0 0 0.5em 0; }
 
 .speakers-page .speaker {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin: 1em; }
+  .speakers-page .speaker .speaker-company:before {
+    content: "/";
+    padding-right: 0.25em; }
+  .speakers-page .speaker .speaker-name a {
+    color: #393939; }
   .speakers-page .speaker:last-of-type {
     border-bottom: none;
     margin-bottom: 0; }
-.speakers-page .speaker-name a {
-  color: #393939; }
 
 .speech {
   display: block;
@@ -443,6 +447,26 @@ section {
     text-align: left;
     width: auto; }
 
+  .speakers-page .speaker .speaker-info,
+  .speakers-page .speaker .speaker-pic {
+    display: inline-block;
+    vertical-align: top; }
+  .speakers-page .speaker .speaker-info {
+    margin-left: 2em;
+    position: relative;
+    text-align: left;
+    width: 55%; }
+  .speakers-page .speaker .speaker-books {
+    left: -240px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+    width: 210px; }
+  .speakers-page .speaker .speaker-name {
+    font-size: xx-large; }
+  .speakers-page .speaker .speaker-position-company {
+    font-size: larger; }
+
   .speech {
     display: inline-block;
     margin: 0.5em;
@@ -492,6 +516,14 @@ section {
     display: inline-block;
     margin: 1em 2em;
     width: auto; }
+
+  .speakers-page .speaker .speaker-link {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 49%; }
+    .speakers-page .speaker .speaker-link:last-of-type {
+      border-left: 2px solid rgba(0, 0, 0, 0.2);
+      padding-left: 1em; }
 
   .speech {
     margin: 1em 2.5em;
