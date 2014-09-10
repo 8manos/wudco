@@ -203,6 +203,7 @@ section {
 .contact label {
   vertical-align: middle; }
 .contact input[type="email"] {
+  color: #393939;
   width: 235px; }
 .contact label {
   display: block;
