@@ -25,6 +25,7 @@ section
 		color: white
 
 	&.headline,
+	&.speakers-detail,
 	&.wannabesponsor
 		position: relative
 
@@ -65,9 +66,16 @@ section
 			+sawtooth(white)
 
 	&.speakers,
+	&.subscribe,
 	&.wannabesponsor
 		background: $fondo_azul
 		color: white
+
+	&.subscribe .container
+		padding: 2em
+
+	&.speakers-detail:after
+		+sawtooth(white)
 
 	&.wannabesponsor
 		padding: 5em 1em

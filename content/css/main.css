@@ -88,9 +88,9 @@ section {
   section.countdown {
     background: #393939;
     color: white; }
-  section.headline, section.wannabesponsor {
+  section.headline, section.speakers-detail, section.wannabesponsor {
     position: relative; }
-    section.headline:after, section.wannabesponsor:after {
+    section.headline:after, section.speakers-detail:after, section.wannabesponsor:after {
       background-size: 10px 12px, 10px 10px !important;
       bottom: -20px;
       content: "";
@@ -121,9 +121,15 @@ section {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background-repeat: repeat-x; }
-  section.speakers, section.wannabesponsor {
+  section.speakers, section.subscribe, section.wannabesponsor {
     background: #33A7B0;
     color: white; }
+  section.subscribe .container {
+    padding: 2em; }
+  section.speakers-detail:after {
+    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background-repeat: repeat-x; }
   section.wannabesponsor {
     padding: 5em 1em; }
     section.wannabesponsor p {
@@ -288,6 +294,22 @@ section {
     text-align: center; }
   .speaker .speaker-info {
     font-size: 1rem; }
+  .speaker .speaker-link {
+    margin: 1em auto; }
+    .speaker .speaker-link h4 {
+      font-size: 1rem;
+      margin: 0; }
+    .speaker .speaker-link [class*="-label"] {
+      color: #33A7B0;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase; }
+      .speaker .speaker-link [class*="-label"] .icon,
+      .speaker .speaker-link [class*="-label"] .label {
+        margin: 0 0.2em;
+        vertical-align: middle; }
+      .speaker .speaker-link [class*="-label"] .icon {
+        font-size: x-large; }
   .speaker .speaker-name {
     font-weight: bold;
     margin-top: 0.5em;
@@ -305,7 +327,11 @@ section {
     font-size: 0.8rem; }
 
 .speakers-page .speaker {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin: 1em; }
+  .speakers-page .speaker:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0; }
 .speakers-page .speaker-name a {
   color: #393939; }
 

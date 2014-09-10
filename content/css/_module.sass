@@ -140,6 +140,27 @@
 	.speaker-info
 		font-size: 1rem
 
+	.speaker-link
+		margin: 1em auto
+
+		h4
+			font-size: 1rem
+			margin: 0
+
+		[class*="-label"]
+			color: $color_azul
+			font-size: 1rem
+			font-weight: 600
+			text-transform: uppercase
+			
+			.icon,
+			.label
+				margin: 0 0.2em
+				vertical-align: middle
+
+			.icon
+				font-size: x-large
+
 	.speaker-name
 		font-weight: bold
 		margin-top: 0.5em
@@ -162,7 +183,12 @@
 
 .speakers-page
 	.speaker
+		border-bottom: 2px solid rgba(0, 0, 0, 0.2)
 		margin: 1em
+
+		&:last-of-type
+			border-bottom: none
+			margin-bottom: 0
 
 	.speaker-name a
 		color: $color_gris
