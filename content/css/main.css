@@ -530,6 +530,40 @@ section {
   .sub-content img {
     width: 150px; }
 
+  .workshop .speaker-name {
+    text-align: left; }
+  .workshop .speaker-pic {
+    display: inline-block;
+    vertical-align: top; }
+
+  .workshop-icon {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0.25em; }
+
+  .workshop-info {
+    display: inline-block;
+    margin-left: 2em;
+    position: relative;
+    text-align: left;
+    width: 55%;
+    vertical-align: top; }
+    .workshop-info .speaker-profile {
+      left: -230px;
+      position: absolute;
+      text-align: center;
+      top: 190px;
+      width: 210px; }
+
+  .workshop-learn-list {
+    padding-left: 20px; }
+
+  .workshop-title {
+    text-align: left;
+    width: 90%; }
+
   .wud-logo {
     margin: 1em 4em 1em 0;
     width: 45%; } }
