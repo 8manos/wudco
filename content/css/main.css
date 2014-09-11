@@ -241,104 +241,112 @@ section {
   display: inline-block;
   font-size: 1.4rem;
   margin: 1em 40px; }
-  .speaker .speaker-books {
-    font-size: 0.8rem; }
-  .speaker .speaker-pic {
-    height: 180px;
-    position: relative;
-    margin: 0 auto;
-    width: 180px; }
-    .speaker .speaker-pic > a {
-      background: white;
-      background: -moz-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
-      background: -webkit-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
-      background: -o-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
-      background: -ms-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
-      background: radial-gradient(ellipse at center, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
-      display: block;
-      height: 45px;
-      position: absolute;
-      text-decoration: none;
-      width: 45px; }
-      .speaker .speaker-pic > a i {
-        font-size: 45px;
-        transition: color 0.3s; }
-      .speaker .speaker-pic > a.linkedin {
-        bottom: -5px;
-        right: 0; }
-        .speaker .speaker-pic > a.linkedin i {
-          color: #007BB5; }
-      .speaker .speaker-pic > a.twitter {
-        right: -25px;
-        top: 50%; }
-        .speaker .speaker-pic > a.twitter i {
-          color: #5FA9DD; }
-      .speaker .speaker-pic > a:hover i {
-        color: #393939;
-        text-decoration: none; }
-    .speaker .speaker-pic figure {
-      border: 10px solid white;
-      border-radius: 50%;
-      box-sizing: border-box;
-      height: 100%;
-      overflow: hidden;
-      margin: 0;
-      text-align: center;
-      width: 100%; }
-      .speaker .speaker-pic figure img {
-        height: 100%; }
-  .speaker .speaker-name,
-  .speaker .speaker-position,
-  .speaker .speaker-company {
-    margin: 0;
-    text-align: center; }
-  .speaker .speaker-bio {
-    font-size: 1rem; }
-  .speaker .speaker-link {
-    margin: 1em auto; }
-    .speaker .speaker-link h4 {
-      font-size: 1rem;
-      margin: 0; }
-    .speaker .speaker-link [class*="-label"] {
-      color: #33A7B0;
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase; }
-      .speaker .speaker-link [class*="-label"] .icon,
-      .speaker .speaker-link [class*="-label"] .label {
-        margin: 0 0.2em;
-        vertical-align: middle; }
-      .speaker .speaker-link [class*="-label"] .icon {
-        font-size: x-large; }
-  .speaker .speaker-name {
-    font-weight: bold;
-    margin-top: 0.5em;
-    text-transform: capitalize; }
-    .speaker .speaker-name a {
+
+.speaker-books {
+  font-size: 0.8rem; }
+
+.speaker-pic {
+  height: 180px;
+  position: relative;
+  margin: 0 auto;
+  width: 180px; }
+  .speaker-pic > a {
+    background: white;
+    background: -moz-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+    background: -o-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(ellipse at center, white 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+    display: block;
+    height: 45px;
+    position: absolute;
+    text-decoration: none;
+    width: 45px; }
+    .speaker-pic > a i {
+      font-size: 45px;
+      transition: color 0.3s; }
+    .speaker-pic > a.linkedin {
+      bottom: -5px;
+      right: 0; }
+      .speaker-pic > a.linkedin i {
+        color: #007BB5; }
+    .speaker-pic > a.twitter {
+      right: -25px;
+      top: 50%; }
+      .speaker-pic > a.twitter i {
+        color: #5FA9DD; }
+    .speaker-pic > a:hover i {
+      color: #393939;
       text-decoration: none; }
-      .speaker .speaker-name a:hover {
-        color: inherit;
-        text-decoration: underline; }
-  .speaker .speaker-position,
-  .speaker .speaker-company {
-    font-size: smaller; }
-  .speaker .speaker-position-company {
+  .speaker-pic figure {
+    border: 10px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    width: 100%; }
+    .speaker-pic figure img {
+      height: 100%; }
+
+.speaker-name,
+.speaker-position,
+.speaker-company {
+  margin: 0;
+  text-align: center; }
+
+.speaker-bio {
+  font-size: 1rem; }
+
+.speaker-link {
+  margin: 1em auto; }
+  .speaker-link h4 {
+    font-size: 1rem;
+    margin: 0; }
+  .speaker-link [class*="-label"] {
     color: #33A7B0;
-    font-size: 0.8rem;
-    margin: 0 0 0.5em 0; }
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+    .speaker-link [class*="-label"] .icon,
+    .speaker-link [class*="-label"] .label {
+      margin: 0 0.2em;
+      vertical-align: middle; }
+    .speaker-link [class*="-label"] .icon {
+      font-size: x-large; }
+
+.speaker-name {
+  font-weight: bold;
+  margin-top: 0.5em;
+  text-transform: capitalize; }
+  .speaker-name a {
+    text-decoration: none; }
+    .speaker-name a:hover {
+      color: inherit;
+      text-decoration: underline; }
+
+.speaker-position,
+.speaker-company {
+  font-size: smaller; }
+
+.speaker-position-company {
+  color: #33A7B0;
+  font-size: 0.8rem;
+  margin: 0 0 0.5em 0; }
 
 .speakers-page .speaker {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin: 1em; }
-  .speakers-page .speaker .speaker-company:before {
-    content: "/";
-    padding-right: 0.25em; }
-  .speakers-page .speaker .speaker-name a {
-    color: #393939; }
-  .speakers-page .speaker:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0; }
+.speakers-page .speaker-company:before {
+  content: "/";
+  padding-right: 0.25em; }
+.speakers-page .speaker-name a {
+  color: #393939; }
+.speakers-page:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0; }
 
 .speech {
   display: block;
@@ -403,6 +411,37 @@ section {
 
 .sub-content img {
   width: 50%; }
+
+.workshop {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  overflow: hidden;
+  padding-bottom: 1em; }
+  .workshop .speaker-profile {
+    color: #de4b39;
+    font-weight: bold;
+    text-decoration: underline; }
+  .workshop:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0; }
+
+.workshop-icon {
+  color: #33A7B0;
+  font-size: 2rem;
+  margin: 0.5em; }
+
+.workshop-learn-list {
+  margin-bottom: 2em;
+  padding-left: 40px;
+  text-align: left; }
+  .workshop-learn-list .workshop-learn-skill {
+    list-style-type: disc; }
+
+.workshop-title {
+  color: #33A7B0;
+  margin-bottom: 0; }
 
 .wud-logo {
   margin: 0.75em auto;

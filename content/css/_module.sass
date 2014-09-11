@@ -78,126 +78,126 @@
 	font-size: 1.4rem
 	margin: 1em 40px
 
-	.speaker-books
-		font-size: 0.8rem
+.speaker-books
+	font-size: 0.8rem
 
-	.speaker-pic
-		height: $speaker_img_size
-		position: relative
-		margin: 0 auto
-		width: $speaker_img_size
+.speaker-pic
+	height: $speaker_img_size
+	position: relative
+	margin: 0 auto
+	width: $speaker_img_size
 
-		& > a
-			+radial-gradient()
-			//background: transparent no-repeat center
-			//background-size: cover
-			display: block
-			height: 45px
-			position: absolute
-			text-decoration: none
-			width: 45px
+	& > a
+		+radial-gradient()
+		//background: transparent no-repeat center
+		//background-size: cover
+		display: block
+		height: 45px
+		position: absolute
+		text-decoration: none
+		width: 45px
+
+		i
+			font-size: 45px
+			transition: color 0.3s
+
+		&.linkedin
+			bottom: -5px
+			right: 0
 
 			i
-				font-size: 45px
-				transition: color 0.3s
+				color: #007BB5
 
-			&.linkedin
-				bottom: -5px
-				right: 0
+		&.twitter
+			right: -25px
+			top: 50%
 
-				i
-					color: #007BB5
+			i
+				color: #5FA9DD
 
-			&.twitter
-				right: -25px
-				top: 50%
-
-				i
-					color: #5FA9DD
-
-			&:hover i
-				color: #393939
-				text-decoration: none
-
-		figure
-			border: 10px solid white
-			border-radius: 50%
-			box-sizing: border-box
-			height: 100%
-			overflow: hidden
-			margin: 0
-			text-align: center
-			width: 100%
-
-			img
-				height: 100%
-
-	.speaker-name,
-	.speaker-position,
-	.speaker-company
-		margin: 0
-		text-align: center
-
-	.speaker-bio
-		font-size: 1rem
-
-	.speaker-link
-		margin: 1em auto
-
-		h4
-			font-size: 1rem
-			margin: 0
-
-		[class*="-label"]
-			color: $color_azul
-			font-size: 1rem
-			font-weight: 600
-			text-transform: uppercase
-			
-			.icon,
-			.label
-				margin: 0 0.2em
-				vertical-align: middle
-
-			.icon
-				font-size: x-large
-
-	.speaker-name
-		font-weight: bold
-		margin-top: 0.5em
-		text-transform: capitalize
-
-		a
+		&:hover i
+			color: #393939
 			text-decoration: none
 
-			&:hover
-				color: inherit
-				text-decoration: underline
+	figure
+		border: 10px solid white
+		border-radius: 50%
+		box-sizing: border-box
+		height: 100%
+		overflow: hidden
+		margin: 0
+		text-align: center
+		width: 100%
 
-	.speaker-position,
-	.speaker-company
-		font-size: smaller
+		img
+			height: 100%
 
-	.speaker-position-company
+.speaker-name,
+.speaker-position,
+.speaker-company
+	margin: 0
+	text-align: center
+
+.speaker-bio
+	font-size: 1rem
+
+.speaker-link
+	margin: 1em auto
+
+	h4
+		font-size: 1rem
+		margin: 0
+
+	[class*="-label"]
 		color: $color_azul
-		font-size: 0.8rem
-		margin: 0 0 0.5em 0
+		font-size: 1rem
+		font-weight: 600
+		text-transform: uppercase
+		
+		.icon,
+		.label
+			margin: 0 0.2em
+			vertical-align: middle
+
+		.icon
+			font-size: x-large
+
+.speaker-name
+	font-weight: bold
+	margin-top: 0.5em
+	text-transform: capitalize
+
+	a
+		text-decoration: none
+
+		&:hover
+			color: inherit
+			text-decoration: underline
+
+.speaker-position,
+.speaker-company
+	font-size: smaller
+
+.speaker-position-company
+	color: $color_azul
+	font-size: 0.8rem
+	margin: 0 0 0.5em 0
 
 .speakers-page
 	.speaker
 		border-bottom: 2px solid rgba(0, 0, 0, 0.2)
 		margin: 1em
 
-		.speaker-company:before
-			content: '/'
-			padding-right: 0.25em
+	.speaker-company:before
+		content: '/'
+		padding-right: 0.25em
 
-		.speaker-name a
-			color: $color_gris
+	.speaker-name a
+		color: $color_gris
 
-		&:last-of-type
-			border-bottom: none
-			margin-bottom: 0
+	&:last-of-type
+		border-bottom: none
+		margin-bottom: 0
 
 .speech
 	display: block
@@ -276,6 +276,40 @@
 .sub-content
 	img
 		width: 50%
+
+.workshop
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2)
+	display: block
+	font-size: 1rem
+	margin-bottom: 1em
+	overflow: hidden
+	padding-bottom: 1em
+
+	.speaker-profile
+		color: $color_naranja
+		font-weight: bold
+		text-decoration: underline
+
+	&:last-of-type
+		border-bottom: none
+		margin-bottom: 0
+
+.workshop-icon
+	color: $color_azul
+	font-size: 2rem
+	margin: 0.5em
+
+.workshop-learn-list
+	margin-bottom: 2em
+	padding-left: 40px
+	text-align: left
+
+	.workshop-learn-skill
+		list-style-type: disc
+
+.workshop-title
+	color: $color_azul
+	margin-bottom: 0
 
 .wud-logo
 	margin: 0.75em auto

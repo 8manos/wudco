@@ -1,0 +1,23 @@
+{% load staticfiles copy %}
+<li class="workshop">
+  <div class="speaker-pic">
+    <figure>
+    <a href="{{url|default:'#'}}" target="_blank"><img src="{% static picture %}" alt="{{name}}" /></a>
+    </figure>
+  </div>
+  <div class="workshop-info">
+    <a class="speaker-profile" href="{{url|default:'#'}}">Ver perfil</a>
+    <p class="workshop-icon"><i class="icon-planning"></i></p>
+    <h2 class="workshop-title">{{title}}</h2>
+    <p class="speaker-name">{{name}}</p>
+    <p class="workshop-overview">{{overview}}</p>
+    <h3 class="workshop-learn-title">Aprenderás</h3>
+    <ul class="workshop-learn-list">
+      <li class="workshop-learn-skill">Nam loboris est eu congue dapibus.</li>
+      <li class="workshop-learn-skill">Cras venenatis quam risus.</li>
+      <li class="workshop-learn-skill">Nulla malesuada nisi eu lectus volupat.</li>
+      <li class="workshop-learn-skill">Phasellus consequat lobortis felis.</li>
+    </ul>
+    <p class="workshop-signup"><a href="#" class="button">Inscríbete</a></p>
+  </div>
+</li>
