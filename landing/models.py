@@ -9,8 +9,13 @@ class Speaker(models.Model):
     picture = models.ImageField(upload_to='speaker/')
     title = models.CharField(max_length=140, verbose_name=u'Descripción')
     url = models.URLField(max_length=200, blank=True)
+    book_title = models.CharField(max_length=200, blank=True)
     twitter_url = models.URLField(max_length=200, blank=True)
     linkedin_url = models.URLField(max_length=200, blank=True)
+    bio = models.TextField(blank=True)
+
+    talk_name = models.CharField(max_length=200)
+    workshop_name = models.CharField(max_length=200)
 
     def __unicode__(self):
         return self.name

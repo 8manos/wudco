@@ -14,3 +14,9 @@ def home(request):
     data['talks'] = Talk.objects.all()
     data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
     return render(request, 'index.html', data)
+
+
+def speakers(request):
+    data = {}
+    data['speakers'] = Speaker.objects.all()
+    return render(request, 'front/ponentes.html', data)
