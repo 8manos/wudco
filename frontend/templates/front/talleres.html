@@ -7,9 +7,9 @@
 			<h2 class="sawtooth blue"><span>{% copy 'title-workshops' default='Talleres' %}</span></h2>
 			<ul class="workshops-page">
                 {% for speaker in speakers %}
-				{% include 'front/_workshop.html' with speaker=speaker picture="img/Jorge_Arango.jpg" name="Jorge Arango" title="Errores y aciertos en el proceso de construcción de un sitio web." overview="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+				{% include 'front/_workshop.html' with speaker=speaker %}
                 {% endfor %}
-				{% include 'front/_workshop.html' with picture="img/Dave_Cooksey.png" name="Dave Cooksey" title="Errores y aciertos en el proceso de construcción de un sitio web." overview="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %}
+				{#% include 'front/_workshop.html' with picture="img/Dave_Cooksey.png" name="Dave Cooksey" title="Errores y aciertos en el proceso de construcción de un sitio web." overview="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." %#}
 			</ul>
 		</div>
 	</section>
