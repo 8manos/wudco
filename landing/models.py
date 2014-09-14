@@ -17,6 +17,8 @@ class Speaker(models.Model):
     talk_name = models.CharField(max_length=200)
     workshop_name = models.CharField(max_length=200)
 
+    workshop_description = models.TextField(blank=True)
+
     def __unicode__(self):
         return self.name
 

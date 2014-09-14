@@ -20,3 +20,9 @@ def speakers(request):
     data = {}
     data['speakers'] = Speaker.objects.all()
     return render(request, 'front/ponentes.html', data)
+
+
+def workshops(request):
+    data = {}
+    data['speakers'] = Speaker.objects.all()
+    return render(request, 'front/talleres.html', data)

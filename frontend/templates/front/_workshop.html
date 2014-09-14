@@ -2,15 +2,15 @@
 <li class="workshop">
   <div class="speaker-pic">
     <figure>
-    <a href="{{url|default:'#'}}" target="_blank"><img src="{% static picture %}" alt="{{name}}" /></a>
+    <a href="{{url|default:'#'}}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{speaker.name}}" /></a>
     </figure>
   </div>
   <div class="workshop-info">
-    <a class="speaker-profile" href="{{url|default:'#'}}">Ver perfil</a>
+    <a class="speaker-profile" href="{{speaker.url|default:'#'}}">Ver perfil</a>
     <p class="workshop-icon"><i class="icon-planning"></i></p>
-    <h2 class="workshop-title">{{title}}</h2>
-    <p class="speaker-name">{{name}}</p>
-    <p class="workshop-overview">{{overview}}</p>
+    <h2 class="workshop-title">{{speaker.workshop_name}}</h2>
+    <p class="speaker-name">{{speaker.name}}</p>
+    <p class="workshop-overview">{{speaker.workshop_description}}</p>
     <h3 class="workshop-learn-title">Aprenderás</h3>
     <ul class="workshop-learn-list">
       <li class="workshop-learn-skill">Nam loboris est eu congue dapibus.</li>
