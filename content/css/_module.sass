@@ -267,6 +267,39 @@
 		img
 			width: 100%
 
+.sponsor-form
+	border-top: 1px solid rgba(0, 0, 0, 0.2)
+	padding: 2em 1em
+
+	a
+		color: $color_gris
+		font-weight: bold
+
+	input,
+	label,
+	textarea
+		vertical-align: middle
+
+	input:not([type="checkbox"]),
+	textarea
+		display: block
+		width: 100%
+
+	p
+		text-align: left
+
+		&:last-of-type
+			direction: rtl
+
+			*
+				direction: ltr
+
+			label
+				font-size: smaller
+
+				&:after
+					content: ''
+
 .sub
 	font-size: 0.8rem
 	letter-spacing: 0.2em

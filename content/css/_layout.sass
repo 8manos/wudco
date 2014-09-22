@@ -71,11 +71,11 @@ section
 		background: $fondo_azul
 		color: white
 
-	&.subscribe .container
-		padding: 2em
-
 	&.speakers-detail:after
 		+sawtooth(white)
+
+	&.subscribe .container
+		padding: 2em
 
 	&.wannabesponsor
 		padding: 5em 1em
@@ -88,6 +88,13 @@ section
 
 		&:after
 			+sawtooth($fondo_azul)
+
+	&.wannabesponsor-form
+		h2
+			color: $color_azul
+		p
+			font-size: 1rem
+			margin-top: 0
 
 .container
 	margin: 0 auto

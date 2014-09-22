@@ -36,6 +36,25 @@ input[type="submit"],
     background: #2c8284;
     color: inherit; }
 
+form {
+  /*.field-error
+   * input:not([type="checkbox"]),
+   * textarea
+   * 	border: 1px solid $color_naranja */ }
+  form input:not([type="checkbox"]),
+  form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    resize: none;
+    transition: all 0.3s; }
+    form input:not([type="checkbox"]):focus,
+    form textarea:focus {
+      outline: 1px solid #33A7B0; }
+  form .errorlist {
+    color: #de4b39; }
+  form .field-required label:after {
+    content: "*"; }
+
 h2 {
   display: inline-block;
   text-align: center; }
@@ -124,12 +143,12 @@ section {
   section.speakers, section.subscribe, section.wannabesponsor {
     background: #33A7B0;
     color: white; }
-  section.subscribe .container {
-    padding: 2em; }
   section.speakers-detail:after {
     background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
     background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
     background-repeat: repeat-x; }
+  section.subscribe .container {
+    padding: 2em; }
   section.wannabesponsor {
     padding: 5em 1em; }
     section.wannabesponsor p {
@@ -141,6 +160,11 @@ section {
       background: linear-gradient(-45deg, transparent 75%, #33A7B0 75%) 0 50%, linear-gradient(45deg, transparent 75%, #33A7B0 75%) 0 50%;
       background: -webkit-linear-gradient(135deg, transparent 75%, #33A7B0 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, #33A7B0 75%) 0 50%;
       background-repeat: repeat-x; }
+  section.wannabesponsor-form h2 {
+    color: #33A7B0; }
+  section.wannabesponsor-form p {
+    font-size: 1rem;
+    margin-top: 0; }
 
 .container {
   margin: 0 auto;
@@ -402,6 +426,31 @@ section {
     margin: 0; }
     .sponsor figure img {
       width: 100%; }
+
+.sponsor-form {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2em 1em; }
+  .sponsor-form a {
+    color: #393939;
+    font-weight: bold; }
+  .sponsor-form input,
+  .sponsor-form label,
+  .sponsor-form textarea {
+    vertical-align: middle; }
+  .sponsor-form input:not([type="checkbox"]),
+  .sponsor-form textarea {
+    display: block;
+    width: 100%; }
+  .sponsor-form p {
+    text-align: left; }
+    .sponsor-form p:last-of-type {
+      direction: rtl; }
+      .sponsor-form p:last-of-type * {
+        direction: ltr; }
+      .sponsor-form p:last-of-type label {
+        font-size: smaller; }
+        .sponsor-form p:last-of-type label:after {
+          content: ""; }
 
 .sub {
   font-size: 0.8rem;

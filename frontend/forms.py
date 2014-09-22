@@ -3,6 +3,8 @@ from django import forms
 from django.utils.safestring import mark_safe
 
 class SponsorForm(forms.Form):
+	#auto_id = '%s'
+	#label_suffix = ''
 	error_css_class = 'field-error'
 	required_css_class = 'field-required'
 	subject = forms.CharField(label = u'Asunto')

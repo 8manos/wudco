@@ -2,13 +2,15 @@
 {% load staticfiles copy %}
 
 {% block contenido %}
-	<section class="sponsor-form">
-		<h2>Quiero ser patrocinador</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem iste at debitis quos dolor a minus! Delectus iure officia tempore ipsam praesentium vitae rerum, odio alias neque aperiam soluta.</p>
-		<form action="" method="post">
-			{% csrf_token %}
-			{{form.as_p}}
-			<button type="submit">Enviar</button>
-		</form>
+	<section class="wannabesponsor-form">
+		<div class="container">
+			<h2>Quiero ser patrocinador</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem iste at debitis quos dolor a minus! Delectus iure officia tempore ipsam praesentium vitae rerum, odio alias neque aperiam soluta.</p>
+			<form class="sponsor-form" action="" method="post">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
 	</section>
 {% endblock %}

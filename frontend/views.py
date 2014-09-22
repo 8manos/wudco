@@ -6,11 +6,11 @@ def page(request, page):
   template = 'front/' + page + '.html'
   if page == 'formulario':
   	if request.method == 'POST':
-  		form = SponsorForm(request.POST)
+  		form = SponsorForm(request.POST, auto_id = '%s', label_suffix = '')
   		if form.is_valid():
   			pass
   	else:
-  		form = SponsorForm()
+  		form = SponsorForm(auto_id = '%s', label_suffix = '')
   	return render(request, template, {'form': form,})
   else:
   	return render(request, template)
