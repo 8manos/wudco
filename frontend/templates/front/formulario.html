@@ -6,11 +6,21 @@
 		<div class="container">
 			<h2>Quiero ser patrocinador</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem iste at debitis quos dolor a minus! Delectus iure officia tempore ipsam praesentium vitae rerum, odio alias neque aperiam soluta.</p>
-			<form class="sponsor-form" action="" method="post">
-				{% csrf_token %}
-				{{form.as_p}}
-				<button type="submit">Enviar</button>
-			</form>
+			<div class="form-content">
+				<form class="sponsor-form" action="" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<button type="submit">Enviar</button>
+				</form>
+				<div class="form-info">
+					<figure class="form-info-img">
+						<img src="{% static 'img/speaker.jpg' %}" alt="">
+					</figure>
+					<div class="form-info-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequuntur eos odit harum repudiandae provident cumque unde nostrum veritatis, accusantium ex temporibus minima quia sequi maxime fugiat sunt nam excepturi.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 {% endblock %}

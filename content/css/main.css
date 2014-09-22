@@ -52,6 +52,8 @@ form {
       outline: 1px solid #33A7B0; }
   form .errorlist {
     color: #de4b39; }
+    form .errorlist li {
+      display: block; }
   form .field-required label:after {
     content: "*"; }
 
@@ -164,7 +166,8 @@ section {
     color: #33A7B0; }
   section.wannabesponsor-form p {
     font-size: 1rem;
-    margin-top: 0; }
+    margin: 0 auto 1em auto;
+    width: 90%; }
 
 .container {
   margin: 0 auto;
@@ -248,6 +251,12 @@ section {
   .date p,
   .header p {
     margin: 0; }
+
+.form-content {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.form-info {
+  display: none; }
 
 .header {
   border-top: 1px solid rgba(128, 128, 128, 0.4);
@@ -428,7 +437,6 @@ section {
       width: 100%; }
 
 .sponsor-form {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding: 2em 1em; }
   .sponsor-form a {
     color: #393939;
@@ -442,7 +450,8 @@ section {
     display: block;
     width: 100%; }
   .sponsor-form p {
-    text-align: left; }
+    text-align: left;
+    width: 100% !important; }
     .sponsor-form p:last-of-type {
       direction: rtl; }
       .sponsor-form p:last-of-type * {
@@ -525,6 +534,37 @@ section {
       padding: 1em;
       vertical-align: middle;
       width: 50px; }
+
+  .form-info,
+  .sponsor-form {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%; }
+
+  .form-info {
+    padding: 2em 1em;
+    text-align: left; }
+
+  .form-info-img {
+    margin: 2em 0 0 0;
+    position: relative; }
+    .form-info-img img {
+      width: 100%; }
+    .form-info-img:after {
+      bottom: 0.25em;
+      color: white;
+      content: "WUDco 2014";
+      font-size: 6.5em;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      line-height: 0.75em;
+      right: 0;
+      text-align: center; }
+
+  .form-info-text p {
+    margin: 1em 0 0 0 !important; }
 
   .header,
   .wud-logo {

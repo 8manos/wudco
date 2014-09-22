@@ -7,7 +7,7 @@ class SponsorForm(forms.Form):
 	#label_suffix = ''
 	error_css_class = 'field-error'
 	required_css_class = 'field-required'
-	subject = forms.CharField(label = u'Asunto')
+	subject = forms.CharField(label = u'Asunto', initial = u'Quiero ser patrocinador')
 	last_name = forms.CharField(label = u'Apellidos')
 	email = forms.EmailField(label = u'Correo electrónico')
 	phone = forms.CharField(label = u'Teléfono')
