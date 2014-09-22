@@ -11,6 +11,6 @@ class SponsorForm(forms.Form):
 	last_name = forms.CharField(label = u'Apellidos')
 	email = forms.EmailField(label = u'Correo electrónico')
 	phone = forms.CharField(label = u'Teléfono')
-	company = forms.CharField(label = u'Tu empresa / dode trabajas')
+	company = forms.CharField(label = u'Tu empresa / donde trabajas')
 	comments = forms.CharField(widget = forms.Textarea, label = u'Comentarios', required = False)
 	terms = forms.BooleanField(label = mark_safe(u'Estoy de acuerdo con los <a href="#">términos de uso del sitio</a>'))
