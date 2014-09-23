@@ -266,6 +266,67 @@ section {
   padding: 1em 0;
   width: 90%; }
 
+.other-article {
+  font-size: 0.75rem; }
+  .other-article h3,
+  .other-article p {
+    margin-top: 0;
+    margin-bottom: 0.25em; }
+  .other-article .other-article-img,
+  .other-article .other-article-info {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top; }
+  .other-article .other-article-img {
+    margin: 0;
+    width: 25%; }
+    .other-article .other-article-img img {
+      width: 100%; }
+  .other-article .other-article-info {
+    padding-left: 1em;
+    text-align: left;
+    width: 70%; }
+  .other-article .other-article-link a {
+    color: #de4b39; }
+  .other-article .other-article-title a {
+    color: #393939;
+    text-decoration: none; }
+    .other-article .other-article-title a:hover {
+      text-decoration: underline; }
+
+.innerpage-article .innerpage-ft-img {
+  margin: 1em auto; }
+  .innerpage-article .innerpage-ft-img img {
+    width: 100%; }
+.innerpage-article .innerpage-date {
+  color: #33A7B0;
+  font-size: 1.2rem;
+  margin-top: 0; }
+.innerpage-article .innerpage-post {
+  font-size: 1rem; }
+  .innerpage-article .innerpage-post a {
+    color: #33A7B0;
+    transition: all 0.3s; }
+    .innerpage-article .innerpage-post a:hover {
+      color: #de4b39; }
+  .innerpage-article .innerpage-post h1,
+  .innerpage-article .innerpage-post h2,
+  .innerpage-article .innerpage-post h3,
+  .innerpage-article .innerpage-post h4,
+  .innerpage-article .innerpage-post h5,
+  .innerpage-article .innerpage-post h6 {
+    color: #de4b39;
+    margin-top: 0;
+    text-align: left; }
+  .innerpage-article .innerpage-post img {
+    margin: 0.25em;
+    width: 30%; }
+  .innerpage-article .innerpage-post p {
+    text-align: left; }
+  .innerpage-article .innerpage-post ul {
+    padding-left: 20px;
+    text-align: left; }
+
 .social-network {
   display: inline-block;
   margin: 1em;
