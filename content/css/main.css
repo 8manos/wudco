@@ -267,7 +267,9 @@ section {
   width: 90%; }
 
 .other-article {
-  font-size: 0.75rem; }
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  margin-bottom: 1em; }
   .other-article h3,
   .other-article p {
     margin-top: 0;
@@ -316,10 +318,13 @@ section {
   .innerpage-article .innerpage-post h5,
   .innerpage-article .innerpage-post h6 {
     color: #de4b39;
+    display: inline-block;
     margin-top: 0;
-    text-align: left; }
+    text-align: left;
+    vertical-align: middle; }
   .innerpage-article .innerpage-post img {
     margin: 0.25em;
+    vertical-align: middle;
     width: 30%; }
   .innerpage-article .innerpage-post p {
     text-align: left; }
@@ -639,6 +644,29 @@ section {
     border: none;
     text-align: left;
     width: auto; }
+
+  .innerpage-article {
+    padding: 0 2em;
+    text-align: left; }
+    .innerpage-article h2 {
+      font-size: xx-large;
+      margin-bottom: 0.25em;
+      text-align: left; }
+    .innerpage-article .innerpage-date {
+      margin-bottom: 3em; }
+    .innerpage-article .innerpage-post img {
+      width: 20%; }
+    .innerpage-article .innerpage-post img ~ h2,
+    .innerpage-article .innerpage-post img ~ h3,
+    .innerpage-article .innerpage-post img ~ h4,
+    .innerpage-article .innerpage-post img ~ h5,
+    .innerpage-article .innerpage-post img ~ h6 {
+      margin: 0;
+      width: 30%; }
+
+  .other-article {
+    display: inline-block;
+    width: 40%; }
 
   .speakers-page .speaker .speaker-info,
   .speakers-page .speaker .speaker-pic {

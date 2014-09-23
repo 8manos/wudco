@@ -72,7 +72,9 @@
 	width: 90%
 
 .other-article
+	box-sizing: border-box
 	font-size: 0.75rem
+	margin-bottom: 1em
 
 	h3,
 	p
@@ -136,11 +138,14 @@
 		h5,
 		h6
 			color: $color_naranja
+			display: inline-block
 			margin-top: 0
 			text-align: left
+			vertical-align: middle
 
 		img
 			margin: 0.25em
+			vertical-align: middle
 			width: 30%
 
 		p
@@ -509,6 +514,34 @@
 		border: none
 		text-align: left
 		width: auto
+
+	.innerpage-article
+		padding: 0 2em
+		text-align: left
+
+		h2
+			font-size: xx-large
+			margin-bottom: 0.25em
+			text-align: left
+
+		.innerpage-date
+			margin-bottom: 3em
+
+		.innerpage-post
+			img
+				width: 20%
+
+			img ~ h2,
+			img ~ h3,
+			img ~ h4,
+			img ~ h5,
+			img ~ h6
+				margin: 0
+				width: 30%
+
+	.other-article
+		display: inline-block
+		width: 40%
 
 	.speakers-page
 		.speaker

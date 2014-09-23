@@ -30,16 +30,10 @@
 		</div>
 	</section>
 	<section class="innerpage-other">
-		<h2 class="sawtooth blue"><span>Otros artículos</span></h2>
-		<div class="other-article">
-			<figure class="other-article-img">
-				<img src="{% static 'img/other-article.jpg' %}" alt="">
-			</figure>
-			<div class="other-article-info">
-				<h3 class="other-article-title"><a href="#">Errores y aciertos en el proceso de construcción de un sitio web.</a></h3>
-				<p class="other-article-writer">Jorge Arango</p>
-				<p class="other-article-link"><a href="#">Ver más</a></p>
-			</div>
+		<div class="container">
+			<h2 class="sawtooth blue"><span>Otros artículos</span></h2><br />
+			{% include 'front/_other-article.html' with image="img/other-article1.jpg" title="Errores y aciertos en el proceso de construcción de un sitio web" author="Jorge Arango" url="#" %}
+			{% include 'front/_other-article.html' with image="img/other-article2.jpg" title="Fundamentos de Lean UX" author="Jorge Arango" url="#" %}
 		</div>
 	</section>
 {% endblock %}
