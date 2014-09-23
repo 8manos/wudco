@@ -666,7 +666,7 @@ section {
 
   .other-article {
     display: inline-block;
-    width: 40%; }
+    width: 49%; }
 
   .speakers-page .speaker .speaker-info,
   .speakers-page .speaker .speaker-pic {
@@ -771,6 +771,18 @@ section {
     display: inline-block;
     margin: 1em 2em;
     width: auto; }
+
+  .innerpage-article {
+    padding: 0 16em; }
+    .innerpage-article .innerpage-post img ~ h2,
+    .innerpage-article .innerpage-post img ~ h3,
+    .innerpage-article .innerpage-post img ~ h4,
+    .innerpage-article .innerpage-post img ~ h5,
+    .innerpage-article .innerpage-post img ~ h6 {
+      margin-left: 1em; }
+
+  .other-article {
+    width: 30%; }
 
   .speakers-page .speaker .speaker-link {
     box-sizing: border-box;
