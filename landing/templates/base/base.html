@@ -38,67 +38,20 @@
     <div class="container">
         <h2 class="sawtooth white"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
         <ul>
-    {% for speaker in speakers %}
-    <li class="speaker">
-    <div class="speaker-pic">
-        <figure>
-            <a href="{{ speaker.url|default:'#' }}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{ speaker.name }}" /></a>
-        </figure>
-        <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"><i class="icon-twitter-profile"></i></a>
-        <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"><i class="icon-linkedin-profile"></i></a>
-    </div>
-    <p class="speaker-name"><a href="{{ speaker.url|default:'#' }}">{{ speaker.name }}</a></p>
-    <p class="speaker-position">{{ speaker.title }}</p>
-    <p class="speaker-company">{{ speaker.company }}</p>
-    </li>{% endfor %}{% comment %}
+        {% for speaker in speakers %}
             <li class="speaker">
-    <div class="speaker-pic">
-        <figure>
-            <a href="#"><img src="img/Jorge_Arango.jpg" alt="Jorge Arango" /></a>
-        </figure>
-        <a href="http://twitter.com/" class="twitter"></a>
-        <a href="http://linked.in/" class="linkedin"></a>
-    </div>
-    <p class="speaker-name"><a href="#">Jorge Arango</a></p>
-    <p class="speaker-position">Fundador y Consultor UX</p>
-    <p class="speaker-company">BootStudio</p>
-</li>
-            <li class="speaker">
-    <div class="speaker-pic">
-        <figure>
-            <a href="#"><img src="img/Kyle_Soucy.jpg" alt="Kyle Soucy" /></a>
-        </figure>
-        <a href="http://twitter.com/" class="twitter"></a>
-        <a href="http://linked.in/" class="linkedin"></a>
-    </div>
-    <p class="speaker-name"><a href="#">Kyle Soucy</a></p>
-    <p class="speaker-position">Directora y Consultora UX</p>
-    <p class="speaker-company">Usable Interface</p>
-</li>
-            <li class="speaker">
-    <div class="speaker-pic">
-        <figure>
-            <a href="#"><img src="img/Lorena_Escandon.jpg" alt="Lorena Escandón" /></a>
-        </figure>
-        <a href="http://twitter.com/" class="twitter"></a>
-        <a href="http://linked.in/" class="linkedin"></a>
-    </div>
-    <p class="speaker-name"><a href="#">Lorena Escandón</a></p>
-    <p class="speaker-position">Especialista Design Thinking</p>
-    <p class="speaker-company"></p>
-</li>
-            <li class="speaker">
-    <div class="speaker-pic">
-        <figure>
-            <a href="#"><img src="img/Valerio_Pinna.png" alt="Valerio Pinna" /></a>
-        </figure>
-        <a href="http://twitter.com/" class="twitter"></a>
-        <a href="http://linked.in/" class="linkedin"></a>
-    </div>
-    <p class="speaker-name"><a href="#">Valerio Pinna</a></p>
-    <p class="speaker-position">Diseñador de Interacción</p>
-    <p class="speaker-company">Mixel Scarl</p>
-</li>{% endcomment %}
+                <div class="speaker-pic">
+                    <figure>
+                        <a href="{% url 'speakers' %}#{{speaker.name|slugify}}"><img src="{{speaker.picture.url}}" alt="{{speaker.name}}" /></a>
+                    </figure>
+                    <a href="{{ speaker.twitter_url|default:'#' }}" class="twitter" target="_blank"><i class="icon-twitter-profile"></i></a>
+                    <a href="{{ speaker.linkedin_url|default:'#' }}" class="linkedin" target="_blank"><i class="icon-linkedin-profile"></i></a>
+                </div>
+                <p class="speaker-name"><a href="{% url 'speakers' %}#{{speaker.name|slugify}}">{{speaker.name}}</a></p>
+                <p class="speaker-position">{{speaker.title}}</p>
+                <p class="speaker-company">{{speaker.company}}</p>
+            </li>
+        {% endfor %}
         </ul>
     </div>
 </section>

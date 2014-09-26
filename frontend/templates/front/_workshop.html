@@ -1,12 +1,12 @@
 {% load staticfiles copy %}
-<li class="workshop">
+<li id="{{speaker.name|slugify}}" class="workshop">
   <div class="speaker-pic">
     <figure>
-    <a href="{{url|default:'#'}}" target="_blank"><img src="{{ speaker.picture.url }}" alt="{{speaker.name}}" /></a>
+    <a href="{% url 'speakers' %}#{{speaker.name|slugify}}"><img src="{{ speaker.picture.url }}" alt="{{speaker.name}}" /></a>
     </figure>
   </div>
   <div class="workshop-info">
-    <a class="speaker-profile" href="{{speaker.url|default:'#'}}">Ver perfil</a>
+    <a class="speaker-profile" href="{% url 'speakers' %}#{{speaker.name|slugify}}">Ver perfil</a>
     <p class="workshop-icon"><i class="icon-planning"></i></p>
     <h2 class="workshop-title">{{speaker.workshop_name}}</h2>
     <p class="speaker-name">{{speaker.name}}</p>
@@ -14,9 +14,9 @@
     <h3 class="workshop-learn-title">Aprenderás</h3>
     <ul class="workshop-learn-list">
       {% for point in speaker.get_workshoplearn_points %}
-      <li class="workshop-learn-skill">{{ point }}</li>
+        <li class="workshop-learn-skill">{{ point }}</li>
       {% endfor %}
     </ul>
-    <p class="workshop-signup"><a href="#" class="button">Inscríbete</a></p>
+    <!--<p class="workshop-signup"><a href="#" class="button">Inscríbete</a></p>-->
   </div>
 </li>
