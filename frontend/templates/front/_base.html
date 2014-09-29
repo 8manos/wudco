@@ -15,19 +15,20 @@
   <header>
 
     {% block header %}
-    <div class="container">
-      <figure class="wud-logo">
-        <a href="/"><img src="{% static 'img/logo_WudCo.svg' %}" alt="World Usability Day" /></a>
-      </figure>
-      <div class="header">
-        <p><strong>{% copy 'title' default='Día mundial de la usabilidad 2014' %}</strong></p>
-        <p><span class="color">{% copy 'city' default='Bogotá Colombia' %}</span></p>
-        <p>{% copy 'location-name' default='Universidad Nacional'%}</p>
+      <div class="container">
+        <figure class="wud-logo">
+          <a href="/"><img src="{% static 'img/logo_WudCo.svg' %}" alt="World Usability Day" /></a>
+        </figure>
+        <div class="header">
+          <p><strong>{% copy 'title' default='Día mundial de la usabilidad 2014' %}</strong></p>
+          <p><span class="color">{% copy 'city' default='Bogotá Colombia' %}</span></p>
+          <p>{% copy 'location-name' default='Universidad Nacional'%}</p>
+        </div>
+        <div class="date">
+          <p><span class="day">7</span> de <strong>noviembre</strong> de 2014</p>
+        </div>
       </div>
-      <div class="date">
-        <p><span class="day">7</span> de <strong>noviembre</strong> de 2014</p>
-      </div>
-    </div>
+      {% include 'front/_menu.html' %}
     {% endblock %}
 
   </header>
@@ -35,5 +36,8 @@
   {% block contenido %}{% endblock %}
 
   {% include 'front/_footer.html' %}
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

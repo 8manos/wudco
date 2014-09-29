@@ -71,6 +71,31 @@
 	padding: 1em 0
 	width: 90%
 
+.menu
+	background: $fondo_gris
+	height: 100%
+	overflow-y: auto
+	position: fixed
+	right: 100%
+	top: 0
+	transition: all 0.3s
+	width: $menu_width
+	z-index: 999999999999
+
+	ul
+		margin-top: 1em
+
+		li a
+			display: block
+			font-weight: bold
+			padding: 1em
+			text-decoration: none
+			text-transform: capitalize
+			transition: all 0.3s
+
+			&:hover
+				background: rgba(0, 0, 0, 0.2)
+
 .other-article
 	box-sizing: border-box
 	font-size: 0.75rem
