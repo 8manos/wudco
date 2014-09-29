@@ -22,7 +22,7 @@ class Speaker(models.Model):
     bio = models.TextField(blank=True, verbose_name=u'Biografía')
 
     talk_name = models.CharField(max_length=200, verbose_name=u'Nombre de la charla')
-    workshop_name = models.CharField(max_length=200, verbose_name=u'Nombre del taller')
+    workshop_name = models.CharField(max_length=200, verbose_name=u'Nombre del taller', blank=True)
 
     workshop_description = models.TextField(blank=True, verbose_name=u'Descripción del taller')
     workshop_learn = models.TextField(blank=True, verbose_name=u'Aprenderás',
