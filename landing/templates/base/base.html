@@ -125,7 +125,7 @@
     <div class="container">
         <h2>{% copy 'want-sponsor' default='¿Quieres ser patrocinador?' %}</h2>
         <p>{% copy 'want-sponsor-description' default='Lorem...'%}</p>
-        <a href="mailto:info@diadelausabilidad.com.co?Subject=Quiero%20ser%20patrocinador" target="_blank" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
+        <a href="{% url 'sponsor_form' %}" class="button">{% copy 'sponsor-action' default='Patrocina' %}</a>
     </div>
 </section>
 <section class="sponsors">
@@ -170,29 +170,6 @@
         </ul>
     </div>
 </section>
-<footer>
-    <div class="container">
-        <div class="organizer">
-            <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
-            <div class="sub-content">
-                <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
-            </div>
-        </div>
-        <div class="actions">
-            <ul>
-                <li>{% if not request.GET.edit_copys%}<a href="{% copy 'link-volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
-                <li>{% if not request.GET.edit_copys%}<a href="{% copy 'link-sponsor' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
-            </ul>
-        </div>
-        <div class="follow-us">
-            <div class="sub">Síguenos</div>
-            <div class="sub-content">
-                {% if not request.GET.edit_copys%}<a href="{% copy 'twitter-url' %}" target="_blank" class="social-network" ><i class="icon-twitter"></i></a>{% else %}{% copy 'twitter-url' %} {% endif %}
-                {% if not request.GET.edit_copys%}<a href="{% copy 'facebook-url' %}" target="_blank" class="social-network" ><i class="icon-facebook"></i></a>{% else %}{% copy 'facebook-url' %} {% endif %}
-                {% if not request.GET.edit_copys%}<a href="{% copy 'youtube-url' %}" target="_blank" class="social-network"><i class="icon-youtube"></i></a>{% else %}{% copy 'youtube-url' %} {% endif %}
-            </div>
-        </div>
-    </div>
-</footer>
+{% include "front/_footer.html"%}
 </body>
 </html>
