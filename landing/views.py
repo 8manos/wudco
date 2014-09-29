@@ -24,7 +24,7 @@ def speakers(request):
 
 def workshops(request):
     data = {}
-    data['speakers'] = Speaker.objects.all()
+    data['speakers'] = Speaker.objects.filter(workshop_name__gt='')
     return render(request, 'front/talleres.html', data)
 
 

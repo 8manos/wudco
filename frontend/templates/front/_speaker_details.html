@@ -20,11 +20,13 @@
         <h4>{{ speaker.talk_name }}</h4>
     </div>
     <div class="speaker-link">
+      {% if speaker.workshop_name %} 
       <div class="workshop-label">
         <span class="icon"><i class="icon-workshop"></i></span>
         <span class="label">Taller</span>
       </div>
       <h4><a href="{% url 'workshops' %}#{{speaker.name|slugify}}">{{speaker.workshop_name}}</a></h4>
+      {% endif %}
     </div>
   </div>
 </li>
