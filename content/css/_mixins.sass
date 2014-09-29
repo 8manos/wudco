@@ -13,3 +13,47 @@
 	//background: -moz-linear-gradient(135deg, transparent 75%, $color 75%) 0 50%, -moz-linear-gradient( 45deg, transparent 75%, $color 75%) 0 50%
 	background: -webkit-linear-gradient(135deg, transparent 75%, $color 75%) 0 50%, -webkit-linear-gradient( 45deg, transparent 75%, $color 75%) 0 50%
 	background-repeat: repeat-x
+
+=triangle-down($color, $size)
+	&:before
+		border-color: $color transparent transparent transparent
+		border-style: solid
+		border-width: $size $size 0 $size
+		content: ''
+		top: 100%
+		left: calc(50% - #{$size})
+		position: absolute
+		transition: all 0.3s
+
+=triangle-left($color, $size)
+	&:before
+		border-color: transparent $color transparent transparent
+		border-style: solid
+		border-width: $size $size $size 0
+		content: ''
+		right: 100%
+		top: calc(50% - #{$size})
+		position: absolute
+		transition: all 0.3s
+
+=triangle-right($color, $size)
+	&:before
+		border-color: transparent transparent transparent $color
+		border-style: solid
+		border-width: $size 0 $size $size
+		content: ''
+		left: 100%
+		top: calc(50% - #{$size})
+		position: absolute
+		transition: all 0.3s
+
+=triangle-up($color, $size)
+	&:before
+		border-color: transparent transparent $color transparent
+		border-style: solid
+		border-width: 0 $size $size $size
+		bottom: 100%
+		content: ''
+		left: calc(50% - #{$size})
+		position: absolute
+		transition: all 0.3s

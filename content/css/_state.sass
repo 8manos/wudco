@@ -1,2 +1,18 @@
-.menu.is-visible
-	right: 100% - $menu_width
+nav
+	&.is-fixed
+		left: 0
+		margin-top: 0
+		position: fixed
+		right: 0
+		top: 0
+		z-index: 99999
+
+.menu
+	&.is-visible
+		overflow: visible
+		right: 100% - $menu_width
+
+	li.is-active
+		background: $color_naranja
+		position: relative
+		+triangle-right($color_naranja, 10px)
