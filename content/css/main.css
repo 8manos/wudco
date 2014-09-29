@@ -201,7 +201,16 @@ section {
   margin: 0 auto;
   max-width: 1280px; }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 768px) {
+  nav {
+    overflow: visible;
+    padding: 0; }
+    nav h2,
+    nav .icon-menu {
+      display: none; }
+    nav .button {
+      float: initial; }
+
   section h2 {
     font-size: 1.4rem; }
   section.headline {
@@ -215,7 +224,7 @@ section {
       font-size: 1.2rem; }
   section.wannabesponsor p {
     font-size: 1rem; } }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 960px) {
   section h2 {
     font-size: 1.6rem; }
   section.headline {
@@ -628,7 +637,7 @@ section {
   .wud-logo img {
     width: 100%; }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 768px) {
   .actions,
   .follow-us,
   .organizer {
@@ -716,6 +725,20 @@ section {
       margin: 0;
       width: 30%; }
 
+  .menu {
+    display: inline-block;
+    overflow: visible;
+    position: initial;
+    vertical-align: middle;
+    width: auto; }
+    .menu ul {
+      margin: 0; }
+      .menu ul li {
+        display: inline-block;
+        vertical-align: middle; }
+        .menu ul li a {
+          padding: 1em 0.5em; }
+
   .other-article {
     display: inline-block;
     width: 49%; }
@@ -800,7 +823,7 @@ section {
   .wud-logo {
     margin: 1em 4em 1em 0;
     width: 45%; } }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 960px) {
   .actions ul {
     padding: 0; }
     .actions ul li {
@@ -876,5 +899,19 @@ nav.is-fixed {
     top: calc(50% - 10px);
     position: absolute;
     transition: all 0.3s; }
+
+@media screen and (min-width: 768px) {
+  .menu li.is-active {
+    background: #de4b39;
+    position: relative; }
+    .menu li.is-active:before {
+      border-color: #de4b39 transparent transparent transparent;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      content: "";
+      top: 100%;
+      left: calc(50% - 10px);
+      position: absolute;
+      transition: all 0.3s; } }
 
 /*# sourceMappingURL=main.css.map */

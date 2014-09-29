@@ -16,3 +16,10 @@ nav
 		background: $color_naranja
 		position: relative
 		+triangle-right($color_naranja, 10px)
+
+@media screen and (min-width: $tablet-th)
+	.menu
+		li.is-active
+			background: $color_naranja
+			position: relative
+			+triangle-down($color_naranja, 10px)
