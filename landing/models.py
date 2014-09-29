@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 from django.db import models
 
+from django.utils.safestring import mark_safe
+
 
 class Speaker(models.Model):
     order = models.IntegerField(default=0)
@@ -49,3 +51,14 @@ class Talk(models.Model):
     name = models.CharField(max_length=140)
     speaker_name = models.CharField(max_length=140)
     url = models.URLField(max_length=140, blank=True)
+
+
+class PotentialSponsor(models.Model):
+    when = models.DateTimeField(auto_now_add=True)
+    subject = models.CharField(max_length=240,verbose_name=u'Asunto', default=u'Quiero ser patrocinador')
+    last_name = models.CharField(max_length=240,verbose_name=u'Apellidos')
+    email = models.EmailField(verbose_name=u'Correo electrónico')
+    phone = models.CharField(max_length=240,verbose_name=u'Teléfono')
+    company = models.CharField(max_length=240,verbose_name=u'Tu empresa / donde trabajas')
+    comments = models.TextField(verbose_name=u'Comentarios', blank=True)
+    # terms = models.BooleanField(verbose_name=mark_safe(u'Estoy de acuerdo con los <a href="#">términos de uso del sitio</a>'))

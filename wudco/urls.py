@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     url(r'^$', 'landing.views.home', name='home'),
     url(r'^ponentes/$', 'landing.views.speakers', name='speakers'),
     url(r'^talleres/$', 'landing.views.workshops', name='workshops'),
+    url(r'^patrocinar/$', 'landing.views.sponsor_form', name='sponsor_form'),
     url(r'^frontend/', include('frontend.urls', namespace='front')),
     url(r'^admin/', include(admin.site.urls)),
 )
