@@ -1,8 +1,6 @@
 from datetime import date
-
-from django.shortcuts import render
-
-from .models import Speaker, Sponsor, Talk
+from django.shortcuts import render, get_object_or_404
+from .models import Speaker, Sponsor, Talk, Post
 from .forms import SponsorForm
 
 
@@ -30,10 +28,27 @@ def workshops(request):
     return render(request, 'front/talleres.html', data)
 
 
-def sponsor_form(request):
+def post(request, post_slug=None):
     data = {}
-    data['speakers'] = Speaker.objects.all()
-    form = SponsorForm(request.POST or None, auto_id='%s', label_suffix='')
+    if post_slug:
+        post = get_object_or_404(Post, slug=post_slug)
+    else:
+        try:
+            post = Post.objects.filter(published=True)[0]
+        except:
+            post = None
+    if post:
+        data['post'] = post
+        data['more_posts'] = Post.objects.filter(published=True).exclude(id=post.id)[:3]
+    return render(request, 'front/interna.html', data)
+
+
+def sponsor_form(request, register_type=None):
+    data = {}
+    initial_d = {'subject': u'Quiero ser patrocinador'}
+    if register_type and register_type == 'volunteer':
+        initial_d = {'subject': u'Quiero ser voluntario'}
+    form = SponsorForm(request.POST or None, auto_id='%s', label_suffix='', initial=initial_d)
     if form.is_valid():
         form.save()
         form = None

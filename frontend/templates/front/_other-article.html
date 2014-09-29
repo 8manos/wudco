@@ -1,11 +1,11 @@
 {% load staticfiles copy %}
 <div class="other-article">
 	<figure class="other-article-img">
-		<img src="{% static image %}" alt="">
+		<img src="{{post.image_post_mini}}" alt="">
 	</figure>
 	<div class="other-article-info">
-		<h3 class="other-article-title"><a href="#">{{title}}</a></h3>
-		<p class="other-article-writer">{{author}}</p>
-		<p class="other-article-link"><a href="{{url}}">Ver más</a></p>
+		<h3 class="other-article-title"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+		<p class="other-article-writer">{{post.author}}</p>
+		<p class="other-article-link"><a href="{{post.get_absolute_url}}">Ver más</a></p>
 	</div>
 </div>

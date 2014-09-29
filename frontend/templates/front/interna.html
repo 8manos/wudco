@@ -1,16 +1,19 @@
 {% extends 'front/_base.html' %}
-{% load staticfiles copy %}
+{% load staticfiles copy humanize %}
 
 {% block contenido %}
 	<section class="innerpage">
 		<div class="container">
 			<article class="innerpage-article">
-				<h2>Nulla malesuada nisi eu lectus volutpat, eu sodales sapien semper</h2>
-				<p class="innerpage-date">22 de Septiembre de 2014</p>
+				{% if post %}
+				<h2>{{post.title}}</h2>
+				<p class="innerpage-date">{{ post.date_published|naturaltime|capfirst }}</p>
 				<figure class="innerpage-ft-img">
-					<img src="{% static 'img/wii.jpg' %}" alt="">
+					<img src="{{post.image_post}}" alt="">
 				</figure>
 				<div class="innerpage-post">
+					{{post.text|safe}}
+					{% comment %}
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nam dolor eum provident, facere assumenda quaerat? Ab dolorum nihil, <a href="#">incidunt quaerat</a> rem enim iure ea nobis beatae obcaecati! Enim, delectus.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quod dicta, suscipit ipsum, nulla alias reiciendis a eos animi eius id impedit rem quo modi aspernatur perferendis voluptate sunt corporis.</p>
 					<img src="{% static 'img/innerpage-img1.jpg' %}" alt="">
@@ -24,17 +27,20 @@
 						<li>Nulla tincidunt purus eget dui viverra.</li>
 						<li>Etiam dictum.</li>
 					</ul>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus natus optio sapiente, labore vel facilis voluptatibus, aliquid, nostrum commodi alias expedita suscipit, at soluta dolorum eos nulla error sint odio?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus natus optio sapiente, labore vel facilis voluptatibus, aliquid, nostrum commodi alias expedita suscipit, at soluta dolorum eos nulla error sint odio?</p>{% endcomment %}
 				</div>
+				{% else%}
+				<h2>No hay artículos aún!</h2>
+				{% endif %}
 			</article>
 		</div>
 	</section>
+	{% if more_posts %}
 	<section class="innerpage-other">
 		<div class="container">
 			<h2 class="sawtooth blue"><span>Otros artículos</span></h2><br />
-			{% include 'front/_other-article.html' with image="img/other-article1.jpg" title="Errores y aciertos en el proceso de construcción de un sitio web" author="Jorge Arango" url="#" %}
-			{% include 'front/_other-article.html' with image="img/other-article2.jpg" title="Fundamentos de Lean UX" author="Jorge Arango" url="#" %}
-			{% include 'front/_other-article.html' with image="img/other-article1.jpg" title="Usabilidad en videojuegos" author="Valerio Pinna" url="#" %}
+			{% for inner_post in more_posts %}
+			{% include 'front/_other-article.html' with post=inner_post %}{% endfor %}
 		</div>
-	</section>
+	</section>{% endif %}
 {% endblock %}
