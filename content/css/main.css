@@ -225,6 +225,9 @@ section {
   section.wannabesponsor p {
     font-size: 1rem; } }
 @media screen and (min-width: 960px) {
+  nav {
+    text-align: center; }
+
   section h2 {
     font-size: 1.6rem; }
   section.headline {
@@ -855,6 +858,9 @@ section {
     .innerpage-article .innerpage-post img ~ h5,
     .innerpage-article .innerpage-post img ~ h6 {
       margin-left: 1em; }
+
+  .menu ul li a {
+    padding: 1em 1.5em; }
 
   .other-article {
     width: 30%; }
