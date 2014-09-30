@@ -42,6 +42,7 @@ nav
 
 section
 	background: white
+	font-size: 1rem
 	padding: 2em 1em
 	text-align: center
 
@@ -52,6 +53,10 @@ section
 	ul
 		margin: 0 auto
 		max-width: 1000px
+
+	&.blog-entries
+		ul
+			margin: 2em auto
 
 	&.countdown
 		background: $fondo_gris
@@ -145,6 +150,17 @@ section
 			font-size: 1rem
 			margin: 0 auto 1em auto
 			width: 90%
+
+	&.workshops
+		ul
+			margin: 2em auto
+
+		.price
+			span
+				font-weight: 600
+
+			&:first-of-type
+				margin-top: 1em
 
 .container
 	margin: 0 auto

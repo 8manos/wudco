@@ -23,6 +23,32 @@
 			&:hover:before
 				color: $color_azul
 
+.blog-item
+	color: $color_azul
+	display: none
+	margin-bottom: 1em
+	text-align: left
+
+	h4
+		margin-top: 0.25em
+
+	.blog-item-author
+		color: $color_gris
+		font-weight: 600
+
+	.blog-item-date
+		font-weight: normal
+		margin-bottom: 1em
+
+	.blog-item-link
+		font-weight: bold
+
+	.blog-item-title
+		font-weight: bold
+
+	&:first-of-type
+		display: block
+
 .contact,
 .counter
 	font-size: 1rem
@@ -448,8 +474,33 @@
 
 .workshop-icon
 	color: $color_azul
-	font-size: 2rem
+	font-size: 2.5rem
 	margin: 0.5em
+
+.workshop-item
+	display: block
+	color: $color_azul
+	margin-bottom: 1em
+
+	.workshop-item-icon,
+	.workshop-item-info
+		display: inline-block
+		vertical-align: top
+
+	.workshop-item-icon
+		font-size: 2rem
+		width: 10%
+
+	.workshop-item-info
+		text-align: left
+		width: 89%
+
+		.workshop-item-link,
+		.workshop-item-title
+			font-weight: bold
+
+		.workshop-item-title
+			margin-bottom: 1em
 
 .workshop-learn-list
 	margin-bottom: 2em

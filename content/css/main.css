@@ -61,6 +61,10 @@ form {
   form .field-required label:after {
     content: "*"; }
 
+hr {
+  margin: 0 auto;
+  width: 95%; }
+
 h2 {
   display: inline-block;
   text-align: center; }
@@ -130,6 +134,7 @@ nav {
 
 section {
   background: white;
+  font-size: 1rem;
   padding: 2em 1em;
   text-align: center; }
   section h2 {
@@ -138,6 +143,8 @@ section {
   section ul {
     margin: 0 auto;
     max-width: 1000px; }
+  section.blog-entries ul {
+    margin: 2em auto; }
   section.countdown {
     background: #393939;
     color: white; }
@@ -211,6 +218,12 @@ section {
     font-size: 1rem;
     margin: 0 auto 1em auto;
     width: 90%; }
+  section.workshops ul {
+    margin: 2em auto; }
+  section.workshops .price span {
+    font-weight: 600; }
+  section.workshops .price:first-of-type {
+    margin-top: 1em; }
 
 .container {
   margin: 0 auto;
@@ -277,6 +290,26 @@ section {
         vertical-align: middle; }
       .actions ul li:hover a, .actions ul li:hover:before {
         color: #33A7B0; }
+
+.blog-item {
+  color: #33A7B0;
+  display: none;
+  margin-bottom: 1em;
+  text-align: left; }
+  .blog-item h4 {
+    margin-top: 0.25em; }
+  .blog-item .blog-item-author {
+    color: #393939;
+    font-weight: 600; }
+  .blog-item .blog-item-date {
+    font-weight: normal;
+    margin-bottom: 1em; }
+  .blog-item .blog-item-link {
+    font-weight: bold; }
+  .blog-item .blog-item-title {
+    font-weight: bold; }
+  .blog-item:first-of-type {
+    display: block; }
 
 .contact,
 .counter {
@@ -636,8 +669,28 @@ section {
 
 .workshop-icon {
   color: #33A7B0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0.5em; }
+
+.workshop-item {
+  display: block;
+  color: #33A7B0;
+  margin-bottom: 1em; }
+  .workshop-item .workshop-item-icon,
+  .workshop-item .workshop-item-info {
+    display: inline-block;
+    vertical-align: top; }
+  .workshop-item .workshop-item-icon {
+    font-size: 2rem;
+    width: 10%; }
+  .workshop-item .workshop-item-info {
+    text-align: left;
+    width: 89%; }
+    .workshop-item .workshop-item-info .workshop-item-link,
+    .workshop-item .workshop-item-info .workshop-item-title {
+      font-weight: bold; }
+    .workshop-item .workshop-item-info .workshop-item-title {
+      margin-bottom: 1em; }
 
 .workshop-learn-list {
   margin-bottom: 2em;
