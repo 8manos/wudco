@@ -13,7 +13,7 @@ class SponsorForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(SponsorForm, self).__init__(*args, **kwargs)
         self.fields['subject'].widget.attrs['readonly'] = True
-        self.fields['subject'].widget.attrs['disabled'] = 'disabled'
+        # self.fields['subject'].widget.attrs['disabled'] = 'disabled'
 
     class Meta:
         model = PotentialSponsor
