@@ -19,13 +19,13 @@ def home(request):
 def speakers(request):
     data = {}
     data['speakers'] = Speaker.objects.all()
-    return render(request, 'wudco/ponentes.html', data)
+    return render(request, 'front/ponentes.html', data)
 
 
 def workshops(request):
     data = {}
     data['speakers'] = Speaker.objects.filter(workshop_name__gt='')
-    return render(request, 'wudco/talleres.html', data)
+    return render(request, 'front/talleres.html', data)
 
 
 def post(request, post_slug=None):
@@ -40,7 +40,7 @@ def post(request, post_slug=None):
     if post:
         data['post'] = post
         data['more_posts'] = Post.objects.filter(published=True).exclude(id=post.id)[:3]
-    return render(request, 'wudco/interna.html', data)
+    return render(request, 'front/interna.html', data)
 
 
 def sponsor_form(request, register_type=None):
@@ -53,4 +53,4 @@ def sponsor_form(request, register_type=None):
         form.save()
         form = None
     data['form'] = form
-    return render(request, 'wudco/formulario.html', data)
+    return render(request, 'front/formulario.html', data)
