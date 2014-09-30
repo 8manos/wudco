@@ -7,7 +7,7 @@
   </div>
   <div class="workshop-info">
     <a class="speaker-profile" href="{% url 'speakers' %}#{{speaker.name|slugify}}">Ver perfil</a>
-    <p class="workshop-icon"><i class="icon-planning"></i></p>
+    <p class="workshop-icon">{% if speaker.workshop_image %}<i>  <img height="32px" width="32px" src="{{ speaker.workshop_image.url }}">{% else %} <i class="icon-planning"> {% endif %}</i></p>
     <h2 class="workshop-title">{{speaker.workshop_name}}</h2>
     <p class="speaker-name">{{speaker.name}}</p>
     <p class="workshop-overview">{{speaker.workshop_description}}</p>

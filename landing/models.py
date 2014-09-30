@@ -28,6 +28,8 @@ class Speaker(models.Model):
     workshop_learn = models.TextField(blank=True, verbose_name=u'Aprenderás',
                                       help_text='Separados con salto de línea.')
 
+    workshop_image = models.ImageField(upload_to='taller/', blank=True, null=True)
+
     def get_workshoplearn_points(self):
         return [point for point in self.workshop_learn.split('\n') if point.strip()]
 
