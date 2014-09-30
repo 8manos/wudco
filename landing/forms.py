@@ -10,5 +10,10 @@ class SponsorForm(forms.ModelForm):
     required_css_class = 'field-required'
     terms = forms.BooleanField(required=True, label = mark_safe(u'Estoy de acuerdo con los <a href="#">términos de uso del sitio</a>'))
 
+    def __init__(self, *args, **kwargs):
+        super(SponsorForm, self).__init__(*args, **kwargs)
+        self.fields['subject'].widget.attrs['readonly'] = True
+        self.fields['subject'].widget.attrs['disabled'] = 'disabled'
+
     class Meta:
         model = PotentialSponsor
