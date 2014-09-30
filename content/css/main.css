@@ -7,6 +7,10 @@ a {
   transition: color 0.3s; }
   a:hover {
     color: #33A7B0; }
+  a.orange {
+    color: #de4b39; }
+    a.orange:hover {
+      color: #33A7B0; }
 
 body {
   background: white;
@@ -153,18 +157,29 @@ section {
     background-position: center calc(100% + 20px);
     background-size: contain;
     padding-bottom: 25%; }
+    section.headline a {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1em; }
     section.headline h1,
     section.headline p {
       margin: 0 auto;
       text-align: center; }
     section.headline h1 {
       font-size: 1.8rem;
+      font-weight: 600;
       margin-bottom: 0.5em; }
       section.headline h1 span {
         display: block; }
     section.headline p {
+      font-size: 1rem; }
+    section.headline .price {
+      width: 75%; }
+      section.headline .price span {
+        font-weight: 600; }
+    section.headline .subtitle {
       display: none;
-      font-size: 1rem;
       width: 60%; }
     section.headline:after {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
@@ -220,8 +235,9 @@ section {
       section.headline h1 span {
         display: initial; }
     section.headline p {
-      display: block;
       font-size: 1.2rem; }
+    section.headline .subtitle {
+      display: block; }
   section.wannabesponsor p {
     font-size: 1rem; } }
 @media screen and (min-width: 960px) {

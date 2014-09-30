@@ -1,0 +1,30 @@
+{% extends 'wudco/_base.html' %}
+{% load staticfiles copy %}
+
+{% block contenido %}
+	<section class="wannabesponsor-form">
+		<div class="container">
+			<h2>{% copy 'wants-sponsor-title' default='Quiero ser patrocinador'%}</h2>
+			<p>{% copy 'wants-sponsor-description' default='Quiero ser patrocinador'%}</p>
+			<div class="form-content">
+				{% if form %}
+				<form class="sponsor-form" action="" method="post">
+					{% csrf_token %}
+					{{form.as_p}}
+					<button type="submit">Enviar</button>
+				</form>{% else %}
+				<p>{% copy 'sponsor-form-success' default='Gracias por tu interés en patrocinar el día de la usabilidad.'%}</p>
+				{% endif %}
+
+				<div class="form-info">
+					<figure class="form-info-img">
+						<img src="{% static 'img/speaker.jpg' %}" alt="">
+					</figure>
+					<div class="form-info-text">
+						<p>{% copy 'sponsor-more-info '%}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

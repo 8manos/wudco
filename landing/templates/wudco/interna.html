@@ -1,0 +1,46 @@
+{% extends 'wudco/_base.html' %}
+{% load staticfiles copy humanize %}
+
+{% block contenido %}
+	<section class="innerpage">
+		<div class="container">
+			<article class="innerpage-article">
+				{% if post %}
+				<h2>{{post.title}}</h2>
+				<p class="innerpage-date">{{ post.date_published|naturaltime|capfirst }}</p>
+				<figure class="innerpage-ft-img">
+					<img src="{{post.image_post}}" alt="">
+				</figure>
+				<div class="innerpage-post">
+					{{post.text|safe}}
+					{% comment %}
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nam dolor eum provident, facere assumenda quaerat? Ab dolorum nihil, <a href="#">incidunt quaerat</a> rem enim iure ea nobis beatae obcaecati! Enim, delectus.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quod dicta, suscipit ipsum, nulla alias reiciendis a eos animi eius id impedit rem quo modi aspernatur perferendis voluptate sunt corporis.</p>
+					<img src="{% static 'img/innerpage-img1.jpg' %}" alt="">
+					<img src="{% static 'img/innerpage-img2.jpg' %}" alt="">
+					<img src="{% static 'img/innerpage-img3.jpg' %}" alt="">
+					<h3>230 personas participaron del WudCo 2013</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde possimus quia reprehenderit debitis cum non voluptate tempora, veritatis. Labore sequi placeat eum perferendis, fugit blanditiis facilis hic nostrum autem odit.</p>
+					<ul>
+						<li>Maecenas congue orci vitae.</li>
+						<li>Sed non neque molestie.</li>
+						<li>Nulla tincidunt purus eget dui viverra.</li>
+						<li>Etiam dictum.</li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus natus optio sapiente, labore vel facilis voluptatibus, aliquid, nostrum commodi alias expedita suscipit, at soluta dolorum eos nulla error sint odio?</p>{% endcomment %}
+				</div>
+				{% else%}
+				<h2>No hay artículos aún!</h2>
+				{% endif %}
+			</article>
+		</div>
+	</section>
+	{% if more_posts %}
+	<section class="innerpage-other">
+		<div class="container">
+			<h2 class="sawtooth blue"><span>Otros artículos</span></h2><br />
+			{% for inner_post in more_posts %}
+			{% include 'wudco/_other-article.html' with post=inner_post %}{% endfor %}
+		</div>
+	</section>{% endif %}
+{% endblock %}

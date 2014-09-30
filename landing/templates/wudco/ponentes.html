@@ -1,0 +1,20 @@
+{% extends 'wudco/_base.html' %}
+{% load staticfiles copy %}
+
+{% block contenido %}
+  <section class="speakers-detail">
+    <div class="container">
+      <h2 class="sawtooth blue"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
+      <ul class="speakers-page">
+        {% for speaker in speakers %}
+          {% include 'wudco/_speaker_details.html' %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <!--<section class="subscribe">
+  	<div class="container">
+    <a href="#" class="button">{% copy 'subscribe-action' default='Inscríbete' %}</a>
+  </div>
+  </section>-->
+{% endblock %}

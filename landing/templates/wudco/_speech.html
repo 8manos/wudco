@@ -1,0 +1,16 @@
+{% load staticfiles copy %}
+<li class="speech">
+  <div class="speech-date">
+    <div class="speech-month">
+      {{ month }}
+    </div>
+    <div class="speech-day">
+      {{ day }}
+    </div>
+  </div>
+  <div class="speech-info">
+    <h3 class="speech-title"><a href="#">{{ title }}</a></h3>
+    <p class="speech-speaker">{{ speaker }}</p>
+    <p class="speech-link"><a href="#">Ver más</a></p>
+  </div>
+</li>

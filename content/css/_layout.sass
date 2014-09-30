@@ -77,6 +77,12 @@ section
 		background-position: center calc(100% + 20px)
 		background-size: contain
 		padding-bottom: 25%
+
+		a
+			display: inline-block
+			font-size: 1rem
+			font-weight: 600
+			margin: 1em
 		
 		h1,
 		p
@@ -85,14 +91,23 @@ section
 
 		h1
 			font-size: 1.8rem
+			font-weight: 600
 			margin-bottom: 0.5em
 
 			span
 				display: block
 
 		p
-			display: none
 			font-size: 1rem
+
+		.price
+			width: 75%
+
+			span
+				font-weight: 600
+
+		.subtitle
+			display: none
 			width: 60%
 
 		&:after
@@ -161,8 +176,10 @@ section
 					display: initial
 
 			p
-				display: block
 				font-size: 1.2rem
+
+			.subtitle
+				display: block
 
 		&.wannabesponsor p
 			font-size: 1rem

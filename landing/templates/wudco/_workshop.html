@@ -1,0 +1,22 @@
+{% load staticfiles copy %}
+<li id="{{speaker.name|slugify}}" class="workshop">
+  <div class="speaker-pic">
+    <figure>
+    <a href="{% url 'speakers' %}#{{speaker.name|slugify}}"><img src="{{ speaker.picture.url }}" alt="{{speaker.name}}" /></a>
+    </figure>
+  </div>
+  <div class="workshop-info">
+    <a class="speaker-profile" href="{% url 'speakers' %}#{{speaker.name|slugify}}">Ver perfil</a>
+    <p class="workshop-icon">{% if speaker.workshop_image %}<i>  <img height="32px" width="32px" src="{{ speaker.workshop_image.url }}">{% else %} <i class="icon-planning"> {% endif %}</i></p>
+    <h2 class="workshop-title">{{speaker.workshop_name}}</h2>
+    <p class="speaker-name">{{speaker.name}}</p>
+    <p class="workshop-overview">{{speaker.workshop_description}}</p>
+    <h3 class="workshop-learn-title">Aprenderás</h3>
+    <ul class="workshop-learn-list">
+      {% for point in speaker.get_workshoplearn_points %}
+        <li class="workshop-learn-skill">{{ point }}</li>
+      {% endfor %}
+    </ul>
+    <!--<p class="workshop-signup"><a href="#" class="button">Inscríbete</a></p>-->
+  </div>
+</li>
