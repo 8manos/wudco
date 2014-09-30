@@ -1,17 +1,30 @@
 {% load staticfiles copy %}
 <footer>
     <div class="container">
-        <div class="organizer">
-            <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
-            <div class="sub-content">
-                <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
+        <div class="l-footer">
+            <div class="organizer">
+                <div class="sub">{% copy 'organizes' default='Organiza' %}</div>
+                <div class="sub-content">
+                    <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
+                </div>
             </div>
-        </div>
-        <div class="actions">
-            <ul>
-                <li>{% if not request.GET.edit_copys%}<a href="{% url 'volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
-                <li>{% if not request.GET.edit_copys%}<a href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
-            </ul>
+            <div class="menu-footer">
+                <ul>
+                    <li><a href="/frontend/evento">El evento</a></li
+                    ><li><a href="{% url 'speakers' %}">Ponentes</a></li
+                    ><li><a href="/frontend/programa">Programa</a></li
+                    ><li><a href="{% url 'speakers' %}">Talleres</a></li
+                    ><li><a href="/frontend/lugar">Lugar</a></li
+                    ><li><a href="{% url 'blog' %}">Blog wudco</a></li>
+                </ul>
+            </div>
+            <div class="actions">
+                <ul>
+                    <li>{% if not request.GET.edit_copys%}<a href="{% url 'volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
+                    <li>{% if not request.GET.edit_copys%}<a href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
+                    <li id="contact-link">{% if not request.GET.edit_copys%}<a href="#">{% else %}{% copy 'link-contact' %} {% endif %}{% copy 'wants-contact' default='Contáctanos' %}</a></li>
+                </ul>
+            </div>
         </div>
         <div class="follow-us">
             <div class="sub">Síguenos</div>

@@ -1,7 +1,7 @@
 {% load staticfiles copy %}
 <section class="sponsors">
   <div class="container">
-    <h2 class="sawtooth blue"><span>{% copy 'sponsor-us' default='Patrocinan'%}</span></h2>
+    <h2 class="sawtooth blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
     <ul>
       {% include 'front/_sponsor.html' with picture="img/logo_monoku.png" name="Monoku" %}
 
@@ -11,6 +11,6 @@
 
       {% include 'front/_sponsor.html' with picture="img/logo_openweb.png" name="Openweb" %}
     </ul>
-    {% if not request.GET.edit_copys%}<a class="orange" href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a>
+    {% if not request.GET.edit_copys%}<a class="orange" href="{% url 'volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a>
   </div>
 </section>
