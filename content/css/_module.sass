@@ -3,14 +3,17 @@
 .organizer
 	margin-bottom: 1em
 
-.actions
+.actions,
+.menu-footer
 	font-size: 0.8rem
 
 	ul
 		list-style: none
+		padding-left: 1em
+		text-align: left
 
 		li
-			margin-bottom: 1em
+			line-height: 1.25em
 
 			&:before
 				content: '•'
@@ -122,6 +125,15 @@
 
 			&:hover:not(.is-active) a
 				background: rgba(0, 0, 0, 0.2)
+
+.menu-footer
+	left: 100%
+	position: absolute
+	top: 0
+	width: 60%
+
+	ul
+		margin-top: 1em
 
 .other-article
 	box-sizing: border-box
@@ -453,7 +465,7 @@
 
 .sub-content
 	img
-		width: 50%
+		width: 80%
 
 .workshop
 	border-bottom: 2px solid rgba(0, 0, 0, 0.2)

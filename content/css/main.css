@@ -100,6 +100,9 @@ footer {
   color: white;
   padding: 2em 1em;
   text-align: center; }
+  footer .l-footer {
+    position: relative;
+    width: 60%; }
 
 header {
   text-align: center; }
@@ -232,6 +235,10 @@ section {
   max-width: 1280px; }
 
 @media screen and (min-width: 768px) {
+  footer .l-footer {
+    display: inline-block;
+    width: auto; }
+
   nav {
     overflow: visible;
     padding: 0; }
@@ -278,19 +285,27 @@ section {
 .organizer {
   margin-bottom: 1em; }
 
-.actions {
+.actions,
+.menu-footer {
   font-size: 0.8rem; }
-  .actions ul {
-    list-style: none; }
-    .actions ul li {
-      margin-bottom: 1em; }
-      .actions ul li:before {
+  .actions ul,
+  .menu-footer ul {
+    list-style: none;
+    padding-left: 1em;
+    text-align: left; }
+    .actions ul li,
+    .menu-footer ul li {
+      line-height: 1.25em; }
+      .actions ul li:before,
+      .menu-footer ul li:before {
         content: "•";
         font-size: 1.75rem;
         padding-right: 7px;
         transition: color 0.3s;
         vertical-align: middle; }
-      .actions ul li:hover a, .actions ul li:hover:before {
+      .actions ul li:hover a, .actions ul li:hover:before,
+      .menu-footer ul li:hover a,
+      .menu-footer ul li:hover:before {
         color: #33A7B0; }
 
 .blog-item {
@@ -378,6 +393,14 @@ section {
       transition: all 0.3s; }
     .menu ul li:hover:not(.is-active) a {
       background: rgba(0, 0, 0, 0.2); }
+
+.menu-footer {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 60%; }
+  .menu-footer ul {
+    margin-top: 1em; }
 
 .other-article {
   box-sizing: border-box;
@@ -652,7 +675,7 @@ section {
   text-transform: uppercase; }
 
 .sub-content img {
-  width: 50%; }
+  width: 80%; }
 
 .workshop {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
