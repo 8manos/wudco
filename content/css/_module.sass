@@ -50,7 +50,7 @@
 		font-weight: bold
 
 	&:first-of-type
-		display: block
+		display: inline-block
 
 .contact,
 .counter
@@ -494,6 +494,16 @@
 	color: $color_azul
 	margin-bottom: 1em
 
+	.workshop-item-author,
+	.workshop-item-description
+		color: $color_gris
+		display: none
+
+	.workshop-item-author,
+	.workshop-item-link,
+	.workshop-item-title
+		font-weight: bold
+
 	.workshop-item-icon,
 	.workshop-item-info
 		display: inline-block
@@ -507,12 +517,8 @@
 		text-align: left
 		width: 89%
 
-		.workshop-item-link,
-		.workshop-item-title
-			font-weight: bold
-
-		.workshop-item-title
-			margin-bottom: 1em
+	.workshop-item-title
+		margin-bottom: 1em
 
 .workshop-learn-list
 	margin-bottom: 2em
@@ -539,7 +545,11 @@
 	.organizer
 		display: inline-block
 		margin: 1em
-		vertical-align: middle
+		vertical-align: top
+
+	.blog-item
+		display: inline-block
+		width: 49%
 
 	.contact label
 		display: initial
@@ -648,6 +658,11 @@
 				a
 					padding: 1em 0.5em
 
+	.menu-footer
+		display: inline-block
+		position: initial
+		width: auto
+
 	.other-article
 		display: inline-block
 		width: 49%
@@ -690,15 +705,6 @@
 		margin: 1em 2em
 		width: 180px
 
-	.sub,
-	.sub-content
-		display: inline-block
-		vertical-align: middle
-
-	.sub
-		border-right: 1px solid
-		padding: 0.5em 1em
-
 	.sub-content img
 		width: 150px
 
@@ -732,8 +738,32 @@
 			top: $speaker_img_size + 10px
 			width: $speaker_img_size + 30px
 
+	.workshop-item
+		display: inline-block
+		margin-bottom: 3em
+		width: 49%
+
+		.workshop-item-author,
+		.workshop-item-description
+			display: block
+			margin-bottom: 1em
+
+		.workshop-item-icon
+			font-size: 2.5rem
+			width: 18%
+
+		.workshop-item-info
+			width: 80%
+
+		.workshop-item-title
+			margin-bottom: 0.25em
+
 	.workshop-learn-list
 		padding-left: 20px
+
+	.workshop-signup
+		.button
+			font-size: larger
 
 	.workshop-title
 		text-align: left
@@ -748,8 +778,13 @@
 		padding: 0
 
 		li
-			display: inline-block
 			margin: 0 0.5em
+
+	.actions,
+	.follow-us,
+	.menu-footer,
+	.organizer
+		vertical-align: middle
 
 	.contact,
 	.counter
@@ -783,6 +818,10 @@
 	.menu ul li a
 		padding: 1em 1.5em
 
+	.menu-footer ul
+		+column-count(2)
+		+column-fill(balance)
+
 	.other-article
 		width: 30%
 
@@ -803,6 +842,18 @@
 
 		.speech-info
 			width: calc(100% - #{$calendar_size} - 10px)
+
+	.sub,
+	.sub-content
+		display: inline-block
+		vertical-align: middle
+
+	.sub
+		border-right: 1px solid
+		padding: 0.5em 1em
+
+	.workshop-item
+		width: 33%
 
 	.wud-logo
 		margin: 1em 8em 1em 0

@@ -63,6 +63,7 @@ form {
 
 hr {
   margin: 0 auto;
+  max-width: 1280px;
   width: 95%; }
 
 h2 {
@@ -190,6 +191,7 @@ section {
         font-weight: 600; }
     section.headline .subtitle {
       display: none;
+      margin-bottom: 1em;
       width: 60%; }
     section.headline:after {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
@@ -271,15 +273,23 @@ section {
   section.headline {
     background-size: auto 55%;
     padding-bottom: 20%; }
+    section.headline a {
+      font-size: larger; }
     section.headline h1 {
       font-size: 2.2rem;
       width: 55%; }
     section.headline p {
       font-size: 1.4rem;
       width: 45%; }
+    section.headline .price {
+      display: inline-block;
+      width: auto; }
   section.wannabesponsor-form .container {
     box-sizing: border-box;
-    padding: 0 12em; } }
+    padding: 0 12em; }
+  section.workshops .price {
+    display: inline-block;
+    margin-top: 2em; } }
 .actions,
 .follow-us,
 .organizer {
@@ -326,7 +336,7 @@ section {
   .blog-item .blog-item-title {
     font-weight: bold; }
   .blog-item:first-of-type {
-    display: block; }
+    display: inline-block; }
 
 .contact,
 .counter {
@@ -701,6 +711,14 @@ section {
   display: block;
   color: #33A7B0;
   margin-bottom: 1em; }
+  .workshop-item .workshop-item-author,
+  .workshop-item .workshop-item-description {
+    color: #393939;
+    display: none; }
+  .workshop-item .workshop-item-author,
+  .workshop-item .workshop-item-link,
+  .workshop-item .workshop-item-title {
+    font-weight: bold; }
   .workshop-item .workshop-item-icon,
   .workshop-item .workshop-item-info {
     display: inline-block;
@@ -711,11 +729,8 @@ section {
   .workshop-item .workshop-item-info {
     text-align: left;
     width: 89%; }
-    .workshop-item .workshop-item-info .workshop-item-link,
-    .workshop-item .workshop-item-info .workshop-item-title {
-      font-weight: bold; }
-    .workshop-item .workshop-item-info .workshop-item-title {
-      margin-bottom: 1em; }
+  .workshop-item .workshop-item-title {
+    margin-bottom: 1em; }
 
 .workshop-learn-list {
   margin-bottom: 2em;
@@ -740,7 +755,11 @@ section {
   .organizer {
     display: inline-block;
     margin: 1em;
-    vertical-align: middle; }
+    vertical-align: top; }
+
+  .blog-item {
+    display: inline-block;
+    width: 49%; }
 
   .contact label {
     display: initial; }
@@ -836,6 +855,11 @@ section {
         .menu ul li a {
           padding: 1em 0.5em; }
 
+  .menu-footer {
+    display: inline-block;
+    position: initial;
+    width: auto; }
+
   .other-article {
     display: inline-block;
     width: 49%; }
@@ -871,15 +895,6 @@ section {
     margin: 1em 2em;
     width: 180px; }
 
-  .sub,
-  .sub-content {
-    display: inline-block;
-    vertical-align: middle; }
-
-  .sub {
-    border-right: 1px solid;
-    padding: 0.5em 1em; }
-
   .sub-content img {
     width: 150px; }
 
@@ -910,8 +925,27 @@ section {
       top: 190px;
       width: 210px; }
 
+  .workshop-item {
+    display: inline-block;
+    margin-bottom: 3em;
+    width: 49%; }
+    .workshop-item .workshop-item-author,
+    .workshop-item .workshop-item-description {
+      display: block;
+      margin-bottom: 1em; }
+    .workshop-item .workshop-item-icon {
+      font-size: 2.5rem;
+      width: 18%; }
+    .workshop-item .workshop-item-info {
+      width: 80%; }
+    .workshop-item .workshop-item-title {
+      margin-bottom: 0.25em; }
+
   .workshop-learn-list {
     padding-left: 20px; }
+
+  .workshop-signup .button {
+    font-size: larger; }
 
   .workshop-title {
     text-align: left;
@@ -924,8 +958,13 @@ section {
   .actions ul {
     padding: 0; }
     .actions ul li {
-      display: inline-block;
       margin: 0 0.5em; }
+
+  .actions,
+  .follow-us,
+  .menu-footer,
+  .organizer {
+    vertical-align: middle; }
 
   .contact,
   .counter {
@@ -956,6 +995,14 @@ section {
   .menu ul li a {
     padding: 1em 1.5em; }
 
+  .menu-footer ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance; }
+
   .other-article {
     width: 30%; }
 
@@ -972,6 +1019,18 @@ section {
     width: 280px; }
     .speech .speech-info {
       width: calc(100% - 50px - 10px); }
+
+  .sub,
+  .sub-content {
+    display: inline-block;
+    vertical-align: middle; }
+
+  .sub {
+    border-right: 1px solid;
+    padding: 0.5em 1em; }
+
+  .workshop-item {
+    width: 33%; }
 
   .wud-logo {
     margin: 1em 8em 1em 0;
