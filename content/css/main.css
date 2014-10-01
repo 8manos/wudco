@@ -199,6 +199,8 @@ section {
     background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
     background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
     background-repeat: repeat-x; }
+  section.sponsors a {
+    font-weight: bold; }
   section.subscribe .container {
     padding: 2em; }
   section.wannabesponsor {
