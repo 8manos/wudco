@@ -30,4 +30,6 @@ $(document).on('ready', function(){
 			$('header').css('margin-bottom', 0);
 		}
 	};
+
+	$('.video a').asyncml();
 });
