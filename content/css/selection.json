@@ -4,6 +4,37 @@
 		{
 			"icon": {
 				"paths": [
+					"M0 932.571v-841.143q0-14.857 9.429-20.571t22.571 1.714l758.857 421.714q13.143 7.429 13.143 17.714t-13.143 17.714l-758.857 421.714q-13.143 7.429-22.571 1.714t-9.429-20.571z"
+				],
+				"attrs": [
+					{
+						"opacity": 1,
+						"visibility": false
+					}
+				],
+				"width": 805,
+				"grid": 14
+			},
+			"attrs": [
+				{
+					"opacity": 1,
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"prevSize": 28,
+				"code": 58891,
+				"name": "play",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
 					"M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"
 				],
 				"attrs": [
@@ -28,7 +59,7 @@
 				"name": "menu",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 0
 		},
 		{
@@ -48,14 +79,14 @@
 				{}
 			],
 			"properties": {
-				"order": 10,
+				"order": 11,
 				"id": 17,
 				"prevSize": 32,
 				"code": 58885,
 				"name": "linkedin-profile",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 0
 		},
 		{
@@ -75,14 +106,14 @@
 				{}
 			],
 			"properties": {
-				"order": 11,
+				"order": 12,
 				"id": 16,
 				"prevSize": 32,
 				"code": 58886,
 				"name": "twitter-profile",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 1
 		},
 		{
@@ -102,14 +133,14 @@
 				{}
 			],
 			"properties": {
-				"order": 2,
+				"order": 3,
 				"id": 15,
 				"prevSize": 32,
 				"code": 58880,
 				"name": "talk",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 2
 		},
 		{
@@ -130,14 +161,14 @@
 				{}
 			],
 			"properties": {
-				"order": 3,
+				"order": 4,
 				"id": 14,
 				"prevSize": 32,
 				"code": 58881,
 				"name": "check",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 3
 		},
 		{
@@ -157,14 +188,14 @@
 				{}
 			],
 			"properties": {
-				"order": 4,
+				"order": 5,
 				"id": 13,
 				"prevSize": 32,
 				"code": 58882,
 				"name": "execution",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 4
 		},
 		{
@@ -199,14 +230,14 @@
 				{}
 			],
 			"properties": {
-				"order": 5,
+				"order": 6,
 				"id": 12,
 				"prevSize": 32,
 				"code": 58883,
 				"name": "evaluation",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 5
 		},
 		{
@@ -226,14 +257,14 @@
 				{}
 			],
 			"properties": {
-				"order": 9,
+				"order": 10,
 				"id": 11,
 				"prevSize": 32,
 				"code": 58884,
 				"name": "facebook",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 6
 		},
 		{
@@ -253,14 +284,14 @@
 				{}
 			],
 			"properties": {
-				"order": 6,
+				"order": 7,
 				"id": 7,
 				"prevSize": 32,
 				"code": 58887,
 				"name": "planning",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 7
 		},
 		{
@@ -286,14 +317,14 @@
 				{}
 			],
 			"properties": {
-				"order": 7,
+				"order": 8,
 				"id": 6,
 				"prevSize": 32,
 				"code": 58888,
 				"name": "workshop",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 8
 		},
 		{
@@ -314,14 +345,14 @@
 				{}
 			],
 			"properties": {
-				"order": 8,
+				"order": 9,
 				"id": 5,
 				"prevSize": 32,
 				"code": 58889,
 				"name": "twitter",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 9
 		},
 		{
@@ -357,14 +388,14 @@
 				{}
 			],
 			"properties": {
-				"order": 1,
+				"order": 2,
 				"id": 1,
 				"prevSize": 32,
 				"code": 58892,
 				"name": "youtube",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 10
 		}
 	],
@@ -384,7 +415,8 @@
 				"emSize": 512,
 				"baseline": 6.25,
 				"whitespace": 50
-			}
+			},
+			"resetPoint": 58880
 		},
 		"imagePref": {},
 		"historySize": 100,

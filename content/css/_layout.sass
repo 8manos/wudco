@@ -68,6 +68,7 @@ section
 
 	&.headline,
 	&.speakers-detail,
+	&.the-event,
 	&.wannabesponsor
 		position: relative
 
@@ -123,9 +124,17 @@ section
 		&:after
 			+sawtooth(white)
 
+	&.prev-eds
+		h2
+			white-space: nowrap
+
+		hr
+			display: none
+
 	&.speakers,
 	&.subscribe,
-	&.wannabesponsor
+	&.wannabesponsor,
+	&.work-team
 		background: $fondo_azul
 		color: white
 
@@ -138,6 +147,9 @@ section
 
 	&.subscribe .container
 		padding: 2em
+
+	&.the-event:after
+		+sawtooth(white)
 
 	&.wannabesponsor
 		padding: 5em 1em
@@ -209,6 +221,10 @@ section
 				font-size: 1.2rem
 
 			.subtitle
+				display: block
+
+		&.prev-eds
+			hr
 				display: block
 
 		&.wannabesponsor p

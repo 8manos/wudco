@@ -26,10 +26,12 @@ input[type="submit"],
   border: none;
   border-radius: 2px;
   color: white;
+  display: inline-block;
   font-size: 0.9rem;
   font-weight: 600;
   height: 35px;
   letter-spacing: 0.2em;
+  line-height: 1.5em;
   padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -152,9 +154,9 @@ section {
   section.countdown {
     background: #393939;
     color: white; }
-  section.headline, section.speakers-detail, section.wannabesponsor {
+  section.headline, section.speakers-detail, section.the-event, section.wannabesponsor {
     position: relative; }
-    section.headline:after, section.speakers-detail:after, section.wannabesponsor:after {
+    section.headline:after, section.speakers-detail:after, section.the-event:after, section.wannabesponsor:after {
       background-size: 10px 12px, 10px 10px !important;
       bottom: -20px;
       content: "";
@@ -197,7 +199,11 @@ section {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background-repeat: repeat-x; }
-  section.speakers, section.subscribe, section.wannabesponsor {
+  section.prev-eds h2 {
+    white-space: nowrap; }
+  section.prev-eds hr {
+    display: none; }
+  section.speakers, section.subscribe, section.wannabesponsor, section.work-team {
     background: #33A7B0;
     color: white; }
   section.speakers-detail:after {
@@ -208,6 +214,10 @@ section {
     font-weight: bold; }
   section.subscribe .container {
     padding: 2em; }
+  section.the-event:after {
+    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background-repeat: repeat-x; }
   section.wannabesponsor {
     padding: 5em 1em; }
     section.wannabesponsor p {
@@ -262,6 +272,8 @@ section {
       font-size: 1.2rem; }
     section.headline .subtitle {
       display: block; }
+  section.prev-eds hr {
+    display: block; }
   section.wannabesponsor p {
     font-size: 1rem; } }
 @media screen and (min-width: 960px) {
@@ -371,6 +383,37 @@ section {
   .header p {
     margin: 0; }
 
+.event-info,
+.event-practical-info {
+  margin: 1em 0;
+  text-align: left; }
+  .event-info h3,
+  .event-practical-info h3 {
+    color: #33A7B0; }
+  .event-info p,
+  .event-practical-info p {
+    margin: 0 0 0.5em 0; }
+  .event-info ul,
+  .event-practical-info ul {
+    padding-left: 20px; }
+  .event-info .button,
+  .event-practical-info .button {
+    margin-top: 1em; }
+
+.event-scopes i,
+.event-scopes span {
+  display: block; }
+.event-scopes i {
+  color: #33A7B0;
+  font-size: 3rem; }
+.event-scopes span {
+  font-size: small;
+  margin-top: 0.5em;
+  text-transform: uppercase; }
+.event-scopes .event-scope {
+  display: inline-block;
+  width: 32%; }
+
 .form-content {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
@@ -381,6 +424,16 @@ section {
   border-top: 1px solid rgba(128, 128, 128, 0.4);
   padding: 1em 0;
   width: 90%; }
+
+.last-edition .last-edition-desc {
+  text-align: left; }
+  .last-edition .last-edition-desc h2 {
+    color: #33A7B0;
+    font-size: x-large;
+    margin-top: 1em; }
+  .last-edition .last-edition-desc p {
+    margin-top: 0;
+    margin-bottom: 1em; }
 
 .menu {
   background: #393939;
@@ -412,6 +465,11 @@ section {
   .menu-footer ul {
     margin-top: 1em; }
 
+.more-of-team {
+  font-weight: 600; }
+  .more-of-team:hover {
+    color: inherit; }
+
 .other-article {
   box-sizing: border-box;
   font-size: 0.75rem;
@@ -441,6 +499,10 @@ section {
     text-decoration: none; }
     .other-article .other-article-title a:hover {
       text-decoration: underline; }
+
+.prev-ed,
+.prev-ed-ftimg {
+  display: none; }
 
 .innerpage-article .innerpage-ft-img {
   margin: 1em auto; }
@@ -687,6 +749,9 @@ section {
 .sub-content img {
   width: 80%; }
 
+.team a {
+  pointer-events: none; }
+
 .video {
   position: relative;
   padding-bottom: 56.25%;
@@ -700,7 +765,20 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 2; }
+  .video:before {
+    background: #33A7B0;
+    bottom: 0.75em;
+    border-radius: 3px;
+    content: "";
+    color: white;
+    cursor: pointer;
+    font-family: icomoon;
+    left: 0.5em;
+    padding: 0.25em 0.75em;
+    position: absolute;
+    z-index: 1; }
 
 .video a {
   color: #fff;
