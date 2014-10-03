@@ -1,0 +1,14 @@
+<li class="{{class}}">
+	{% if class == 'program-item-break' %}
+		<p>{{text}}</p>
+	{% elif class == 'program-item' %}
+		<i class="icon-{{icon}} program-item-icon"></i>
+		<div class="program-item-info">
+			<span class="program-item-time">{{time}}</span>
+			<h2 class="program-item-name">{{name}}</h2>
+			<div class="program-item-text">
+				<p>{{text}}</p>
+			</div>
+		</div>
+	{% endif %}
+</li>

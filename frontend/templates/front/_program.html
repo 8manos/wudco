@@ -1,0 +1,19 @@
+{% load staticfiles copy %}
+<section class="program">
+	<div class="container">
+		<h2 class="sawtooth blue"><span>{% copy 'title-program' default='Programa' %}</span></h2>
+		<div class="speech-label">
+			<i class="icon-talk"></i>
+			<span class="label">Charlas</span>
+			<ul class="program-list">
+				{% include 'front/_program-item.html' with class='program-item' icon='clock' time='8:00 a.m. > 8:40 a.m.' name='Bienvenida y presentación' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+				{% include 'front/_program-item.html' with class='program-item' icon='evaluation' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+				{% include 'front/_program-item.html' with class='program-item' icon='execution' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+				{% include 'front/_program-item.html' with class='program-item-break' text='Coffee break' %}
+				{% include 'front/_program-item.html' with class='program-item' icon='planning' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+				{% include 'front/_program-item.html' with class='program-item' icon='evaluation' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+				{% include 'front/_program-item.html' with class='program-item' icon='execution' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+			</ul>
+		</div>
+	</div>
+</section>
