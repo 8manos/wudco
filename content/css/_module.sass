@@ -96,6 +96,7 @@
 
 	h3
 		color: $color_azul
+		margin-top: 0
 
 	p
 		margin: 0 0 0.5em 0
@@ -672,6 +673,26 @@
 			vertical-align: middle
 			width: $calendar_nav_size
 
+	.event-info,
+	.event-practical-info
+		display: inline-block
+		vertical-align: top
+
+		center
+			text-align: left
+
+	.event-info
+		width: 60%
+
+	.event-practical-info
+		width: 35%
+
+	.event-scopes
+		margin: 1em 0
+
+		.event-scope
+			width: 20%
+
 	.form-info,
 	.sponsor-form
 		box-sizing: border-box
@@ -740,6 +761,25 @@
 				margin: 0
 				width: 30%
 
+	.last-edition
+		margin: 1em 0 2em 0
+
+		.last-edition-desc,
+		.last-edition-video
+			box-sizing: border-box
+			display: inline-block
+			vertical-align: top
+			width: 49%
+
+		.last-edition-desc
+			padding-left: 0.5em
+
+			h2
+				margin-top: 0
+
+		.last-edition-video
+			padding-right: 0.5em
+
 	.menu
 		display: inline-block
 		overflow: visible
@@ -765,6 +805,31 @@
 	.other-article
 		display: inline-block
 		width: 49%
+
+	.prev-ed
+		box-sizing: border-box
+		display: inline-block
+		padding-right: 1em
+		width: 32%
+
+		.prev-ed-desc
+			display: none
+
+	.prev-ed-ftimg
+		box-sizing: border-box
+		display: inline-block
+		padding-right: 1em
+		width: 32%
+
+		figure
+			margin: 0
+
+			img
+				width: 100%
+
+		h2
+			color: $color_azul
+			margin-bottom: 0.5em
 
 	.speakers-page
 		.speaker

@@ -199,7 +199,7 @@ section {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background-repeat: repeat-x; }
-  section.prev-eds h2 {
+  section.prev-eds .container > h2 {
     white-space: nowrap; }
   section.prev-eds hr {
     display: none; }
@@ -273,7 +273,9 @@ section {
     section.headline .subtitle {
       display: block; }
   section.prev-eds hr {
-    display: block; }
+    display: block;
+    margin: 2em 0;
+    width: 100%; }
   section.wannabesponsor p {
     font-size: 1rem; } }
 @media screen and (min-width: 960px) {
@@ -389,7 +391,8 @@ section {
   text-align: left; }
   .event-info h3,
   .event-practical-info h3 {
-    color: #33A7B0; }
+    color: #33A7B0;
+    margin-top: 0; }
   .event-info p,
   .event-practical-info p {
     margin: 0 0 0.5em 0; }
@@ -881,6 +884,25 @@ section {
       vertical-align: middle;
       width: 50px; }
 
+  .event-info,
+  .event-practical-info {
+    display: inline-block;
+    vertical-align: top; }
+    .event-info center,
+    .event-practical-info center {
+      text-align: left; }
+
+  .event-info {
+    width: 60%; }
+
+  .event-practical-info {
+    width: 35%; }
+
+  .event-scopes {
+    margin: 1em 0; }
+    .event-scopes .event-scope {
+      width: 20%; }
+
   .form-info,
   .sponsor-form {
     box-sizing: border-box;
@@ -941,6 +963,21 @@ section {
       margin: 0;
       width: 30%; }
 
+  .last-edition {
+    margin: 1em 0 2em 0; }
+    .last-edition .last-edition-desc,
+    .last-edition .last-edition-video {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+      width: 49%; }
+    .last-edition .last-edition-desc {
+      padding-left: 0.5em; }
+      .last-edition .last-edition-desc h2 {
+        margin-top: 0; }
+    .last-edition .last-edition-video {
+      padding-right: 0.5em; }
+
   .menu {
     display: inline-block;
     overflow: visible;
@@ -963,6 +1000,27 @@ section {
   .other-article {
     display: inline-block;
     width: 49%; }
+
+  .prev-ed {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 1em;
+    width: 32%; }
+    .prev-ed .prev-ed-desc {
+      display: none; }
+
+  .prev-ed-ftimg {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 1em;
+    width: 32%; }
+    .prev-ed-ftimg figure {
+      margin: 0; }
+      .prev-ed-ftimg figure img {
+        width: 100%; }
+    .prev-ed-ftimg h2 {
+      color: #33A7B0;
+      margin-bottom: 0.5em; }
 
   .speakers-page .speaker .speaker-info,
   .speakers-page .speaker .speaker-pic {
@@ -1160,7 +1218,8 @@ nav.is-fixed {
     left: 100%;
     top: calc(50% - 10px);
     position: absolute;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    z-index: 1; }
 
 @media screen and (min-width: 768px) {
   .menu li.is-active {
@@ -1174,6 +1233,7 @@ nav.is-fixed {
       top: 100%;
       left: calc(50% - 10px);
       position: absolute;
-      transition: all 0.3s; } }
+      transition: all 0.3s;
+      z-index: 1; } }
 
 /*# sourceMappingURL=main.css.map */
