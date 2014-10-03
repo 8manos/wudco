@@ -675,6 +675,7 @@
 
 	.event-info,
 	.event-practical-info
+		box-sizing: border-box
 		display: inline-block
 		vertical-align: top
 
@@ -682,9 +683,11 @@
 			text-align: left
 
 	.event-info
+		padding-right: 0.5em
 		width: 60%
 
 	.event-practical-info
+		padding-left: 0.5em
 		width: 35%
 
 	.event-scopes
@@ -971,6 +974,15 @@
 		margin: 1em 2em
 		width: auto
 
+	.event-scopes .event-scope
+		width: 15%
+
+		i
+			font-size: 4.25rem
+
+		span
+			font-size: initial
+
 	.innerpage-article
 		padding: 0 16em
 
@@ -991,6 +1003,16 @@
 
 	.other-article
 		width: 30%
+
+	.prev-ed
+		text-align: left
+
+		.prev-ed-desc
+			display: block
+
+			h3
+				color: $color_azul
+				font-size: x-large
 
 	.speakers-page
 		.speaker

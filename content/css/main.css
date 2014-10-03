@@ -886,6 +886,7 @@ section {
 
   .event-info,
   .event-practical-info {
+    box-sizing: border-box;
     display: inline-block;
     vertical-align: top; }
     .event-info center,
@@ -893,9 +894,11 @@ section {
       text-align: left; }
 
   .event-info {
+    padding-right: 0.5em;
     width: 60%; }
 
   .event-practical-info {
+    padding-left: 0.5em;
     width: 35%; }
 
   .event-scopes {
@@ -1144,6 +1147,13 @@ section {
     margin: 1em 2em;
     width: auto; }
 
+  .event-scopes .event-scope {
+    width: 15%; }
+    .event-scopes .event-scope i {
+      font-size: 4.25rem; }
+    .event-scopes .event-scope span {
+      font-size: initial; }
+
   .innerpage-article {
     padding: 0 16em; }
     .innerpage-article .innerpage-post img ~ h2,
@@ -1166,6 +1176,14 @@ section {
 
   .other-article {
     width: 30%; }
+
+  .prev-ed {
+    text-align: left; }
+    .prev-ed .prev-ed-desc {
+      display: block; }
+      .prev-ed .prev-ed-desc h3 {
+        color: #33A7B0;
+        font-size: x-large; }
 
   .speakers-page .speaker .speaker-link {
     box-sizing: border-box;
