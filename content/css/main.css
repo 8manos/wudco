@@ -203,6 +203,8 @@ section {
     white-space: nowrap; }
   section.prev-eds hr {
     display: none; }
+  section.program hr {
+    margin: 1em auto; }
   section.speakers, section.subscribe, section.wannabesponsor, section.work-team {
     background: #33A7B0;
     color: white; }
@@ -428,6 +430,17 @@ section {
   padding: 1em 0;
   width: 90%; }
 
+.label {
+  margin: 0 auto 1em auto; }
+  .label i,
+  .label span {
+    color: #33A7B0;
+    display: block; }
+  .label span {
+    font-size: smaller;
+    margin: 0.2em 0 0 0;
+    text-transform: uppercase; }
+
 .last-edition .last-edition-desc {
   text-align: left; }
   .last-edition .last-edition-desc h2 {
@@ -506,6 +519,46 @@ section {
 .prev-ed,
 .prev-ed-ftimg {
   display: none; }
+
+.program-item,
+.program-item-break {
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 1em 0; }
+  .program-item p,
+  .program-item-break p {
+    margin-top: 0; }
+  .program-item .program-item-icon,
+  .program-item .program-item-info,
+  .program-item-break .program-item-icon,
+  .program-item-break .program-item-info {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top; }
+  .program-item .program-item-icon,
+  .program-item-break .program-item-icon {
+    color: #33A7B0;
+    font-size: 2rem;
+    width: 15%; }
+  .program-item .program-item-info,
+  .program-item-break .program-item-info {
+    width: 80%; }
+  .program-item .program-item-name,
+  .program-item-break .program-item-name {
+    text-align: left; }
+
+.program-item-break {
+  font-size: large;
+  text-transform: uppercase; }
+  .program-item-break p {
+    margin: 0; }
+
+.program-item-time {
+  color: #de4b39;
+  display: block;
+  font-weight: bold;
+  margin: 0; }
 
 .innerpage-article .innerpage-ft-img {
   margin: 1em auto; }
