@@ -547,6 +547,9 @@ section {
   .program-item .program-item-name,
   .program-item-break .program-item-name {
     text-align: left; }
+  .program-item .program-item-time,
+  .program-item-break .program-item-time {
+    margin: 0; }
 
 .program-item-break {
   font-size: large;
@@ -558,7 +561,7 @@ section {
   color: #de4b39;
   display: block;
   font-weight: bold;
-  margin: 0; }
+  margin: 1em auto; }
 
 .innerpage-article .innerpage-ft-img {
   margin: 1em auto; }
@@ -1020,6 +1023,11 @@ section {
       margin: 0;
       width: 30%; }
 
+  .label i {
+    font-size: 2rem; }
+  .label span {
+    font-size: x-large; }
+
   .last-edition {
     margin: 1em 0 2em 0; }
     .last-edition .last-edition-desc,
@@ -1078,6 +1086,9 @@ section {
     .prev-ed-ftimg h2 {
       color: #33A7B0;
       margin-bottom: 0.5em; }
+
+  .program-item .program-item-icon {
+    font-size: 5rem; }
 
   .speakers-page .speaker .speaker-info,
   .speakers-page .speaker .speaker-pic {
