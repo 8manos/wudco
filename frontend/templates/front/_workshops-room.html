@@ -1,0 +1,15 @@
+{% load staticfiles copy %}
+<section class="workshops-room">
+	<div class="container">
+	  <h2 class="sawtooth blue"><span>{% copy 'title-rooms' default='Salas de los talleres' %}</span></h2>
+	</div>
+	<ul class="rooms">
+		{% include 'front/_workshop-item-room.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." room='Sala 4' building='Edificio Antonio Nariño' %}
+
+		{% include 'front/_workshop-item-room.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." room='Sala 4' building='Edificio Antonio Nariño' %}
+
+		{% include 'front/_workshop-item-room.html' with icon="evaluation" title="Errores y aciertos en el proceso de construcción de un sitio web." room='Sala 4' building='Edificio Antonio Nariño' %}
+
+		{% include 'front/_workshop-item-room.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." room='Sala 4' building='Edificio Antonio Nariño' %}
+	</ul>
+</section>

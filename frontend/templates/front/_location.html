@@ -1,0 +1,24 @@
+{% load staticfiles copy %}
+<section class="location">
+	<div class="container">
+	  <h2 class="sawtooth blue"><span>{% copy 'title-place' default='Lugar' %}</span></h2>
+	  <div class="place">
+	  	<h3 class="place-name">Universidad Nacional de Colombia</h3>
+	  	<div class="place-location">
+	  		<span class="place-address">Avenida Carrera 30 # 45</span>
+	  		<span class="place-city">Bogotá, Colombia</span>
+	  	</div>
+	  	<figure class="place-picture">
+	  		<img src="{% static 'img/auditorio_leon_de_greiff.jpg' %}" alt="Universidad Nacional de Colombia">
+	  	</figure>
+	  	<div class="place-map">
+	  		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7953.515337348526!2d-74.08482620484817!3d4.63726630054679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bce19c776d3%3A0x42d0e7ad325a9011!2sUniversidad+Nacional+de+Colombia!5e0!3m2!1ses!2s!4v1412693081240" width="400" height="300" frameborder="0" style="border:0"></iframe>
+	  		<span class="place-address">Avenida Carrera 30 # 45</span>
+	  		<span class="place-city">Bogotá, Colombia</span>
+	  	</div>
+	  	<div class="place-text">
+	  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, libero accusantium alias quae dicta, cumque quisquam at soluta ad officiis suscipit mollitia sequi porro est iure minus repellendus nemo labore?</p>
+	  	</div>
+	  </div>
+	</div>
+</section>
