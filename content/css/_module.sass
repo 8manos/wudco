@@ -216,6 +216,12 @@
 	&:hover
 		color: inherit
 
+.nearby-item
+	text-align: left
+
+	ul
+		padding-left: 20px
+
 .other-article
 	box-sizing: border-box
 	font-size: 0.75rem
@@ -253,6 +259,42 @@
 
 		&:hover
 			text-decoration: underline
+
+.place
+	text-align: left
+
+	.place-address
+		color: $color_azul
+		font-weight: bold
+
+	.place-location
+		margin-bottom: 1em
+
+		span
+			display: block
+
+	.place-map
+		margin: 0.5em auto
+
+		iframe
+			width: 100%
+
+		.place-address,
+		.place-city
+			color: $color_gris
+			display: block
+			font-size:  smaller
+			font-weight: bold
+
+	.place-name
+		margin-bottom: 0
+		text-align: left
+	
+	.place-picture
+		margin: 0.5em auto
+
+		img
+			width: 100%
 
 .prev-ed,
 .prev-ed-ftimg
@@ -682,6 +724,10 @@
 	.workshop-item-info
 		text-align: left
 		width: 88%
+
+	.workshop-item-room
+		color: $color_gris
+		margin-top: -1em
 
 	.workshop-item-title
 		margin-top: 0

@@ -154,9 +154,9 @@ section {
   section.countdown {
     background: #393939;
     color: white; }
-  section.headline, section.speakers-detail, section.the-event, section.wannabesponsor {
+  section.headline, section.location, section.speakers-detail, section.the-event, section.wannabesponsor {
     position: relative; }
-    section.headline:after, section.speakers-detail:after, section.the-event:after, section.wannabesponsor:after {
+    section.headline:after, section.location:after, section.speakers-detail:after, section.the-event:after, section.wannabesponsor:after {
       background-size: 10px 12px, 10px 10px !important;
       bottom: -20px;
       content: "";
@@ -199,13 +199,17 @@ section {
       background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
       background-repeat: repeat-x; }
+  section.location:after {
+    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
+    background-repeat: repeat-x; }
   section.prev-eds .container > h2 {
     white-space: nowrap; }
   section.prev-eds hr {
     display: none; }
   section.program hr {
     margin: 1em auto; }
-  section.speakers, section.subscribe, section.wannabesponsor, section.work-team {
+  section.nearby, section.speakers, section.subscribe, section.wannabesponsor, section.work-team {
     background: #33A7B0;
     color: white; }
   section.speakers-detail:after {
@@ -498,6 +502,11 @@ section {
   .more-of-team:hover {
     color: inherit; }
 
+.nearby-item {
+  text-align: left; }
+  .nearby-item ul {
+    padding-left: 20px; }
+
 .other-article {
   box-sizing: border-box;
   font-size: 0.75rem;
@@ -527,6 +536,33 @@ section {
     text-decoration: none; }
     .other-article .other-article-title a:hover {
       text-decoration: underline; }
+
+.place {
+  text-align: left; }
+  .place .place-address {
+    color: #33A7B0;
+    font-weight: bold; }
+  .place .place-location {
+    margin-bottom: 1em; }
+    .place .place-location span {
+      display: block; }
+  .place .place-map {
+    margin: 0.5em auto; }
+    .place .place-map iframe {
+      width: 100%; }
+    .place .place-map .place-address,
+    .place .place-map .place-city {
+      color: #393939;
+      display: block;
+      font-size: smaller;
+      font-weight: bold; }
+  .place .place-name {
+    margin-bottom: 0;
+    text-align: left; }
+  .place .place-picture {
+    margin: 0.5em auto; }
+    .place .place-picture img {
+      width: 100%; }
 
 .prev-ed,
 .prev-ed-ftimg {
@@ -897,6 +933,9 @@ section {
   .workshop-item .workshop-item-info {
     text-align: left;
     width: 88%; }
+  .workshop-item .workshop-item-room {
+    color: #393939;
+    margin-top: -1em; }
   .workshop-item .workshop-item-title {
     margin-top: 0;
     margin-bottom: 1em; }

@@ -67,6 +67,7 @@ section
 		color: white
 
 	&.headline,
+	&.location,
 	&.speakers-detail,
 	&.the-event,
 	&.wannabesponsor
@@ -124,6 +125,9 @@ section
 		&:after
 			+sawtooth(white)
 
+	&.location:after
+		+sawtooth(white)
+
 	&.prev-eds
 		.container > h2
 			white-space: nowrap
@@ -135,6 +139,7 @@ section
 		hr
 			margin: 1em auto
 
+	&.nearby,
 	&.speakers,
 	&.subscribe,
 	&.wannabesponsor,
