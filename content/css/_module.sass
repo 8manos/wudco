@@ -727,7 +727,7 @@
 
 	.workshop-item-room
 		color: $color_gris
-		margin-top: -1em
+		margin-top: -0.5em
 
 	.workshop-item-title
 		margin-top: 0
@@ -928,9 +928,41 @@
 		position: initial
 		width: auto
 
+	.nearby-item
+		box-sizing: border-box
+		display: inline-block
+		padding: 0 1em
+		vertical-align: top
+		width: 32%
+
+		h3
+			margin-top: 0
+
+		&:nth-child(2)
+			border-width: 0 1px
+			border-style: solid
+
 	.other-article
 		display: inline-block
 		width: 49%
+
+	.place
+		.place-map,
+		.place-picture
+			box-sizing: border-box
+			display: inline-block
+			vertical-align: top
+
+		.place-map
+			height: $map-height
+			width: $map-width
+
+			iframe
+				height: 100%
+
+		.place-picture
+			padding-right: 1em
+			width: 93vw - $map-width
 
 	.prev-ed
 		box-sizing: border-box

@@ -247,6 +247,8 @@ section {
     font-weight: 600; }
   section.workshops .price:first-of-type {
     margin-top: 1em; }
+  section.workshops-room .container > h2 {
+    white-space: nowrap; }
 
 .container {
   margin: 0 auto;
@@ -935,7 +937,7 @@ section {
     width: 88%; }
   .workshop-item .workshop-item-room {
     color: #393939;
-    margin-top: -1em; }
+    margin-top: -0.5em; }
   .workshop-item .workshop-item-title {
     margin-top: 0;
     margin-bottom: 1em; }
@@ -1113,9 +1115,35 @@ section {
     position: initial;
     width: auto; }
 
+  .nearby-item {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 1em;
+    vertical-align: top;
+    width: 32%; }
+    .nearby-item h3 {
+      margin-top: 0; }
+    .nearby-item:nth-child(2) {
+      border-width: 0 1px;
+      border-style: solid; }
+
   .other-article {
     display: inline-block;
     width: 49%; }
+
+  .place .place-map,
+  .place .place-picture {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top; }
+  .place .place-map {
+    height: 22.61905vw;
+    width: 38vw; }
+    .place .place-map iframe {
+      height: 100%; }
+  .place .place-picture {
+    padding-right: 1em;
+    width: 55vw; }
 
   .prev-ed {
     box-sizing: border-box;
