@@ -4,13 +4,9 @@
 		<div class="menu">
 			<h2>World usability day</h2>
 			<ul>
-				<li class="is-active"><a href="/">Inicio</a></li
-				><li><a href="{% url 'event' %}">El evento</a></li
-				><li><a href="{% url 'speakers' %}">Ponentes</a></li
-				><li><a href="{% url 'agenda' %}">Programa</a></li
-				><li><a href="{% url 'workshops' %}">Talleres</a></li
-				><li><a href="/frontend/lugar">Lugar</a></li
-				><li><a href="{% url 'blog' %}">Blog wudco</a></li>
+				{% for item in menu %}
+				<li {% if item.active %}class="is-active"{% endif %}><a href="{{ item.url }}">{{ item.name }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 		<a href="" class="button">Inscríbete</a>
