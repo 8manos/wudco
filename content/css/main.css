@@ -1012,7 +1012,7 @@ section {
     width: 35%; }
 
   .event-scopes {
-    margin: 1em 0; }
+    margin: 1em auto; }
     .event-scopes .event-scope {
       width: 20%; }
 
@@ -1138,6 +1138,8 @@ section {
     vertical-align: top; }
   .place .place-map {
     height: 22.61905vw;
+    max-height: 208px;
+    max-width: 350px;
     width: 38vw; }
     .place .place-map iframe {
       height: 100%; }
@@ -1249,9 +1251,9 @@ section {
   .workshop-learn-list {
     padding-left: 20px; }
 
-  .workshop-signup .button {
-    font-size: larger; }
-
+  /*.workshop-signup
+   * .button
+   * 	font-size: larger */
   .workshop-title {
     text-align: left;
     width: 90%; }
@@ -1338,10 +1340,9 @@ section {
       padding-left: 1em; }
 
   .speech {
-    margin: 1em 2.5em;
     width: 280px; }
     .speech .speech-info {
-      width: calc(100% - 50px - 10px); }
+      width: calc(100% - 50px - 15px); }
 
   .sub,
   .sub-content {
