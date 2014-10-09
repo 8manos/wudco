@@ -9,6 +9,45 @@ from ckeditor.fields import RichTextField
 from sorl.thumbnail import get_thumbnail
 
 
+ICON_CHOICES = (
+    ('clock', u'Reloj'),
+    ('evaluation', u'Evaluación'),
+    ('execution', u'Ejecución'),
+    ('planning', u'Planeación'),
+)
+
+
+class AgendaItem(models.Model):
+    title = models.CharField(max_length=140, verbose_name=u'Título')
+    description = models.TextField(verbose_name=u'Descripción')
+    item_type = models.CharField(max_length=140, choices=ICON_CHOICES, verbose_name=u'ícono')
+
+    time_starts = models.TimeField(db_index=True)
+    time_ends = models.TimeField()
+    coffee_break_after = models.BooleanField(default=False)
+
+    def get_time_description(self):
+        return u'%s %s' % (str(self.time_starts), str(self.time_ends))
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        ordering = ('time_starts', )
+
+
+class TeamMember(models.Model):
+    order = models.IntegerField(default=0)
+    name = models.CharField(max_length=140, verbose_name=u'Nombre')
+    picture = models.ImageField(upload_to='speaker/', verbose_name=u'Imágen')
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('order', )
+
+
 class Speaker(models.Model):
     order = models.IntegerField(default=0)
     name = models.CharField(max_length=140, verbose_name=u'Nombre')

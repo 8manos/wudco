@@ -5,14 +5,13 @@
     <p class="price">Precio antes del 31 de Octubre: <span class="color">$40.000</span>.</p>
     <p class="price">Precio hasta el 6 de Noviembre: <span class="color">$50.000</span>.</p>
     <ul>
+      {% for speaker in speakers %}
+      {% if speaker.workshop_name %}
       {% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-      {% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-      {% include 'front/_workshop-item.html' with icon="evaluation" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-      {% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
+      {% endif %}
+      {% endfor %}
+      {#% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
     </ul>
-    <p class="workshop-signup"><a href="#" class="button">Inscríbete</a></p>
+    <p class="workshop-signup"><a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button">Inscríbete</a></p>
   </div>
 </section>

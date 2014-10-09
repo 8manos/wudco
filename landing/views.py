@@ -1,6 +1,6 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404
-from .models import Speaker, Sponsor, Talk, Post
+from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem
 from .forms import SponsorForm
 
 
@@ -14,6 +14,19 @@ def home(request):
     data['talks'] = Talk.objects.all()
     data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
     return render(request, 'front/index.html', data)
+
+
+def event(request):
+    data = {}
+    data['team'] = TeamMember.objects.all()
+    return render(request, 'front/evento.html', data)
+
+
+def agenda(request):
+    data = {}
+    data['agenda'] = AgendaItem.objects.all()
+    data['speakers'] = Speaker.objects.all()
+    return render(request, 'front/programa.html', data)
 
 
 def speakers(request):
