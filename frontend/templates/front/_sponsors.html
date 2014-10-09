@@ -3,13 +3,10 @@
   <div class="container">
     <h2 class="sawtooth blue"><span>{% copy 'sponsor-us' default='Patrocinan'%}</span></h2>
     <ul>
-      {% include 'front/_sponsor.html' with picture="img/logo_monoku.png" name="Monoku" %}
-
-      {% include 'front/_sponsor.html' with picture="img/logo_8manos.png" name="8manos" %}
-
-      {% include 'front/_sponsor.html' with picture="img/logo_webcake.png" name="Webcake" %}
-
-      {% include 'front/_sponsor.html' with picture="img/logo_openweb.png" name="Openweb" %}
+     {% for sponsor in sponsors %}<li class="sponsor">
+      {% include 'front/_sponsor.html' with picture=sponsor.logo.url name=sponsor.name url=sponsor.url %}
+      {% endfor %}
+      {#% include 'front/_sponsor.html' with picture="img/logo_8manos.png" name="8manos" %#}
     </ul>
     {% if not request.GET.edit_copys%}<a class="orange" href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a>
   </div>

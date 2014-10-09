@@ -2,7 +2,7 @@
 <li class="speaker">
   <div class="speaker-pic">
     <figure>
-    <a href="{{ url|default:'#' }}" target="_blank"><img src="{% static picture %}" alt="{{ name }}" /></a>
+    <a href="{% url 'speakers' %}#{{speaker.name|slugify}}" target="_blank"><img src="{{picture}}" alt="{{ name }}" /></a>
     </figure>
     {% if twitter_url %}
       <a href="{{twitter_url}}" class="twitter" target="_blank"><i class="icon-twitter-profile"></i></a>
@@ -11,7 +11,7 @@
       <a href="{{linkedin_url}}" class="linkedin" target="_blank"><i class="icon-linkedin-profile"></i></a>
     {% endif %}
   </div>
-  <p class="speaker-name"><a href="{{ url|default:'#' }}">{{ name }}</a></p>
+  <p class="speaker-name"><a href="{% url 'speakers' %}#{{speaker.name|slugify}}">{{ name }}</a></p>
   {% if title %}
     <p class="speaker-position">{{title}}</p>
   {% endif %}

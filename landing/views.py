@@ -13,7 +13,7 @@ def home(request):
     data['sponsors'] = Sponsor.objects.all()
     data['talks'] = Talk.objects.all()
     data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
-    return render(request, 'index.html', data)
+    return render(request, 'front/index.html', data)
 
 
 def speakers(request):
