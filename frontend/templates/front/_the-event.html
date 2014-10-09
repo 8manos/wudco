@@ -17,10 +17,10 @@
 	    </li>
 	  </ul>
 	  <div class="event-info">
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat perspiciatis iste architecto hic pariatur, corporis distinctio culpa ad nemo? Consequatur iure nesciunt ipsum laborum minima, ipsam quod quis veniam sunt!</p>
+	  	<p>{% copy 'event-description' br=True %}</p>
 	  </div>
 	  <div class="event-practical-info">
-	  	<h3>Información práctica</h3>
+	  	<h3>{% copy 'practical-info' br=True default="Información práctica" %}</h3>
 	  	<ul>
 	  		<li>Curibatur pellentesque risus ac adipscing tristique.</li>
 	  		<li>Nunc pretium tempor erat ut cursus. Nulla mollis.</li>

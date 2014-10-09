@@ -7,13 +7,11 @@
 			<span class="label">Charlas</span>
 		</div>
 		<ul class="program-list">
-			{% include 'front/_program-item.html' with class='program-item' icon='clock' time='8:00 a.m. > 8:40 a.m.' name='Bienvenida y presentación' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
-			{% include 'front/_program-item.html' with class='program-item' icon='evaluation' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
-			{% include 'front/_program-item.html' with class='program-item' icon='execution' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
-			{% include 'front/_program-item.html' with class='program-item-break' text='Coffee break' %}
-			{% include 'front/_program-item.html' with class='program-item' icon='planning' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
-			{% include 'front/_program-item.html' with class='program-item' icon='evaluation' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
-			{% include 'front/_program-item.html' with class='program-item' icon='execution' time='8:00 a.m. > 8:40 a.m.' name='Nam consequat malesuada enim ac tincidunt' text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit doloremque culpa magnam laboriosam, modi perspiciatis consequuntur perferendis, cupiditate illum repellat. Libero sunt eum sint dolor maiores, nesciunt veritatis praesentium.' %}
+			{% for item in agenda %}
+			{% include 'front/_program-item.html' with class='program-item' icon=item.item_type time=item.get_time_description name=item.title text=item.description %}
+			{% if item.coffee_break_after%}
+			{% include 'front/_program-item.html' with class='program-item-break' text='Coffee break' %}{% endif %}
+			{% endfor %}
 		</ul>
 		<a href="" class="button">Inscríbete</a>
 		<hr />
@@ -23,14 +21,13 @@
 		</div>
 		<span class="program-item-time">3:00 p.m. > 7:00 p.m.</span>
 		<ul class="program-workshops">
-			{% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-			{% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-			{% include 'front/_workshop-item.html' with icon="evaluation" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
-
-			{% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
+		{% for speaker in speakers %}
+		      {% if speaker.workshop_name %}
+		      {% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
+		      {% endif %}
+		      {% endfor %}
+			{#% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
 		</ul>
-		<a href="" class="button">Inscríbete</a>
+		<a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button">Inscríbete</a>
 	</div>
 </section>

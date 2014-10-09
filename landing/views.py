@@ -1,35 +1,80 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404
-from .models import Speaker, Sponsor, Talk, Post
+from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem
 from .forms import SponsorForm
+
+from django.core.urlresolvers import reverse
 
 
 FECHA_CIERRE = date(2014, 11, 7)
+PRICE_BEFORE = 60000
+PRICE_AFTER = 80000
+
+
+def get_context(request):
+    menu = [
+            {'url': "/", 'name': 'Inicio'},
+            {'url': reverse('event'), 'name': 'El evento'},
+            {'url': reverse('speakers'), 'name': 'Ponentes'},
+            {'url': reverse('agenda'), 'name': 'Programa'},
+            {'url': reverse('workshops'), 'name': 'Talleres'},
+            {'url': reverse('place'), 'name': 'Lugar'},
+            {'url': reverse('blog'), 'name': 'Blog wudco'},
+    ]
+    data = {'menu': menu}
+    for item in data['menu']:
+        if request.path == item['url']:
+            item['active'] = True
+        else:
+            item['active'] = False
+    data['price_before'] = PRICE_BEFORE
+    data['price_after'] = PRICE_AFTER
+    return data
 
 
 def home(request):
-    data = {}
+    data = get_context(request)
     data['speakers'] = Speaker.objects.all()
     data['sponsors'] = Sponsor.objects.all()
     data['talks'] = Talk.objects.all()
     data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
-    return render(request, 'index.html', data)
+    return render(request, 'front/index.html', data)
+
+
+def event(request):
+    data = get_context(request)
+    data['team'] = TeamMember.objects.all()
+    return render(request, 'front/evento.html', data)
+
+
+def place(request):
+    data = get_context(request)
+    # data['team'] = TeamMember.objects.all()
+    return render(request, 'front/lugar.html', data)
+
+
+def agenda(request):
+    data = get_context(request)
+    data['agenda'] = AgendaItem.objects.all()
+    data['speakers'] = Speaker.objects.all()
+    return render(request, 'front/programa.html', data)
 
 
 def speakers(request):
-    data = {}
+    data = get_context(request)
     data['speakers'] = Speaker.objects.all()
     return render(request, 'front/ponentes.html', data)
 
 
 def workshops(request):
-    data = {}
+    data = get_context(request)
     data['speakers'] = Speaker.objects.filter(workshop_name__gt='')
     return render(request, 'front/talleres.html', data)
 
 
 def post(request, post_slug=None):
-    data = {}
+    data = get_context(request)
+    data['menu'][-1]['active'] = True
     if post_slug:
         post = get_object_or_404(Post, slug=post_slug)
     else:
@@ -44,7 +89,7 @@ def post(request, post_slug=None):
 
 
 def sponsor_form(request, register_type=None):
-    data = {}
+    data = get_context(request)
     initial_d = {'subject': u'Quiero ser patrocinador'}
     if register_type and register_type == 'volunteer':
         initial_d = {'subject': u'Quiero ser voluntario'}

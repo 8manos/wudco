@@ -3,8 +3,9 @@
 	<div class="container">
 		<h2 class="sawtooth white"><span>{% copy 'title-work-team' default='Equipo de trabajo' %}</span></h2>
 	    <ul class="team">
-	      {% include 'front/_speaker.html' with picture="img/Kyle_Soucy.jpg" name="Margó Sabala" %}
-	      {% include 'front/_speaker.html' with picture="img/Lorena_Escandon.jpg" name="Ruth Polinés" %}
+        {% for member in team %}
+	      {% include 'front/_speaker.html' with picture=member.picture.url name=member.name %}
+          {% endfor %}
 	    </ul>
 	    <a class="more-of-team" href="#">Más del equipo</a>
 	</div>
