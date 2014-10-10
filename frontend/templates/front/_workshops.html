@@ -2,12 +2,12 @@
 <section class="workshops">
   <div class="container">
     <h2 class="sawtooth blue"><span>{% copy 'paid-workshop' default='Talleres'%}</span></h2><br />
-    <p class="price">Precio antes del 31 de Octubre: <span class="color">$40.000</span>.</p>
-    <p class="price">Precio hasta el 6 de Noviembre: <span class="color">$50.000</span>.</p>
+    <p class="price">Precio antes del 31 de Octubre: <span class="color">$400.000</span>.</p>
+    {# <p class="price">Precio hasta el 6 de Noviembre: <span class="color">$50.000</span>.</p> #}
     <ul>
       {% for speaker in speakers %}
       {% if speaker.workshop_name %}
-      {% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %}
+      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.workshop_description url="{% url 'workshops' %}" %}
       {% endif %}
       {% endfor %}
       {#% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
