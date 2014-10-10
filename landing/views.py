@@ -35,14 +35,14 @@ def get_context(request):
 def home(request):
     try:
         data = get_context(request)
-        print data
+        # print data
         data['speakers'] = Speaker.objects.all()
         data['sponsors'] = Sponsor.objects.all()
         data['talks'] = Talk.objects.all()
         data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
     except:
         pass
-    return render(request, 'index.html', data)
+    return render(request, 'front/index.html', data)
 
 
 def event(request):
