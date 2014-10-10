@@ -1,11 +1,14 @@
 {% load staticfiles copy %}
+{% if posts.exists %}
 <section class="blog-entries">
   <div class="container">
     <h2 class="sawtooth blue"><span>{% copy 'blog-title' default='Blog Wudco'%}</span></h2>
     <ul>
-      {% include 'front/_blog-item.html' with title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" date="20 de Septiembre de 2014" url="#" %}
-
-      {% include 'front/_blog-item.html' with title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" date="20 de Septiembre de 2014" url="#" %}
+    {% for post in posts %}
+      {% include 'front/_blog-item.html' with title=post.title author=post.author date=post.date_published url=post.get_absolute_url %}
+    {% endfor %}
+      {# {% include 'front/_blog-item.html' with title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" date="20 de Septiembre de 2014" url="#" %} #}
+    }
     </ul>
   </div>
-</section>
+</section>{% endif %}

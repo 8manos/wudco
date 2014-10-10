@@ -39,6 +39,7 @@ def home(request):
         data['speakers'] = Speaker.objects.all()
         data['sponsors'] = Sponsor.objects.all()
         data['talks'] = Talk.objects.all()
+        data['posts'] = Post.objects.filter(published=True)[:2]
         data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
     except:
         pass
