@@ -42,7 +42,7 @@ def home(request):
         data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
     except:
         pass
-    return render(request, 'front/index.html', data)
+    return render(request, 'index.html', data)
 
 
 def event(request):
