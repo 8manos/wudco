@@ -149,12 +149,13 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=140, verbose_name=u'Nombre')
     url = models.URLField(max_length=200, blank=True)
     logo = models.ImageField(upload_to='sponsor/')
+    is_partner = models.BooleanField(default=True, verbose_name=u'Es aliado')
 
     def __unicode__(self):
         return self.name
 
     class Meta:
-        ordering = ('order', )
+        ordering = ('is_partner', 'order', )
 
 
 class Talk(models.Model):

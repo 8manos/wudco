@@ -26,11 +26,16 @@ class PastEditionAdmin(admin.ModelAdmin):
     list_display = ('year', 'description', 'youtube_id', 'image', )
 
 
+class SponsorAdmin(admin.ModelAdmin):
+    list_display = ('name', 'url', 'is_partner', 'order')
+    list_editable = ('is_partner', 'order')
+
+
 admin.site.register(Speaker)
 admin.site.register(PastEdition, PastEditionAdmin)
 admin.site.register(NearbyPlace, NearbyPlaceAdmin)
 admin.site.register(TeamMember)
-admin.site.register(Sponsor)
+admin.site.register(Sponsor, SponsorAdmin)
 admin.site.register(Talk)
 admin.site.register(PotentialSponsor)
 admin.site.register(Post, PostAdmin)
