@@ -151,6 +151,12 @@ class Sponsor(models.Model):
     logo = models.ImageField(upload_to='sponsor/')
     is_partner = models.BooleanField(default=True, verbose_name=u'Es aliado')
 
+    def get_logo(self):
+        try:
+            return self.logo.url
+        except:
+            return ''
+
     def __unicode__(self):
         return self.name
 
