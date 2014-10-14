@@ -576,6 +576,9 @@ section {
 .prev-ed-ftimg {
   display: none; }
 
+.prev-ed img {
+  width: 100%; }
+
 .program-item,
 .program-item-break {
   border-top: 2px solid rgba(0, 0, 0, 0.2);

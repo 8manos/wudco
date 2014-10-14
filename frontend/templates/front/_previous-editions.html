@@ -3,28 +3,30 @@
 	<div class="container">
 		<h2 class="sawtooth blue"><span>{% copy 'title-previous' default='Ediciones anteriores' %}</span></h2>
 		{% for edition in past_editions %}
-		{% if forloop.first %}
-		<div class="last-edition">
-			{% if edition.youtube_id %}
-				<div class="last-edition-video">
-					<div class="video">
-						<a href="http://www.youtube.com/watch?v={{edition.youtube_id}}"></a>
+			{% if forloop.first %}
+				<div class="last-edition">
+					{% if edition.youtube_id %}
+						<div class="last-edition-video">
+							<div class="video">
+								<a href="http://www.youtube.com/watch?v={{edition.youtube_id}}"></a>
+							</div>
+						</div>
+					{% else %}
+						<figure class="last-edition-img">
+							<img src="{{edition.get_image}}">
+						</figure>
+					{% endif %}
+					<div class="last-edition-desc">
+						<h2>WUDco {{ edition.year }}</h2>
+						<p>{{ edition.description }}</p>
 					</div>
 				</div>
 			{% else %}
-				<figure class="last-edition-img">
-					<img src="{{edition.get_image}}">
-				</figure>
+				{% include 'front/_prev-ed.html' with video_id=edition.youtube_id year=edition.year text=edition.description image=edition.get_image%}
 			{% endif %}
-			<div class="last-edition-desc">
-				<h2>WUDco {{ edition.year }}</h2>
-				<p>{{ edition.description }}</p>
-			</div>
-		</div>{% else %}
-		{% include 'front/_prev-ed.html' with video_id=edition.youtube_id year=edition.year text=edition.description image=edition.get_image%}
-		{% endif %}{% endfor %}
-		{% comment %}
+		{% endfor %}
 		<hr />
+		{% comment %}
 		{% include 'front/_prev-ed-ftimg.html' with title='WUDco 2013' img='img/speaker.jpg' %}
 		{% include 'front/_prev-ed-ftimg.html' with title='WUDco 2012' img='img/speaker.jpg' %}
 		{% include 'front/_prev-ed-ftimg.html' with title='WUDco 2011' img='img/speaker.jpg' %} {% endcomment %}
