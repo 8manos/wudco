@@ -2,7 +2,7 @@
 from django.db import models
 
 from django.template.defaultfilters import truncatewords
-from django.utils.safestring import mark_safe
+# from django.utils.safestring import mark_safe
 from django.core.urlresolvers import reverse
 
 from ckeditor.fields import RichTextField
@@ -28,7 +28,8 @@ class AgendaItem(models.Model):
     coffee_break_after = models.BooleanField(default=False)
 
     def get_time_description(self):
-        return u'%s %s' % (str(self.time_starts), str(self.time_ends))
+        format_t = lambda x: x.strftime("%H:%M %p")
+        return u'%s > %s' % (format_t(self.time_starts), format_t(self.time_ends))
 
     def __unicode__(self):
         return self.title
