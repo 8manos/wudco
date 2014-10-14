@@ -3,8 +3,10 @@
   <div class="container">
     <h2 class="sawtooth blue"><span>{% copy 'sponsor-us' default='Patrocinan'%}</span></h2>
     <ul>
-     {% for sponsor in sponsors %}{% if not sponsor.is_partner %}<li class="sponsor">
-      {% include 'front/_sponsor.html' with picture=sponsor.get_logo name=sponsor.name url=sponsor.url %}{% endif %}
+     {% for sponsor in sponsors %}
+     	{% if not sponsor.is_partner %}
+      		{% include 'front/_sponsor.html' with picture=sponsor.get_logo name=sponsor.name url=sponsor.url %}
+      	{% endif %}
       {% endfor %}
     </ul>
     {% if not request.GET.edit_copys%}<a class="orange" href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a>

@@ -5,7 +5,17 @@
 		{% for edition in past_editions %}
 		{% if forloop.first %}
 		<div class="last-edition">
-			<div class="last-edition-video"><div class="video">{% if edition.youtube_id %}<a href="http://www.youtube.com/watch?v={{edition.youtube_id}}"></a>{% else %}<img src="{{edition.get_image}}">{% endif %}</div></div>
+			{% if edition.youtube_id %}
+				<div class="last-edition-video">
+					<div class="video">
+						<a href="http://www.youtube.com/watch?v={{edition.youtube_id}}"></a>
+					</div>
+				</div>
+			{% else %}
+				<figure class="last-edition-img">
+					<img src="{{edition.get_image}}">
+				</figure>
+			{% endif %}
 			<div class="last-edition-desc">
 				<h2>WUDco {{ edition.year }}</h2>
 				<p>{{ edition.description }}</p>

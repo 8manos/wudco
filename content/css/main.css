@@ -469,6 +469,12 @@ section {
     margin-top: 0;
     margin-bottom: 1em; }
 
+.last-edition-img {
+  margin: 0; }
+  .last-edition-img img {
+    vertical-align: middle;
+    width: 100%; }
+
 .menu {
   background: #393939;
   height: 100%;
@@ -1084,6 +1090,7 @@ section {
   .last-edition {
     margin: 1em 0 2em 0; }
     .last-edition .last-edition-desc,
+    .last-edition .last-edition-img,
     .last-edition .last-edition-video {
       box-sizing: border-box;
       display: inline-block;
@@ -1093,6 +1100,7 @@ section {
       padding-left: 0.5em; }
       .last-edition .last-edition-desc h2 {
         margin-top: 0; }
+    .last-edition .last-edition-img,
     .last-edition .last-edition-video {
       padding-right: 0.5em; }
 

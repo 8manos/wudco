@@ -6,7 +6,7 @@
     {# <p class="price">Precio hasta el 6 de Noviembre: <span class="color">$50.000</span>.</p> #}
     <ul>
       {% for speaker in speakers_w %}
-      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}"
+      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}
       {% endfor %}
       {#% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
     </ul>
