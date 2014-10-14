@@ -20,9 +20,9 @@
             </div>
             <div class="actions">
                 <ul>
-                    <li>{% if not request.GET.edit_copys%}<a href="{% url 'volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
-                    <li>{% if not request.GET.edit_copys%}<a href="{% url 'sponsor_form' %}">{% else %}{% copy 'link-sponsor' %} {% endif %}{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
-                    <li id="contact-link">{% if not request.GET.edit_copys%}<a href="#">{% else %}{% copy 'link-contact' %} {% endif %}{% copy 'wants-contact' default='Contáctanos' %}</a></li>
+                    <li><a href="{% url 'volunteer' %}">{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
+                    <li><a href="{% url 'sponsor_form' %}">{% copy 'wants-sponsor' default='Quiero ser patrocinador' %}</a></li>
+                    <li id="contact-link"><a href="#">{% copy 'wants-contact' default='Contáctanos' %}</a></li>
                 </ul>
             </div>
         </div>

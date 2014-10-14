@@ -7,6 +7,9 @@
 				{% for item in menu %}
 				<li {% if item.active %}class="is-active"{% endif %}><a href="{{ item.url }}">{{ item.name }}</a></li>
 				{% endfor %}
+				 {% if user.is_staff and not request.GET.edit_copys%}
+            <li><a href="?edit_copys=true"> Editar Copies</a></li>
+            {% endif %}
 			</ul>
 		</div>
 		<a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button">Inscríbete</a>
