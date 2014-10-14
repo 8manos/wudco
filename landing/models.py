@@ -17,6 +17,25 @@ ICON_CHOICES = (
     ('planning', u'Planeación'),
 )
 
+PLACE_CHOICES = (
+    (0, u'Restaurantes cerca'),
+    (1, u'Transporte'),
+    (2, u'Información práctica'),
+    # (3, u'Planeación'),
+)
+
+
+class NearbyPlace(models.Model):
+    place_type = models.IntegerField(choices=PLACE_CHOICES)
+    name = models.CharField(max_length=300)
+    order = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('place_type', 'order', )
+
 
 class AgendaItem(models.Model):
     title = models.CharField(max_length=140, verbose_name=u'Título')

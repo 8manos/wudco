@@ -1,8 +1,8 @@
 {% load staticfiles copy %}
 <section class="nearby">
 	<div class="container">
-	  {% include 'front/_nearby-item.html' with name='Restaurantes cerca' item1='Curabitur pellentesque risus ac adipiscing.' item2='Nunc pretium tempor erat ut cursus.' item3='Nullam vel est vitae sapien auctor.' item4='Curabitur molestie turpis non nunc vestibulum.' %}
-	  {% include 'front/_nearby-item.html' with name='Transporte' item1='Curabitur pellentesque risus ac adipiscing.' item2='Nunc pretium tempor erat ut cursus.' item3='Nullam vel est vitae sapien auctor.' item4='Curabitur molestie turpis non nunc vestibulum.' %}
-	  {% include 'front/_nearby-item.html' with name='Información práctica' item1='Curabitur pellentesque risus ac adipiscing.' item2='Nunc pretium tempor erat ut cursus.' item3='Nullam vel est vitae sapien auctor.' item4='Curabitur molestie turpis non nunc vestibulum.' %}
+    {% for name, items in places.items %}
+	  {% include 'front/_nearby-item.html' with name=name items=items %}
+	  {% endfor %}
 	</div>
 </section>

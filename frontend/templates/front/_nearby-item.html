@@ -1,9 +1,9 @@
 <div class="nearby-item">
 	<h3>{{name}}</h3>
 	<ul>
-		<li>{{item1}}</li>
-		<li>{{item2}}</li>
-		<li>{{item3}}</li>
-		<li>{{item4}}</li>
+        {% for item in items %}
+		<li>{{item}}</li>
+        {% endfor %}
+		
 	</ul>
 </div>

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Speaker, Sponsor, Talk, PotentialSponsor,\
-    Post, TeamMember, AgendaItem
+    Post, TeamMember, AgendaItem, NearbyPlace
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -16,7 +16,14 @@ class AgendaItemAdmin(admin.ModelAdmin):
                     'time_ends', 'coffee_break_after')
     list_editable = list_display[2:]
 
+
+class NearbyPlaceAdmin(admin.ModelAdmin):
+    list_display = ('place_type', 'name', 'order', )
+    list_editable = ('order', )
+
+
 admin.site.register(Speaker)
+admin.site.register(NearbyPlace, NearbyPlaceAdmin)
 admin.site.register(TeamMember)
 admin.site.register(Sponsor)
 admin.site.register(Talk)
