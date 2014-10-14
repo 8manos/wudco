@@ -1,7 +1,7 @@
 <div class="prev-ed">
-	<div class="prev-ed-video"><div class="video"><a href="{{video}}"></a></div></div>
+	<div class="prev-ed-video">{% if video_id %}<div class="video"><a href="http://www.youtube.com/watch?v={{video_id}}"></a></div>{% else %}{% if image %}<img src="{{image}}">{% endif %}{% endif %}</div>
 	<div class="prev-ed-desc">
-		<h3>{{title}}</h3>
+		<h3>WUDco {{year}}</h3>
 		<p>{{text}}</p>
 	</div>
 </div>

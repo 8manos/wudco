@@ -25,6 +25,21 @@ PLACE_CHOICES = (
 )
 
 
+class PastEdition(models.Model):
+    year = models.IntegerField()
+    description = models.TextField(blank=True)
+    youtube_id = models.CharField(max_length=300, blank=True, null=True)
+    image = models.ImageField(upload_to='past/', blank=True, null=True)
+
+    def get_image(self):
+        if self.image:
+            return get_thumbnail(self.image, '394x221', crop='center').url
+        return ''
+
+    class Meta:
+        ordering = ('-year', )
+
+
 class NearbyPlace(models.Model):
     place_type = models.IntegerField(choices=PLACE_CHOICES)
     name = models.CharField(max_length=300)

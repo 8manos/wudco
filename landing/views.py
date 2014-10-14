@@ -1,6 +1,7 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404
-from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem, NearbyPlace
+from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem,\
+    NearbyPlace, PastEdition
 from .forms import SponsorForm
 
 from django.core.urlresolvers import reverse
@@ -37,6 +38,7 @@ def home(request):
         data = get_context(request)
         # print data
         data['speakers'] = Speaker.objects.filter(only_workshop=False)
+        data['speakers_w'] = Speaker.objects.filter(workshop_name__gt='')
         data['sponsors'] = Sponsor.objects.all()
         data['talks'] = Talk.objects.all()
         data['posts'] = Post.objects.filter(published=True)[:2]
@@ -49,6 +51,7 @@ def home(request):
 def event(request):
     data = get_context(request)
     data['team'] = TeamMember.objects.all()
+    data['past_editions'] = PastEdition.objects.all()
     return render(request, 'front/evento.html', data)
 
 
@@ -68,7 +71,7 @@ def place(request):
 def agenda(request):
     data = get_context(request)
     data['agenda'] = AgendaItem.objects.all()
-    data['speakers'] = Speaker.objects.filter(only_workshop=False)
+    data['speakers'] = Speaker.objects.filter(workshop_name__gt='')
     return render(request, 'front/programa.html', data)
 
 

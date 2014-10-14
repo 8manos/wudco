@@ -5,13 +5,11 @@
     <p class="price">Precio antes del 31 de Octubre: <span class="color">$400.000</span>.</p>
     {# <p class="price">Precio hasta el 6 de Noviembre: <span class="color">$50.000</span>.</p> #}
     <ul>
-      {% for speaker in speakers %}
-      {% if speaker.workshop_name %}
+      {% for speaker in speakers_w %}
       {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}"
-      {% endif %}
       {% endfor %}
       {#% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
     </ul>
-    <p class="workshop-signup"><a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button">Inscríbete</a></p>
+    <p class="workshop-signup"><a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button" target="_blank">Inscríbete</a></p>
   </div>
 </section>
