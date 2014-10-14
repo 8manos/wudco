@@ -105,7 +105,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATIC_URL = '/static/'
+STATIC_URL = 'https://wudco.s3.amazonaws.com/'
 if [(i, k) for i, k in os.environ.items() if 'heroku' in k]:
     DEBUG = False
     import dj_database_url
