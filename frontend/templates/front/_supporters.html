@@ -4,7 +4,7 @@
     <h2 class="sawtooth blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
     <ul>
     {% for sponsor in sponsors %}{% if sponsor.is_partner %}<li class="sponsor">
-      {% include 'front/_sponsor.html' with picture=sponsor.logo.url name=sponsor.name url=sponsor.url %}{% endif %}
+      {% include 'front/_sponsor.html' with picture=sponsor.get_logo name=sponsor.name url=sponsor.url %}{% endif %}
       {% endfor %}
       
     </ul>
