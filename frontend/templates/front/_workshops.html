@@ -7,7 +7,7 @@
     <ul>
       {% for speaker in speakers %}
       {% if speaker.workshop_name %}
-      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.workshop_description url="/talleres/" %}"
+      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}"
       {% endif %}
       {% endfor %}
       {#% include 'front/_workshop-item.html' with icon="execution" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}

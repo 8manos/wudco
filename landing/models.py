@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 from django.db import models
 
+from django.template.defaultfilters import truncatewords
 from django.utils.safestring import mark_safe
 from django.core.urlresolvers import reverse
 
@@ -67,11 +68,16 @@ class Speaker(models.Model):
     workshop_learn = models.TextField(blank=True, verbose_name=u'Aprenderás',
                                       help_text='Separados con salto de línea.')
 
+    only_workshop = models.BooleanField(default=False, verbose_name=u'Sólo taller')
+
     ICONS = (('evaluation', 'Evaluación'), ('execution', 'Ejecución'), ('planning', 'Planeación'),)
     workshop_icon = models.CharField(blank = True, null = True, max_length = 10, choices = ICONS, verbose_name = u'Ícono del taller')
 
     def get_workshoplearn_points(self):
         return [point for point in self.workshop_learn.split('\n') if point.strip()]
+
+    def get_workshop_summay(self):
+        return truncatewords(self.workshop_description, 20)
 
     def __unicode__(self):
         return self.name
