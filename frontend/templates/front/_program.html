@@ -19,14 +19,13 @@
 			<i class="icon-workshop"></i>
 			<span class="label">Talleres</span>
 		</div>
-		<span class="program-item-time">3:00 p.m. > 7:00 p.m.</span>
+		<span class="program-item-time">{% copy 'workshops-time' default='2:30 p.m. > 6:30 p.m.' %}</span>
 		<ul class="program-workshops">
 		{% for speaker in speakers %}
-		      {% if speaker.workshop_name %}
-		      {% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}"
-		      {% endif %}
-		      {% endfor %}
-			{#% include 'front/_workshop-item.html' with icon="planning" title="Errores y aciertos en el proceso de construcción de un sitio web." author="Jorge Arango" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque voluptatibus fuga molestiae doloribus veritatis quia recusandae veniam fugiat magni. Voluptatum dolores esse ipsam. Cumque, reiciendis amet excepturi esse optio!" url="#" %#}
+	      {% if speaker.workshop_name %}
+	      	{% include 'front/_workshop-item.html' with icon=speaker.workshop_icon title=speaker.workshop_name author=speaker.name description=speaker.get_workshop_summay url="/talleres/" %}
+	      {% endif %}
+	    {% endfor %}
 		</ul>
 		<a href="https://welcu.com/usaria/dia-mundial-de-la-usabilidad-2014" class="button">Inscríbete</a>
 	</div>
