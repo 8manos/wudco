@@ -571,6 +571,11 @@ section {
     margin: 0.5em auto; }
     .place .place-picture img {
       width: 100%; }
+  .place .place-text a {
+    color: #33A7B0;
+    transition: color 0.3s; }
+    .place .place-text a:hover {
+      color: #de4b39; }
 
 .prev-ed,
 .prev-ed-ftimg {
