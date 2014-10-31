@@ -1,4 +1,30 @@
 {% load staticfiles copy %}
+{% if conf_place %}
+<section class="location">
+	<div class="container">
+	  <h2 class="sawtooth blue"><span>LO{% copy 'title-place' default='Lugar' %}</span></h2>
+	  <div class="place">
+	  	<h3 class="place-name">{{conf_place.title}}</h3>
+	  	<div class="place-location">
+	  		<span class="place-address">{{conf_place.address }}</span>
+	  		<span class="place-address">{{conf_place.room }}</span>
+	  		<span class="place-city">{{conf_place.city }}</span>
+	  	</div>
+	  	<figure class="place-picture">
+	  		<img src="{{ conf_place.image.url }}" alt="{{conf_place.title}}">
+	  	</figure>
+	  	<div class="place-map">
+	  		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3976.925304286047!2d-74.06886399999999!3d4.607394!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a28273232d%3A0x8f335cc5fc58e786!2sCAI+Tadeo!5e0!3m2!1ses!2ses!4v1412959271215" width="400" height="300" frameborder="0" style="border:0"></iframe>
+	  		<span class="place-address">{{conf_place.address }}</span>
+	  		<span class="place-city">{{conf_place.city }}</span>
+	  	</div>
+	  	<div class="place-text">
+	  		{{conf_place.description|safe }}
+	  	</div>
+	  </div>
+	</div>
+</section>
+{% else %}
 <section class="location">
 	<div class="container">
 	  <h2 class="sawtooth blue"><span>{% copy 'title-place' default='Lugar' %}</span></h2>
@@ -22,3 +48,4 @@
 	  </div>
 	</div>
 </section>
+{% endif %}

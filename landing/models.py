@@ -171,6 +171,19 @@ class Talk(models.Model):
     url = models.URLField(max_length=140, blank=True)
 
 
+class PlaceInfo(models.Model):
+    title = models.CharField(max_length=140, verbose_name=u'Título')
+    address = models.CharField(max_length=140, verbose_name=u'Dirección')
+    city = models.CharField(max_length=140, verbose_name=u'Ciudad')
+    room = models.CharField(max_length=140, verbose_name=u'Salón')
+    description = RichTextField(verbose_name=u'Descripción')
+    image = models.ImageField(upload_to='place/', verbose_name=u'Imagen')
+
+    def save(self, *args, **kwargs):
+        super(PlaceInfo, self).save(*args, **kwargs)
+        PlaceInfo.objects.exclude(id=self.id).delete()
+
+
 class PotentialSponsor(models.Model):
     when = models.DateTimeField(auto_now_add=True)
     subject = models.CharField(max_length=240, verbose_name=u'Asunto', default=u'Quiero ser patrocinador')

@@ -1,7 +1,7 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404
 from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem,\
-    NearbyPlace, PastEdition
+    NearbyPlace, PastEdition, PlaceInfo
 from .forms import SponsorForm
 
 from django.core.urlresolvers import reverse
@@ -64,6 +64,10 @@ def place(request):
         ps.append(p)
         d_places[p.get_place_type_display()] = ps
     data['places'] = d_places
+    try:
+        data['conf_place'] = PlaceInfo.objects.all()[0]
+    except:
+        pass
     # data['team'] = TeamMember.objects.all()
     return render(request, 'front/lugar.html', data)
 
