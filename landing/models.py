@@ -187,7 +187,7 @@ class PlaceInfo(models.Model):
 class PotentialSponsor(models.Model):
     when = models.DateTimeField(auto_now_add=True)
     subject = models.CharField(max_length=240, verbose_name=u'Asunto', default=u'Quiero ser patrocinador')
-    last_name = models.CharField(max_length=240, verbose_name=u'Apellidos')
+    last_name = models.CharField(max_length=240, verbose_name=u'Nombres y apellidos')
     email = models.EmailField(verbose_name=u'Correo electrónico')
     phone = models.CharField(max_length=240, verbose_name=u'Teléfono')
     company = models.CharField(max_length=240, verbose_name=u'Tu empresa / donde trabajas')
