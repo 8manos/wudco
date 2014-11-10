@@ -293,6 +293,7 @@ section {
   section h2 {
     font-size: 1.6rem; }
   section.headline {
+    background-size: auto 55%;
     padding-bottom: 20%; }
     section.headline a {
       font-size: larger; }
