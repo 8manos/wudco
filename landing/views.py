@@ -16,10 +16,8 @@ def get_context(request):
     menu = [
             {'url': "/", 'name': 'Inicio'},
             {'url': reverse('event'), 'name': 'El evento'},
-            {'url': reverse('speakers'), 'name': 'Ponentes'},
-            {'url': reverse('agenda'), 'name': 'Programa'},
+            {'url': reverse('memoirs'), 'name': 'Memorias'},
             {'url': reverse('workshops'), 'name': 'Talleres'},
-            {'url': reverse('place'), 'name': 'Lugar'},
             {'url': reverse('blog'), 'name': 'Blog wudco'},
     ]
     data = {'menu': menu}
@@ -71,6 +69,9 @@ def place(request):
     # data['team'] = TeamMember.objects.all()
     return render(request, 'front/lugar.html', data)
 
+def memoirs(request):
+    data = get_context(request)
+    return render(request, 'front/evento.html', data)
 
 def agenda(request):
     data = get_context(request)
