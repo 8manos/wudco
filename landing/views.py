@@ -71,7 +71,7 @@ def place(request):
 
 def memoirs(request):
     data = get_context(request)
-    return render(request, 'front/evento.html', data)
+    return render(request, 'front/memorias.html', data)
 
 def agenda(request):
     data = get_context(request)
