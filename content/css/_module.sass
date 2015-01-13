@@ -407,6 +407,18 @@
 			padding-left: 20px
 			text-align: left
 
+.so-it-was-title
+	color: $color_azul
+	font-size: 2.2rem
+
+.so-it-was-video-desc
+	color: $color_azul
+	font-weight: bold
+	text-align: left
+
+	h3
+		margin-top: 0.5em
+
 .social-network
 	display: inline-block
 	margin: 1em
@@ -660,34 +672,21 @@
 		pointer-events: none
 
 .video
-	position: relative
-	padding-bottom: 56.25%
-	height: 0
-	overflow: hidden
-	max-width: 100%
+	a
+		padding-top: 56.25%
 
-	embed,
-	iframe,
-	object
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		z-index: 2
-
-	&:before
-		background: $color_azul
-		bottom: 0.75em
-		border-radius: 3px
-		content: '\e60b'
-		color: white
-		cursor: pointer
-		font-family: icomoon
-		left: 0.5em
-		padding: 0.25em 0.75em
-		position: absolute
-		z-index: 1
+		&:before
+			background: $color_azul
+			bottom: 0.75em
+			border-radius: 3px
+			content: '\e60b'
+			color: white
+			cursor: pointer
+			font-family: icomoon
+			left: 0.5em
+			padding: 0.25em 0.75em
+			position: absolute
+			z-index: 1
 
 .video a
 	color: #fff

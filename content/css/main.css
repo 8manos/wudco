@@ -660,6 +660,17 @@ section {
     padding-left: 20px;
     text-align: left; }
 
+.so-it-was-title {
+  color: #33A7B0;
+  font-size: 2.2rem; }
+
+.so-it-was-video-desc {
+  color: #33A7B0;
+  font-weight: bold;
+  text-align: left; }
+  .so-it-was-video-desc h3 {
+    margin-top: 0.5em; }
+
 .social-network {
   display: inline-block;
   margin: 1em;
@@ -872,22 +883,9 @@ section {
 .team a {
   pointer-events: none; }
 
-.video {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  .video embed,
-  .video iframe,
-  .video object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2; }
-  .video:before {
+.video a {
+  padding-top: 56.25%; }
+  .video a:before {
     background: #33A7B0;
     bottom: 0.75em;
     border-radius: 3px;
