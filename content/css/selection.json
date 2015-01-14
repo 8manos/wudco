@@ -4,6 +4,64 @@
 		{
 			"icon": {
 				"paths": [
+					"M737.229 891.802c13.722 13.875 13.722 36.25 0 50.125s-35.891 13.875-49.613 0l-400.896-404.838c-13.722-13.875-13.722-36.301 0-50.125l400.896-404.89c13.722-13.875 35.891-13.875 49.613 0s13.722 36.25 0 50.125l-365.568 379.802 365.568 379.802z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"tags": [
+					"arrow-left",
+					"previous",
+					"left"
+				],
+				"grid": 20
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 20,
+				"id": 1,
+				"name": "prev",
+				"prevSize": 20,
+				"code": 58894
+			},
+			"setIdx": 1,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M286.771 891.802c-13.722 13.875-13.722 36.25 0 50.125s35.891 13.875 49.613 0l400.896-404.838c13.722-13.875 13.722-36.301 0-50.125l-400.896-404.89c-13.722-13.875-35.891-13.875-49.613 0s-13.722 36.25 0 50.125l365.568 379.802-365.568 379.802z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"tags": [
+					"arrow-left",
+					"previous",
+					"left"
+				],
+				"grid": 20
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"name": "next",
+				"prevSize": 20,
+				"code": 58895
+			},
+			"setIdx": 1,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
 					"M0 932.571v-841.143q0-14.857 9.429-20.571t22.571 1.714l758.857 421.714q13.143 7.429 13.143 17.714t-13.143 17.714l-758.857 421.714q-13.143 7.429-22.571 1.714t-9.429-20.571z"
 				],
 				"attrs": [
@@ -29,7 +87,7 @@
 				"name": "play",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 2,
 			"iconIdx": 0
 		},
 		{
@@ -52,14 +110,14 @@
 				}
 			],
 			"properties": {
-				"order": 1,
+				"order": 2,
 				"id": 1,
 				"prevSize": 32,
 				"code": 58893,
 				"name": "clock",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 3,
 			"iconIdx": 0
 		},
 		{
@@ -82,14 +140,14 @@
 				}
 			],
 			"properties": {
-				"order": 2,
+				"order": 3,
 				"id": 0,
 				"prevSize": 32,
 				"code": 58890,
 				"name": "menu",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 3,
 			"iconIdx": 1
 		},
 		{
@@ -109,14 +167,14 @@
 				{}
 			],
 			"properties": {
-				"order": 12,
+				"order": 13,
 				"id": 17,
 				"prevSize": 32,
 				"code": 58885,
 				"name": "linkedin-profile",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 0
 		},
 		{
@@ -136,14 +194,14 @@
 				{}
 			],
 			"properties": {
-				"order": 13,
+				"order": 14,
 				"id": 16,
 				"prevSize": 32,
 				"code": 58886,
 				"name": "twitter-profile",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 1
 		},
 		{
@@ -163,14 +221,14 @@
 				{}
 			],
 			"properties": {
-				"order": 4,
+				"order": 5,
 				"id": 15,
 				"prevSize": 32,
 				"code": 58880,
 				"name": "talk",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 2
 		},
 		{
@@ -191,14 +249,14 @@
 				{}
 			],
 			"properties": {
-				"order": 5,
+				"order": 6,
 				"id": 14,
 				"prevSize": 32,
 				"code": 58881,
 				"name": "check",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 3
 		},
 		{
@@ -218,14 +276,14 @@
 				{}
 			],
 			"properties": {
-				"order": 6,
+				"order": 7,
 				"id": 13,
 				"prevSize": 32,
 				"code": 58882,
 				"name": "execution",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 4
 		},
 		{
@@ -260,14 +318,14 @@
 				{}
 			],
 			"properties": {
-				"order": 7,
+				"order": 8,
 				"id": 12,
 				"prevSize": 32,
 				"code": 58883,
 				"name": "evaluation",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 5
 		},
 		{
@@ -287,14 +345,14 @@
 				{}
 			],
 			"properties": {
-				"order": 11,
+				"order": 12,
 				"id": 11,
 				"prevSize": 32,
 				"code": 58884,
 				"name": "facebook",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 6
 		},
 		{
@@ -314,14 +372,14 @@
 				{}
 			],
 			"properties": {
-				"order": 8,
+				"order": 9,
 				"id": 7,
 				"prevSize": 32,
 				"code": 58887,
 				"name": "planning",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 7
 		},
 		{
@@ -347,14 +405,14 @@
 				{}
 			],
 			"properties": {
-				"order": 9,
+				"order": 10,
 				"id": 6,
 				"prevSize": 32,
 				"code": 58888,
 				"name": "workshop",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 8
 		},
 		{
@@ -375,14 +433,14 @@
 				{}
 			],
 			"properties": {
-				"order": 10,
+				"order": 11,
 				"id": 5,
 				"prevSize": 32,
 				"code": 58889,
 				"name": "twitter",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 9
 		},
 		{
@@ -418,14 +476,14 @@
 				{}
 			],
 			"properties": {
-				"order": 3,
+				"order": 4,
 				"id": 1,
 				"prevSize": 32,
 				"code": 58892,
 				"name": "youtube",
 				"ligatures": ""
 			},
-			"setIdx": 2,
+			"setIdx": 4,
 			"iconIdx": 10
 		}
 	],
@@ -452,6 +510,9 @@
 		"historySize": 100,
 		"showCodes": true,
 		"search": "",
-		"gridSize": 16
+		"gridSize": 16,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"showGrid": true
 	}
 }

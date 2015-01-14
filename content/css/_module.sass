@@ -52,6 +52,13 @@
 	&:first-of-type
 		display: inline-block
 
+.carousel
+	position: relative
+
+	.carousel-controls
+		color: white
+		font-size: 5rem
+
 .contact,
 .counter
 	font-size: 1rem
@@ -266,6 +273,49 @@
 
 		&:hover
 			text-decoration: underline
+
+.owl-carousel
+	figcaption
+		background-color: rgba(0, 0, 0, 0.2)
+		bottom: 0
+		color: white
+		font-weight: bold
+		padding: 0.5em 1em
+		position: absolute
+		text-align: left
+		z-index: 2
+
+	figure
+		background-color: black
+		height: 300px
+		margin: 0
+		position: relative
+		width: 100%
+
+	img
+		left: 50%
+		position: absolute
+		top: 50%
+		transform: translate(-50%, -50%)
+		-webkit-transform: translate(-50%, -50%)
+
+.owl-next,
+.owl-prev
+	background-color: rgba(0, 0, 0, 0.2)
+	cursor: pointer
+	line-height: 1rem
+	padding: 0.2rem
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	-webkit-transform: translateY(-50%)
+	z-index: 1
+
+.owl-next
+	right: 0
+
+.owl-prev
+	left: 0
 
 .place
 	text-align: left

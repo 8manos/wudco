@@ -24,7 +24,7 @@
 				var img_top = (height - img_height)/2;
 				var $img = $(this);
 				if(opts.responsive){
-					console.log(provider);
+					//console.log(provider);
 					$img.css({
 						left: 0,
 						margin: '-9.25% 0',
