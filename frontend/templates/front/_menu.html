@@ -1,16 +1,18 @@
 <div class="nav-container">
 	<nav>
-		<i class="icon-menu"></i>
-		<div class="menu">
-			<h2>World usability day</h2>
-			<ul>
-				{% for item in menu %}
-					<li {% if item.active %}class="is-active"{% endif %}><a href="{{ item.url }}">{{ item.name }}</a></li>
-				{% endfor %}
-				{% if user.is_staff and not request.GET.edit_copys %}
-					<li><a href="?edit_copys=true"> Editar Copies</a></li>
-				{% endif %}
-			</ul>
+		<div class="container">
+			<i class="icon-menu"></i>
+			<div class="menu">
+				<h2>World usability day</h2>
+				<ul>
+					{% for item in menu %}
+						<li {% if item.active %}class="is-active"{% endif %}><a href="{{ item.url }}">{{ item.name }}</a></li>
+					{% endfor %}
+					{% if user.is_staff and not request.GET.edit_copys %}
+						<li><a href="?edit_copys=true"> Editar Copies</a></li>
+					{% endif %}
+				</ul>
+			</div>
 		</div>
 	</nav>
 </div>
