@@ -2,13 +2,15 @@
 {% load staticfiles copy %}
 
 {% block contenido %}
-  {% include 'front/_so-it-was.html' %}
-  <hr />
-  {% include 'front/_blog.html' %}
-  <hr />
-  {% include 'front/_images.html' %}
-  <hr />
-  {% include 'front/_sponsors.html' %}
-  <hr />
-  {% include 'front/_supporters.html' %}
+	{% include 'front/_so-it-was.html' %}
+	<hr />
+	<div class="container">
+		{% include 'front/_blog.html' %}
+		<hr />
+		{% include 'front/_images.html' %}
+	</div>
+	<hr />
+	{% include 'front/_sponsors.html' %}
+	<hr />
+	{% include 'front/_supporters.html' %}
 {% endblock %}

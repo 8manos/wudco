@@ -272,6 +272,13 @@ section {
 
   section h2 {
     font-size: 1.4rem; }
+  section.blog-entries, section.images {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%; }
+  section.blog-entries + hr {
+    display: none; }
   section.headline {
     background-position: center calc(100% + 40px); }
     section.headline h1 {
