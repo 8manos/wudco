@@ -254,7 +254,8 @@ section {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px; }
+  max-width: 1280px;
+  overflow: hidden; }
 
 @media screen and (min-width: 768px) {
   footer .l-footer {
@@ -349,6 +350,7 @@ section {
 .blog-item {
   color: #33A7B0;
   display: none;
+  list-style-type: none;
   margin-bottom: 1em;
   text-align: left; }
   .blog-item h4 {
@@ -364,7 +366,7 @@ section {
   .blog-item .blog-item-title {
     font-weight: bold; }
   .blog-item:first-of-type {
-    display: inline-block; }
+    display: block; }
 
 .carousel {
   position: relative; }
@@ -568,7 +570,6 @@ section {
   z-index: 2; }
 .owl-carousel figure {
   background-color: black;
-  height: 300px;
   margin: 0;
   position: relative;
   width: 100%; }
@@ -1038,9 +1039,7 @@ section {
     vertical-align: top; }
 
   .blog-item {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%; }
+    display: block; }
 
   .contact label {
     display: initial; }
@@ -1357,9 +1356,6 @@ section {
   .menu-footer,
   .organizer {
     vertical-align: middle; }
-
-  .blog-item {
-    width: 45%; }
 
   .contact,
   .counter {

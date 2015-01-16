@@ -15,32 +15,37 @@ var imgOrientation = function($pic){
 
 var adjustImgs = function($carousel){
 	$carousel.find('img').each(function(){
-		if(imgOrientation($(this)) == 'horizontal'){
-			$(this).css({
+		var $img = $(this);
+		var $fig = $img.parent();
+		if(imgOrientation($img) == 'horizontal'){
+			$img.css({
 				'height': 'auto',
 				'width': '100%'
 			});
 		}
-		else if(imgOrientation($(this)) == 'vertical'){
-			$(this).css({
+		else if(imgOrientation($img) == 'vertical'){
+			$img.css({
 				'height': '100%',
 				'width': 'auto'
 			});
 		}
 
-		if($(this).innerHeight() > $(this).parent().innerHeight()){
-			$(this).css({
+		if($img.innerHeight() > $fig.innerHeight()){
+			$img.css({
 				'height': '100%',
 				'width': 'auto'
 			});
 		}
 
-		else if($(this).innerWidth() > $(this).parent().innerWidth()){
-			$(this).css({
+		else if($img.innerWidth() > $fig.innerWidth()){
+			$img.css({
 				'height': 'auto',
 				'width': '100%'
 			});
 		}
+	});
+	$carousel.find('figure').css({
+		'height': $carousel.innerWidth()/1.6
 	});
 }
 
