@@ -716,14 +716,17 @@ section {
     padding-left: 20px;
     text-align: left; }
 
+.memoirs-title,
 .so-it-was-title {
   color: #33A7B0;
   font-size: 2.2rem; }
 
+.memoirs-video-desc,
 .so-it-was-video-desc {
   color: #33A7B0;
   font-weight: bold;
   text-align: left; }
+  .memoirs-video-desc h3,
   .so-it-was-video-desc h3 {
     margin-top: 0.5em; }
 
@@ -1240,10 +1243,12 @@ section {
   .program-item .program-item-icon {
     font-size: 5rem; }
 
+  .memoirs-text,
   .so-it-was-text {
     margin: 0 auto;
     max-width: 600px; }
 
+  .memoirs-video,
   .so-it-was-video {
     display: inline-block;
     margin: 1em;
@@ -1412,12 +1417,15 @@ section {
         color: #33A7B0;
         font-size: x-large; }
 
+  .memoirs-video,
   .so-it-was-video {
     margin: 1em 0;
     width: calc(33% - 0.6666em); }
+    .memoirs-video:nth-child(3n),
     .so-it-was-video:nth-child(3n) {
       margin-left: 0;
       margin-right: 1em; }
+    .memoirs-video:nth-child(3n + 2),
     .so-it-was-video:nth-child(3n + 2) {
       margin-left: 1em;
       margin-right: 0; }

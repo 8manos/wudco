@@ -13,5 +13,6 @@ gulp.task('sass', function(){
 });
 
 gulp.task('default', function(){
+	gulp.start('sass');
 	gulp.watch('content/css/*.sass', ['sass']);
 });
