@@ -3,7 +3,7 @@
 	<div class="container">
 	  <h2 class="sawtooth blue"><span>{% copy 'title-memoirs' default='Memorias' %}</span></h2>
 	  <div class="memoirs-text">
-			<p>Fusce auctor augue dui, nec mollis justo elementum ut. Pellentesque posuere nisl mi, a pulvinar erat volutpat quis. Aliquam velit leo, semper sit amet consequat fringilla, lacinia consectetur est.</p>
+			<p>{% copy 'memoirs-text' default='' %}</p>
 		</div>
 		{% for video in post_videos %}
 		<div class="memoirs-video">
