@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Speaker, Sponsor, Talk, PotentialSponsor,\
     Post, TeamMember, AgendaItem, NearbyPlace, PastEdition,\
-    PlaceInfo
+    PlaceInfo, PostEventPhoto, PostEventVideo
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -36,6 +36,17 @@ class PlaceInfoAdmin(admin.ModelAdmin):
     list_display = ('title', )
 
 
+class PostEventPhotoAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image', 'order')
+    list_editable = ('order', )
+
+
+class PostEventVideoAdmin(admin.ModelAdmin):
+    list_display = ('name', 'video_url', 'order')
+    list_editable = ('order', )
+
+admin.site.register(PostEventPhoto, PostEventPhotoAdmin)
+admin.site.register(PostEventVideo, PostEventVideoAdmin)
 admin.site.register(Speaker)
 admin.site.register(PlaceInfo, PlaceInfoAdmin)
 admin.site.register(PastEdition, PastEditionAdmin)

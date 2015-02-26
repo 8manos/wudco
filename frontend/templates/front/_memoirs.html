@@ -5,35 +5,16 @@
 	  <div class="memoirs-text">
 			<p>Fusce auctor augue dui, nec mollis justo elementum ut. Pellentesque posuere nisl mi, a pulvinar erat volutpat quis. Aliquam velit leo, semper sit amet consequat fringilla, lacinia consectetur est.</p>
 		</div>
+		{% for video in post_videos %}
 		<div class="memoirs-video">
 			<div class="memoirs-video-cont">
 				<div class="video">
-					<a href="https://www.youtube.com/watch?v=PbnjGiGFxG8"></a>
+					<a href="{{video.video_url}}"></a>
 				</div>
 			</div>
 			<div class="memoirs-video-desc">
-				<h3>Nulla malesuada nisi eu lectus volutpat, eu sodales sapien semper.</h3>
+				<h3>{{video.name}}</h3>
 			</div>
-		</div>
-		<div class="memoirs-video">
-			<div class="memoirs-video-cont">
-				<div class="video">
-					<a href="https://www.youtube.com/watch?v=PbnjGiGFxG8"></a>
-				</div>
-			</div>
-			<div class="memoirs-video-desc">
-				<h3>Nulla malesuada nisi eu lectus volutpat, eu sodales sapien semper.</h3>
-			</div>
-		</div>
-		<div class="memoirs-video">
-			<div class="memoirs-video-cont">
-				<div class="video">
-					<a href="https://www.youtube.com/watch?v=PbnjGiGFxG8"></a>
-				</div>
-			</div>
-			<div class="memoirs-video-desc">
-				<h3>Nulla malesuada nisi eu lectus volutpat, eu sodales sapien semper.</h3>
-			</div>
-		</div>
+		</div>{% endfor %}
 	</div>
 </section>

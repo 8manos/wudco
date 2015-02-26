@@ -1,7 +1,7 @@
 from datetime import date
 from django.shortcuts import render, get_object_or_404
 from .models import Speaker, Sponsor, Talk, Post, TeamMember, AgendaItem,\
-    NearbyPlace, PastEdition, PlaceInfo
+    NearbyPlace, PastEdition, PlaceInfo, PostEventPhoto, PostEventVideo
 from .forms import SponsorForm
 
 from django.core.urlresolvers import reverse
@@ -41,6 +41,8 @@ def home(request):
         data['talks'] = Talk.objects.all()
         data['posts'] = Post.objects.filter(published=True)[:2]
         data['days_left'] = max((FECHA_CIERRE - date.today()).days, 0)
+        data['post_images'] = PostEventPhoto.objects.all()
+        data['post_videos'] = PostEventVideo.objects.all()
     except:
         pass
     return render(request, 'front/index.html', data)
@@ -69,9 +71,13 @@ def place(request):
     # data['team'] = TeamMember.objects.all()
     return render(request, 'front/lugar.html', data)
 
+
 def memoirs(request):
     data = get_context(request)
+    data['post_images'] = PostEventPhoto.objects.all()
+    data['post_videos'] = PostEventVideo.objects.all()
     return render(request, 'front/memorias.html', data)
+
 
 def agenda(request):
     data = get_context(request)

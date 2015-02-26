@@ -192,3 +192,24 @@ class PotentialSponsor(models.Model):
     phone = models.CharField(max_length=240, verbose_name=u'Teléfono')
     company = models.CharField(max_length=240, verbose_name=u'Tu empresa / donde trabajas')
     comments = models.TextField(verbose_name=u'Comentarios', blank=True)
+
+
+class PostEventPhoto(models.Model):
+    name = models.TextField()
+    image = models.ImageField(upload_to='post/')
+    order = models.IntegerField(default=0)
+
+    def get_image_home(self):
+        return get_thumbnail(self.image, '558x372').url
+
+    class Meta:
+        ordering = ('order', )
+
+
+class PostEventVideo(models.Model):
+    name = models.TextField()
+    video_url = models.URLField(max_length=140)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ('order', )
