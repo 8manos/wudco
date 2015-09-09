@@ -10,7 +10,7 @@ a
 
 		&:hover
 			color: $color_azul
-			
+
 body
 	background: white
 	color: $color_gris
@@ -90,6 +90,23 @@ h2
 		&.white
 			border-image: url($zigzag_white) 0 0 10 0 round round
 			color: white
+
+	&.underline
+		text-transform: uppercase
+
+		&:after
+			background: white
+			content: ""
+			display: block
+			height: 2px
+			margin: 8px auto
+			width: 2em
+
+		&.blue
+			color: $color_azul_oscuro
+
+			&:after
+				background: $color_azul_oscuro
 
 input
 	border: none

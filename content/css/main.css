@@ -8,7 +8,7 @@ a {
   a:hover {
     color: #33A7B0; }
   a.orange {
-    color: #de4b39; }
+    color: #ed594f; }
     a.orange:hover {
       color: #33A7B0; }
 
@@ -22,7 +22,7 @@ button,
 input[type="submit"],
 .button {
   box-sizing: border-box;
-  background: #de4b39;
+  background: #ed594f;
   border: none;
   border-radius: 2px;
   color: white;
@@ -39,7 +39,7 @@ input[type="submit"],
   button:hover,
   input[type="submit"]:hover,
   .button:hover {
-    background: #2c8284;
+    background: #0f3858;
     color: inherit; }
 
 form {
@@ -57,7 +57,7 @@ form {
     form textarea:focus {
       outline: 1px solid #33A7B0; }
   form .errorlist {
-    color: #de4b39; }
+    color: #ed594f; }
     form .errorlist li {
       display: block; }
   form .field-required label:after {
@@ -84,6 +84,19 @@ h2 {
     h2.sawtooth.white {
       border-image: url("../img/zigzag-white.svg") 0 0 10 0 round round;
       color: white; }
+  h2.underline {
+    text-transform: uppercase; }
+    h2.underline:after {
+      background: white;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: 8px auto;
+      width: 2em; }
+    h2.underline.blue {
+      color: #0f3858; }
+      h2.underline.blue:after {
+        background: #0f3858; }
 
 input {
   border: none;
@@ -99,7 +112,7 @@ ul {
   padding: 0; }
 
 footer {
-  background: #393939;
+  background: #0f3858;
   color: white;
   padding: 2em 1em;
   text-align: center; }
@@ -108,10 +121,11 @@ footer {
     width: 60%; }
 
 header {
+  background: #f5f5f5;
   text-align: center; }
 
 nav {
-  background: #393939;
+  background: #f5f5f5;
   color: white;
   font-size: 1rem;
   margin-top: 0.5em;
@@ -152,7 +166,7 @@ section {
   section.blog-entries ul {
     margin: 2em auto; }
   section.countdown {
-    background: #393939;
+    background: #0f3858;
     color: white; }
   section.headline, section.location, section.speakers-detail, section.the-event, section.wannabesponsor {
     position: relative; }
@@ -195,14 +209,6 @@ section {
       display: none;
       margin-bottom: 1em;
       width: 60%; }
-    section.headline:after {
-      background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-      background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-      background-repeat: repeat-x; }
-  section.location:after {
-    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background-repeat: repeat-x; }
   section.prev-eds .container > h2 {
     white-space: nowrap; }
   section.prev-eds hr {
@@ -210,20 +216,12 @@ section {
   section.program hr {
     margin: 1em auto; }
   section.nearby, section.speakers, section.subscribe, section.wannabesponsor, section.work-team {
-    background: #33A7B0;
+    background: #ed594f;
     color: white; }
-  section.speakers-detail:after {
-    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background-repeat: repeat-x; }
   section.sponsors a {
     font-weight: bold; }
   section.subscribe .container {
     padding: 2em; }
-  section.the-event:after {
-    background: linear-gradient(-45deg, transparent 75%, white 75%) 0 50%, linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background: -webkit-linear-gradient(135deg, transparent 75%, white 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, white 75%) 0 50%;
-    background-repeat: repeat-x; }
   section.wannabesponsor {
     padding: 5em 1em; }
     section.wannabesponsor p {
@@ -231,10 +229,6 @@ section {
       margin: 0 auto 2em auto;
       max-width: 800px;
       width: 90%; }
-    section.wannabesponsor:after {
-      background: linear-gradient(-45deg, transparent 75%, #33A7B0 75%) 0 50%, linear-gradient(45deg, transparent 75%, #33A7B0 75%) 0 50%;
-      background: -webkit-linear-gradient(135deg, transparent 75%, #33A7B0 75%) 0 50%, -webkit-linear-gradient(45deg, transparent 75%, #33A7B0 75%) 0 50%;
-      background-repeat: repeat-x; }
   section.wannabesponsor-form h2 {
     color: #33A7B0; }
   section.wannabesponsor-form p {
@@ -378,7 +372,7 @@ section {
   margin-bottom: 0.5em; }
 
 .counter .number {
-  background: #33A7B0;
+  background: #ed594f;
   border-radius: 50%;
   display: inline-block;
   font-size: x-large;
@@ -392,6 +386,10 @@ section {
   .date p,
   .header p {
     margin: 0; }
+  .date span,
+  .header span {
+    color: #0f3858;
+    font-weight: 500; }
 
 .event-info,
 .event-practical-info {
@@ -476,7 +474,7 @@ section {
     width: 100%; }
 
 .menu {
-  background: #393939;
+  background: #f5f5f5;
   height: 100%;
   overflow-y: auto;
   position: fixed;
@@ -538,7 +536,7 @@ section {
     text-align: left;
     width: 70%; }
   .other-article .other-article-link a {
-    color: #de4b39; }
+    color: #ed594f; }
   .other-article .other-article-title a {
     color: #393939;
     text-decoration: none; }
@@ -575,7 +573,7 @@ section {
     color: #33A7B0;
     transition: color 0.3s; }
     .place .place-text a:hover {
-      color: #de4b39; }
+      color: #ed594f; }
 
 .prev-ed,
 .prev-ed-ftimg {
@@ -622,7 +620,7 @@ section {
     margin: 0; }
 
 .program-item-time {
-  color: #de4b39;
+  color: #ed594f;
   display: block;
   font-weight: bold;
   margin: 1em auto; }
@@ -641,14 +639,14 @@ section {
     color: #33A7B0;
     transition: all 0.3s; }
     .innerpage-article .innerpage-post a:hover {
-      color: #de4b39; }
+      color: #ed594f; }
   .innerpage-article .innerpage-post h1,
   .innerpage-article .innerpage-post h2,
   .innerpage-article .innerpage-post h3,
   .innerpage-article .innerpage-post h4,
   .innerpage-article .innerpage-post h5,
   .innerpage-article .innerpage-post h6 {
-    color: #de4b39;
+    color: #ed594f;
     display: inline-block;
     margin-top: 0;
     text-align: left;
@@ -816,7 +814,7 @@ section {
     .speech .speech-info .speech-title {
       margin: 0.3em 0 0 0; }
     .speech .speech-info .speech-link a {
-      color: #de4b39;
+      color: #ed594f;
       font-weight: bold;
       transition: color 0.3s; }
       .speech .speech-info .speech-link a:hover {
@@ -915,7 +913,7 @@ section {
   overflow: hidden;
   padding-bottom: 1em; }
   .workshop .speaker-profile {
-    color: #de4b39;
+    color: #ed594f;
     font-weight: bold;
     text-decoration: underline; }
   .workshop:last-of-type {
@@ -1392,10 +1390,10 @@ nav.is-fixed {
   overflow: visible;
   right: 30%; }
 .menu li.is-active {
-  background: #de4b39;
+  background: #ed594f;
   position: relative; }
   .menu li.is-active:before {
-    border-color: transparent transparent transparent #de4b39;
+    border-color: transparent transparent transparent #ed594f;
     border-style: solid;
     border-width: 10px 0 10px 10px;
     content: "";
@@ -1407,10 +1405,10 @@ nav.is-fixed {
 
 @media screen and (min-width: 768px) {
   .menu li.is-active {
-    background: #de4b39;
+    background: #ed594f;
     position: relative; }
     .menu li.is-active:before {
-      border-color: #de4b39 transparent transparent transparent;
+      border-color: #ed594f transparent transparent transparent;
       border-style: solid;
       border-width: 10px 10px 0 10px;
       content: "";

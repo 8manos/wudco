@@ -1,7 +1,7 @@
 {% load staticfiles copy %}
 <section class="speakers">
   <div class="container">
-    <h2 class="sawtooth white"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
+    <h2 class="underline"><span>{% copy 'title-speakers' default='Ponentes' %}</span></h2>
     <ul>
     {% for speaker in speakers %}
         {% include 'front/_speaker.html' with picture=speaker.picture.url name=speaker.name title=speaker.title company=speaker.company linkedin_url=linkedin_url twitter_url=twitter_url %}

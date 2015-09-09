@@ -1,14 +1,14 @@
 {% load copy %}
 <section class="sponsors">
   <div class="container">
-    <h2 class="sawtooth blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
+    <h2 class="underline blue"><span>{% copy 'support-us' default='Nos apoyan'%}</span></h2>
     <ul>
     {% for sponsor in sponsors %}
         {% if sponsor.is_partner %}
           {% include 'front/_sponsor.html' with picture=sponsor.get_logo name=sponsor.name url=sponsor.url %}
         {% endif %}
-      {% endfor %} 
-      
+      {% endfor %}
+
     </ul>
     {% if not request.GET.edit_copys%}<a class="orange" href="{% url 'volunteer' %}">{% else %}{% copy 'link-volunteer' %} {% endif %}{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a>
   </div>

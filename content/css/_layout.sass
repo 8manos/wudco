@@ -1,5 +1,5 @@
 footer
-	background: $fondo_gris
+	background: $fondo_azul
 	color: white
 	padding: 2em 1em
 	text-align: center
@@ -9,6 +9,7 @@ footer
 		width: 60%
 
 header
+	background: $fondo_gris
 	text-align: center
 
 nav
@@ -63,7 +64,7 @@ section
 			margin: 2em auto
 
 	&.countdown
-		background: $fondo_gris
+		background: $fondo_azul
 		color: white
 
 	&.headline,
@@ -94,7 +95,7 @@ section
 			font-size: 1rem
 			font-weight: 600
 			margin: 1em
-		
+
 		h1,
 		p
 			margin: 0 auto
@@ -123,10 +124,8 @@ section
 			width: 60%
 
 		&:after
-			+sawtooth(white)
 
 	&.location:after
-		+sawtooth(white)
 
 	&.prev-eds
 		.container > h2
@@ -144,11 +143,10 @@ section
 	&.subscribe,
 	&.wannabesponsor,
 	&.work-team
-		background: $fondo_azul
+		background: $color_naranja
 		color: white
 
 	&.speakers-detail:after
-		+sawtooth(white)
 
 	&.sponsors
 		a
@@ -158,11 +156,10 @@ section
 		padding: 2em
 
 	&.the-event:after
-		+sawtooth(white)
 
 	&.wannabesponsor
 		padding: 5em 1em
-		
+
 		p
 			font-size: 0.8rem
 			margin: 0 auto 2em auto
@@ -170,7 +167,6 @@ section
 			width: 90%
 
 		&:after
-			+sawtooth($fondo_azul)
 
 	&.wannabesponsor-form
 		h2

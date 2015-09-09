@@ -1,7 +1,7 @@
 {% load copy %}
 <section class="sponsors">
   <div class="container">
-    <h2 class="sawtooth blue"><span>{% copy 'sponsor-us' default='Organizan'%}</span></h2>
+    <h2 class="underline blue"><span>{% copy 'sponsor-us' default='Organizan'%}</span></h2>
     <ul>
      {% for sponsor in sponsors %}
      	{% if not sponsor.is_partner %}
