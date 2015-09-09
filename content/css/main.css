@@ -168,6 +168,8 @@ section {
   section.countdown {
     background: #0f3858;
     color: white; }
+    section.countdown p {
+      margin: 0; }
   section.headline, section.location, section.speakers-detail, section.the-event, section.wannabesponsor {
     position: relative; }
     section.headline:after, section.location:after, section.speakers-detail:after, section.the-event:after, section.wannabesponsor:after {
@@ -180,10 +182,11 @@ section {
       position: absolute;
       width: 100%; }
   section.headline {
-    background: url("../img/home.svg") no-repeat;
-    background-position: center calc(100% + 20px);
+    background: url(../img/bg_movil.png) no-repeat;
+    background-position: center bottom;
     background-size: contain;
-    padding-bottom: 25%; }
+    margin-bottom: -2em;
+    padding-bottom: 50%; }
     section.headline a {
       display: inline-block;
       font-size: 1rem;
@@ -265,7 +268,8 @@ section {
   section h2 {
     font-size: 1.4rem; }
   section.headline {
-    background-position: center calc(100% + 40px); }
+    background-image: url(../img/bg_tablet.png);
+    padding-bottom: 33%; }
     section.headline h1 {
       font-size: 2rem; }
       section.headline h1 span {
@@ -287,7 +291,7 @@ section {
   section h2 {
     font-size: 1.6rem; }
   section.headline {
-    background-size: auto 55%;
+    background-image: url(../img/bg_desktop.png);
     padding-bottom: 20%; }
     section.headline a {
       font-size: larger; }

@@ -67,6 +67,9 @@ section
 		background: $fondo_azul
 		color: white
 
+		p
+			margin: 0
+
 	&.headline,
 	&.location,
 	&.speakers-detail,
@@ -85,10 +88,11 @@ section
 			width: 100%
 
 	&.headline
-		background: url($headline_bckgnd) no-repeat
-		background-position: center calc(100% + 20px)
+		background: url(../img/bg_movil.png) no-repeat
+		background-position: center bottom
 		background-size: contain
-		padding-bottom: 25%
+		margin-bottom: -2em
+		padding-bottom: 50%
 
 		a
 			display: inline-block
@@ -218,7 +222,8 @@ section
 			font-size: 1.4rem
 
 		&.headline
-			background-position: center calc(100% + 40px)
+			background-image: url(../img/bg_tablet.png)
+			padding-bottom: 33%
 
 			h1
 				font-size: 2rem
@@ -250,7 +255,7 @@ section
 			font-size: 1.6rem
 
 		&.headline
-			background-size: auto 55%
+			background-image: url(../img/bg_desktop.png)
 			padding-bottom: 20%
 
 			a
