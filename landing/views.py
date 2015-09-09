@@ -7,7 +7,7 @@ from .forms import SponsorForm
 from django.core.urlresolvers import reverse
 
 
-FECHA_CIERRE = date(2014, 11, 7)
+FECHA_CIERRE = date(2015, 11, 12)
 PRICE_BEFORE = 60000
 PRICE_AFTER = 80000
 
