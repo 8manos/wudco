@@ -8,6 +8,7 @@
                     <a href="http://usarte.co" target="_blank"><img src="{% static 'img/logo_usarte_blanco.png' %}" alt="usarte.co"></a>
                 </div>
             </div>
+            {% comment %}
             <div class="menu-footer">
                 <ul>
                     <li><a href="{% url 'event' %}">El evento</a></li
@@ -18,6 +19,7 @@
                     ><li><a href="{% url 'blog' %}">Blog wudco</a></li>
                 </ul>
             </div>
+            {% endcomment %}
             <div class="actions">
                 <ul>
                     <li><a href="{% url 'volunteer' %}">{% copy 'wants-volunteer' default='Quiero ser voluntario' %}</a></li>
